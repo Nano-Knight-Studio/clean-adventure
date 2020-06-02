@@ -8,6 +8,7 @@ public class CameraBehaviour : MonoBehaviour
     public Transform [] targets;
     [Header("Position")]
     public float movementSpeed;
+    public float smoothTime;
     public Vector3 offset;
     [Header("Rotation")]
     public float lookSpeed;
@@ -16,15 +17,12 @@ public class CameraBehaviour : MonoBehaviour
 
     Transform pointer;
     [HideInInspector] public Transform orientation;
+    Vector3 currentVelocity;
     public static CameraBehaviour instance;
 
     void Awake ()
     {
         instance = this;
-    }
-
-    void Start ()
-    {
         pointer = new GameObject("Pointer").transform;
         pointer.SetParent(transform);
         pointer.localPosition = Vector3.zero;
@@ -36,14 +34,9 @@ public class CameraBehaviour : MonoBehaviour
     void FixedUpdate ()
     {
         //Position
-        transform.position = Vector3.Lerp(transform.position,
-                                        GetAveragePosition() + offset,
-                                        movementSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.SmoothDamp(transform.position, GetAveragePosition() + offset, ref currentVelocity, smoothTime);
 
         //Rotation
-        // pointer.LookAt(Vector3.Lerp(focusPoint.position,
-        //                             new Vector3(transform.position.x, focusPoint, GetAveragePosition().z),
-        //                             playerInfluence));
         pointer.LookAt(GetAveragePosition());
         transform.rotation = Quaternion.Slerp(transform.rotation,
                                         pointer.rotation,

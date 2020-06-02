@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         mainCollider = GetComponent<Collider>();
-        animator = GetComponentInChildren<Animator>();
         cameraOrientation = CameraBehaviour.instance.orientation;
     }
 
@@ -85,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         // Rotation
         if (inputVector.magnitude > 0)
         {
-            transform.forward = Vector3.Lerp(transform.forward, velocity.normalized, turnSpeed * Time.deltaTime);
+            transform.forward = Vector3.Lerp(transform.forward, new Vector3(velocity.x, 0, velocity.z).normalized, turnSpeed * Time.deltaTime);
         }
 
         // Applying jump
