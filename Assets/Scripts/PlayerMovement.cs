@@ -125,6 +125,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnTriggerStay (Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            other.gameObject.GetComponent<Enemy>().DetectPlayer(this.gameObject);
+        }
+    }
+
     void OnTriggerExit (Collider other)
     {
         if (other.gameObject.name == "Barrier")
