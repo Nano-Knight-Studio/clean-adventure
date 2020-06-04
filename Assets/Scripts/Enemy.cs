@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,6 +15,10 @@ public class Enemy : MonoBehaviour
 
     public void DetectPlayer (GameObject player)
     {
-        navMeshAgent.SetDestination(player.transform.position);
+        try
+        {
+            navMeshAgent.SetDestination(player.transform.position);
+        }
+        catch (Exception ex) {}
     }
 }
