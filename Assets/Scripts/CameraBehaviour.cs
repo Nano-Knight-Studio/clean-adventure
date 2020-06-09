@@ -9,6 +9,7 @@ public class CameraBehaviour : MonoBehaviour
     [Header("Position")]
     public float movementSpeed;
     public float smoothTime;
+    public Vector3 lookOffset;
     public Vector3 offset;
     [Header("Rotation")]
     public float lookSpeed;
@@ -37,7 +38,7 @@ public class CameraBehaviour : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, GetAveragePosition() + offset, ref currentVelocity, smoothTime);
 
         //Rotation
-        pointer.LookAt(GetAveragePosition());
+        pointer.LookAt(GetAveragePosition() + lookOffset);
         transform.rotation = Quaternion.Slerp(transform.rotation,
                                         pointer.rotation,
                                         lookSpeed * Time.fixedDeltaTime);
