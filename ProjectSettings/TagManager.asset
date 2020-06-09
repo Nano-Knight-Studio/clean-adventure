@@ -15,9 +15,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
+  - IgnorePlayer
+  - Player
+  - Bubble
   - 
   - 
   - 
