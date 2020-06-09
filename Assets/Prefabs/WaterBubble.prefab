@@ -343,8 +343,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.6
-      minScalar: 0.4
+      scalar: 0.4
+      minScalar: 0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1201,7 +1201,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.8104171
+          time: 0.92507166
           value: 1
           inSlope: 0.6830964
           outSlope: 0.6830964
@@ -1211,7 +1211,7 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 0.98400724
+          value: 0
           inSlope: -0.40441722
           outSlope: -0.40441722
           tangentMode: 0
@@ -5097,9 +5097,10 @@ GameObject:
   - component: {fileID: 785765667921281404}
   - component: {fileID: 690589642}
   - component: {fileID: 7991011082451865138}
+  - component: {fileID: 1832919947412385534}
   m_Layer: 11
   m_Name: WaterBubble
-  m_TagString: Untagged
+  m_TagString: DamageEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5113,7 +5114,7 @@ Transform:
   m_GameObject: {fileID: 6383101612006521208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5051, y: 0.2114, z: -7.6812}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children:
   - {fileID: 7529658396299133667}
   - {fileID: 2558773347367467734}
@@ -5164,7 +5165,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 1.5, z: 0}
   maxVelocity: {x: 0, y: 1.5, z: 0}
   increase: {x: 0, y: 0, z: 0}
-  acceleration: 0.2
+  acceleration: 0.1
   currentVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &690589642
 MonoBehaviour:
@@ -5198,6 +5199,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1832919947412385534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383101612006521208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3c21f11f77279438aabaccaea21db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  splashPrefab: {fileID: 7998951072375877250, guid: 33e31a4c664343a4694a555d51075177,
+    type: 3}
 --- !u!1 &6961246447002999052
 GameObject:
   m_ObjectHideFlags: 0
