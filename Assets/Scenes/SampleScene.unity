@@ -51163,6 +51163,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1683600338}
+    - target: {fileID: 5759677796609421753, guid: e73ee765e55d6b648868737d565b1959,
+        type: 3}
+      propertyPath: shootDelay
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 574494071, guid: e73ee765e55d6b648868737d565b1959, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
