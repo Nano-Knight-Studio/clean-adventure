@@ -9,18 +9,27 @@ public class PlayerShooting : MonoBehaviour
     public Transform shootPoint;
     public float force;
     public string soundName;
-    public KeyCode key;
+    public KeyCode[] keys;
     public float shootDelay;
-    bool shooting = false;
+    bool keyPressed = false;
     bool canShoot = true;
     public float spread;
     public float scaleRandomizationFactor;
 
     void Update ()
     {
-        animator.SetBool("Shooting", Input.GetKey(key));
+        keyPressed = false;
+        foreach (KeyCode k in keys)
+        {
+            if (Input.GetKey(k))
+            {
+                keyPressed = true;
+            }
+        }
 
-        if (canShoot && Input.GetKey(key))
+        animator.SetBool("Shooting", keyPressed);
+
+        if (canShoot && keyPressed)
         {
             StartCoroutine(Shoot());
         }

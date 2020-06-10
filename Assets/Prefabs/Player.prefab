@@ -656,7 +656,7 @@ MonoBehaviour:
   speed: 1.3
   acceleration: 10
   decceleration: 10
-  jumpForce: 1.5
+  jumpForce: 0
   turnSpeed: 20
   horizontalInputAxis: Horizontal
   verticalInputAxis: Vertical
@@ -713,7 +713,7 @@ MonoBehaviour:
   shootPoint: {fileID: 5465415308741332128}
   force: 2
   soundName: 
-  key: 323
+  keys: 
   shootDelay: 0.07
   spread: 3.5
   scaleRandomizationFactor: 1
