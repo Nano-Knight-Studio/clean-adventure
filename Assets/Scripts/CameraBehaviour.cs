@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraBehaviour : MonoBehaviour
 {
     public bool active = true;
+    public Transform cam;
     public Transform [] targets;
     [Header("Position")]
     public float movementSpeed;
@@ -13,9 +14,14 @@ public class CameraBehaviour : MonoBehaviour
     public Vector3 offset;
     [Header("Rotation")]
     public float lookSpeed;
-
+    [Header("Input")]
+    public string horizontalInput;
+    public string verticalInput;
+    public float inputOffset;
+    public float inputSmoothTime;
+    Vector3 currentVelocityInput;
     // INTERNAL
-
+    [HideInInspector] public Vector2 currentOffset;
     Transform pointer;
     [HideInInspector] public Transform orientation;
     Vector3 currentVelocity;
@@ -32,13 +38,23 @@ public class CameraBehaviour : MonoBehaviour
         orientation.localPosition = Vector3.zero;
     }
 
+    void Update ()
+    {
+        currentOffset = new Vector2(Input.GetAxisRaw(horizontalInput), Input.GetAxisRaw(verticalInput));
+    }
+
+    void LateUpdate ()
+    {
+        cam.localPosition = Vector3.SmoothDamp(cam.localPosition, new Vector3(currentOffset.x, 0, currentOffset.y) * -inputOffset, ref currentVelocityInput, inputSmoothTime * Time.deltaTime);
+    }
+
     void FixedUpdate ()
     {
         //Position
         transform.position = Vector3.SmoothDamp(transform.position, GetAveragePosition() + offset, ref currentVelocity, smoothTime);
 
         //Rotation
-        pointer.LookAt(GetAveragePosition() + lookOffset);
+        pointer.LookAt(GetAveragePosition() + lookOffset - new Vector3(currentOffset.x, 0, currentOffset.y) * 0.1f);
         transform.rotation = Quaternion.Slerp(transform.rotation,
                                         pointer.rotation,
                                         lookSpeed * Time.fixedDeltaTime);

@@ -307,7 +307,7 @@ InputManager:
     snap: 0
     invert: 1
     type: 2
-    axis: 4
+    axis: 3
     joyNum: 1
   - serializedVersion: 3
     m_Name: Right Joystick Vertical
@@ -323,5 +323,5 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 5
+    axis: 4
     joyNum: 1

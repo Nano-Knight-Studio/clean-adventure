@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Input")]
     public string horizontalInputAxis;
     public string verticalInputAxis;
-    public string jumpInput;
+    public KeyCode[] jumpKeys;
     public string grabInput;
     [Header("Ground detection")]
     public LayerMask layerMask;
@@ -39,12 +39,15 @@ public class PlayerMovement : MonoBehaviour
     void Update ()
     {
         // Jump input
-        if (Input.GetButtonDown(jumpInput) && IsGrounded())
+        foreach (KeyCode k in jumpKeys)
         {
-            if (!jumpFlag)
+            if (Input.GetKeyDown(k))
             {
-                jumpFlag = true;
-                StartCoroutine(ResetJumpFlag());
+                if (!jumpFlag)
+                {
+                    jumpFlag = true;
+                    StartCoroutine(ResetJumpFlag());
+                }
             }
         }
 
@@ -82,9 +85,13 @@ public class PlayerMovement : MonoBehaviour
         // rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(inputVector.x * speed, rb.velocity.y, inputVector.y * speed), acceleration * Time.fixedDeltaTime);
 
         // Rotation
-        if (inputVector.magnitude > 0)
+        if (inputVector.magnitude > 0.1f)
         {
             transform.forward = Vector3.Lerp(transform.forward, new Vector3(velocity.x, 0, velocity.z).normalized, turnSpeed * Time.deltaTime);
+        }
+        else if (CameraBehaviour.instance.currentOffset.magnitude > 0)
+        {
+            transform.forward = Vector3.Lerp(transform.forward, new Vector3(-CameraBehaviour.instance.currentOffset.x, 0, -CameraBehaviour.instance.currentOffset.y).normalized, turnSpeed * Time.deltaTime);
         }
 
         // Applying jump

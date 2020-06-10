@@ -660,7 +660,7 @@ MonoBehaviour:
   turnSpeed: 20
   horizontalInputAxis: Horizontal
   verticalInputAxis: Vertical
-  jumpInput: Jump
+  jumpKeys: 
   grabInput: Grab
   layerMask:
     serializedVersion: 2
