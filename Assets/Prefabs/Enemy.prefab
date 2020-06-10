@@ -271,6 +271,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -12, y: -12}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5865571680068709730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3365169542815475532}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3365169542815475532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5865571680068709730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.801}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6346533089954095157}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6346533089954095151
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +335,7 @@ Transform:
   m_LocalPosition: {x: 0.483, y: 0.0721, z: -6.667}
   m_LocalScale: {x: 0.11653793, y: 0.072836205, z: 0.12382155}
   m_Children:
+  - {fileID: 3365169542815475532}
   - {fileID: 2773920882764948387}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -422,6 +453,12 @@ MonoBehaviour:
   maxLife: 100
   currentLife: 100
   lifeBar: {fileID: 5922535000342055740}
+  attackPoint: {fileID: 3365169542815475532}
+  attackRange: 0.05
+  damage: 10
+  attackLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!135 &949703390633594593
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -503,7 +540,7 @@ RectTransform:
   m_Children:
   - {fileID: 6760132362547811059}
   m_Father: {fileID: 6346533089954095157}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

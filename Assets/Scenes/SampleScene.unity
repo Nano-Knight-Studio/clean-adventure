@@ -51163,23 +51163,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1683600338}
-    - target: {fileID: 5759677796609421753, guid: e73ee765e55d6b648868737d565b1959,
-        type: 3}
-      propertyPath: shootDelay
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 574494071, guid: e73ee765e55d6b648868737d565b1959, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 2056655982, guid: e73ee765e55d6b648868737d565b1959, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 2105317996, guid: e73ee765e55d6b648868737d565b1959, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73ee765e55d6b648868737d565b1959, type: 3}
 --- !u!4 &2022911627 stripped
@@ -53517,7 +53500,7 @@ Light:
   m_InnerSpotAngle: 21.802082
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
