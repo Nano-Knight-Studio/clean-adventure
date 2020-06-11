@@ -1718,7 +1718,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.25
-  m_Speed: 0.25
+  m_Speed: 0.4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 5000
@@ -1751,6 +1751,8 @@ MonoBehaviour:
   attackLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  damageScaleMultiplier: 1.5
+  damageScaleSpeed: 20
   defaultMaterial: {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
   damageMaterial: {fileID: 2100000, guid: e68ffbbb3410c2a4ebb930cf641e7baf, type: 2}
   deathParticles: {fileID: 7998951072375877250, guid: d72f81cebc226ed48badd8962cff4853,

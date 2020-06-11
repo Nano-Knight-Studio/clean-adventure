@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string verticalInputAxis;
     [SerializeField] private KeyCode[] jumpKeys;
     [SerializeField] private string grabInput;
+    [Header("Aim Assist")]
+    [SerializeField] private float aimAssistSmoothTime;
     [Header("Ground detection")]
     [SerializeField] private LayerMask layerMask;
     [Header("Animations")]
@@ -23,17 +25,21 @@ public class PlayerMovement : MonoBehaviour
     
     //----- INTERNAL -----//
     private PlayerShooting playerShooting;
+    private PlayerAimAssist playerAimAssist;
     private Rigidbody rb;
     private Vector2 inputVector;
     private bool jumpFlag;
+    [HideInInspector] public bool isStopped;
     private bool canWalkRight = true;
     private Collider mainCollider;
     [HideInInspector] public bool blocked;
     private Transform cameraOrientation;
+    private Vector3 aimAssistCurrentVelocity;
 
     void Start ()
     {
         playerShooting = GetComponent<PlayerShooting>();
+        playerAimAssist = GetComponentInChildren<PlayerAimAssist>();
         rb = GetComponent<Rigidbody>();
         mainCollider = GetComponent<Collider>();
         cameraOrientation = CameraBehaviour.instance.orientation;
@@ -71,9 +77,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Animation parameters
-        animator.SetBool("Grounded", IsGrounded());
         animator.SetFloat("Walk", rb.velocity.magnitude);
-        print (rb.velocity.magnitude);
     }
 
     void FixedUpdate()
@@ -86,13 +90,21 @@ public class PlayerMovement : MonoBehaviour
         // rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(inputVector.x * speed, rb.velocity.y, inputVector.y * speed), acceleration * Time.fixedDeltaTime);
 
         // Rotation
-        if (inputVector.magnitude > 0.1f)
+        // Walking
+        if (!isStopped)
         {
             transform.forward = Vector3.Lerp(transform.forward, new Vector3(velocity.x, 0, velocity.z).normalized, turnSpeed * Time.deltaTime);
         }
+        // Stopped, shooting with mouse
         else if (Input.GetKey(KeyCode.Mouse0))
         {
             transform.forward = Vector3.Lerp(transform.forward, CameraBehaviour.instance.orientation.forward, turnSpeed * Time.deltaTime);
+        }
+        // Aim assist
+        if (playerShooting.keyPressed)
+        {
+            transform.forward = Vector3.SmoothDamp(transform.forward, playerAimAssist.GetAimAssistDirection(), ref aimAssistCurrentVelocity, aimAssistSmoothTime * Time.fixedDeltaTime);
+            print (playerAimAssist.GetAimAssistDirection());
         }
 
         // Applying jump
@@ -112,6 +124,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.isKinematic = false;
         }
+
+        isStopped = (rb.velocity.magnitude < 0.05f);
     }
 
     bool IsGrounded ()

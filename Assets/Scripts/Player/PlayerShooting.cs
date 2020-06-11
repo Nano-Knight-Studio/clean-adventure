@@ -52,7 +52,7 @@ public class PlayerShooting : MonoBehaviour
 
         // Sound
         string selectedSound = soundNames[Random.Range(0, soundNames.Length)];
-        AudioManager.instance.SetPitch(selectedSound, Random.Range(0.9f, 1.1f));
+        AudioManager.instance.SetPitch(selectedSound, Random.Range(0.4f, 0.6f));
         AudioManager.instance.PlaySound(selectedSound);
 
         // Applying force

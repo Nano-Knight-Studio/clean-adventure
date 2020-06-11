@@ -17,12 +17,17 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private float damage;
     [SerializeField] private LayerMask attackLayerMask;
+    [Header("Taking Damage")]
+    [SerializeField] private float damageScaleMultiplier;
+    [SerializeField] private float damageScaleSpeed;
     [Header("Graphics")]
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material damageMaterial;
     [SerializeField] private GameObject deathParticles;
     [SerializeField] private MeshRenderer mainRenderer;
     //----- INTERNAL -----//
+    private Vector3 desiredScale;
+    private Vector3 defaultScale;
     private NavMeshAgent navMeshAgent;
     private Transform target;
     private bool attacking = false;
@@ -31,11 +36,20 @@ public class Enemy : MonoBehaviour
 
     void Start ()
     {
+        defaultScale = transform.localScale;
+        desiredScale = defaultScale;
         navMeshAgent = GetComponent<NavMeshAgent>();
         pointer = new GameObject("Pointer").transform;
         pointer.SetParent(transform);
         pointer.localPosition = Vector3.zero;
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, UnityEngine.Random.Range(0.0f, 360.0f), transform.localEulerAngles.z);
+    }
+
+    void Update ()
+    {
+        // Lerping scale
+        // Used on damage effect
+        transform.localScale = Vector3.Lerp(transform.localScale, desiredScale, damageScaleSpeed * Time.deltaTime);
     }
 
     void FixedUpdate ()
@@ -99,7 +113,9 @@ public class Enemy : MonoBehaviour
     IEnumerator BlinkDamage()
     {
         mainRenderer.material = damageMaterial;
-        yield return new WaitForSeconds(0.1f);
+        desiredScale = defaultScale * damageScaleMultiplier;
+        yield return new WaitForSeconds(0.15f);
+        desiredScale = defaultScale;
         mainRenderer.material = defaultMaterial;
     }
 

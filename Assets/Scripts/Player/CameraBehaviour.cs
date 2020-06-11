@@ -10,7 +10,8 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] private float smoothTime;
     [SerializeField] private Vector3 offset;
     [Header("Rotation")]
-    [SerializeField] private float lookSpeed;
+    // [SerializeField] private float lookSpeed;
+    [SerializeField] private AnimationCurve rotSpeedOverVelocity;
     [Header("Input")]
     [SerializeField] private string horizontalInput;
     [SerializeField] private string verticalInput;
@@ -65,9 +66,12 @@ public class CameraBehaviour : MonoBehaviour
         //Rotation
         if (cooldown <= 0)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation,
-                                            targets[0].rotation,
-                                            lookSpeed * GetAverageVelocity() * Time.fixedDeltaTime);
+            // if (Quaternion.Angle(transform.rotation, targets[0].rotation) > 47.0f || targets[0].gameObject.GetComponent<PlayerMovement>().isStopped)
+            // {
+                transform.rotation = Quaternion.Slerp(transform.rotation,
+                                                targets[0].rotation,
+                                                rotSpeedOverVelocity.Evaluate(GetAverageVelocity())  * Time.fixedDeltaTime);
+            // }
         }
         else
         {
@@ -102,7 +106,6 @@ public class CameraBehaviour : MonoBehaviour
 
     float GetAverageVelocity ()
     {
-        return 1;
         float average = 0.0f;
         int activeTargets = 0;
         for(int i = 0; i < targets.Length; i++)
