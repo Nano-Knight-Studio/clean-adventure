@@ -44120,84 +44120,84 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Step_Grass_0
     Clip: {fileID: 8300000, guid: 3ba3efa794240c249ae5bfe7d0745c03, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_1
     Clip: {fileID: 8300000, guid: 348fdb7315a66bb4ca79b3ef5789e2c6, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_2
     Clip: {fileID: 8300000, guid: 9eea79310072af740bccb920283ecc8a, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_3
     Clip: {fileID: 8300000, guid: 8a9a49df561a89042946ec99feca9ee4, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_4
     Clip: {fileID: 8300000, guid: 0f24b4226db9f24419c20f65a712047e, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_5
     Clip: {fileID: 8300000, guid: 0d50ee877e75aa548a89572b0b170ffe, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_0
     Clip: {fileID: 8300000, guid: 2792dc4f5a048a448857acc08bfdfe49, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_1
     Clip: {fileID: 8300000, guid: e3fe9db5c8d7304498bd21ffadaa15ab, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_2
     Clip: {fileID: 8300000, guid: 38cdeca6712b24d45b391424c7ff7511, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_3
     Clip: {fileID: 8300000, guid: 97e0762a9f60bee4aaf3f3f28e8d3aec, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_4
     Clip: {fileID: 8300000, guid: 308954c131a78574aa8e3c11996e96d2, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_5
     Clip: {fileID: 8300000, guid: f6a857c0a867cb5409747d79ff4c8187, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
