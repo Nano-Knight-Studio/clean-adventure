@@ -19,7 +19,6 @@ public class MapPoint : MonoBehaviour
 
     void Update()
     {
-        //DEBUG
         if (debug)
         {
             foreach (MapPoint p in availablePoints)

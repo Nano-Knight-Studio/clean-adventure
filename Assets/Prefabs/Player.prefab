@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 8382406584031840960}
   - component: {fileID: 3819444491371411730}
   - component: {fileID: 2022911630}
+  - component: {fileID: 716186920}
   m_Layer: 10
   m_Name: Mesh
   m_TagString: Untagged
@@ -481,6 +482,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &716186920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123926744398909197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776ad2e2e892c34c937e65e2f71ef00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassSounds:
+  - Step_Grass_0
+  - Step_Grass_1
+  - Step_Grass_2
+  - Step_Grass_3
+  - Step_Grass_4
+  stoneSounds:
+  - Step_Stone_0
+  - Step_Stone_1
+  - Step_Stone_2
+  - Step_Stone_3
+  - Step_Stone_4
+  groundDistance: 0.05
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &3657602317704910049
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,18 +682,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3337252f4fdc5604ca0aae067b1761ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.3
+  speed: 1
   acceleration: 10
   decceleration: 10
   jumpForce: 0
   turnSpeed: 20
   horizontalInputAxis: Horizontal
   verticalInputAxis: Vertical
-  jumpKeys: 
+  jumpKeys: 200000004a010000
   grabInput: Grab
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  animator: {fileID: 2022911630}
   blocked: 0
 --- !u!114 &1977877653
 MonoBehaviour:
@@ -708,15 +738,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203ab92fae506641b3f1e5ecba99261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 2022911630}
+  keys: 430100004c010000
   prefab: {fileID: 6383101612006521208, guid: b891011236c5a6d4384aee2c1aaaaea0, type: 3}
   shootPoint: {fileID: 5465415308741332128}
-  force: 2
-  soundName: 
-  keys: 
+  force: 3
+  animator: {fileID: 2022911630}
+  soundNames:
+  - Gun_0
+  - Gun_1
+  - Gun_2
   shootDelay: 0.07
   spread: 3.5
-  scaleRandomizationFactor: 1
+  keyPressed: 0
 --- !u!114 &2022911629
 MonoBehaviour:
   m_ObjectHideFlags: 0

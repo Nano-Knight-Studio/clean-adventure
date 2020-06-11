@@ -6,31 +6,34 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float speed;
-    public float acceleration;
-    public float decceleration;
-    public float jumpForce;
-    public float turnSpeed;
+    [SerializeField] private float speed;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float decceleration;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float turnSpeed;
     [Header("Input")]
-    public string horizontalInputAxis;
-    public string verticalInputAxis;
-    public KeyCode[] jumpKeys;
-    public string grabInput;
+    [SerializeField] private string horizontalInputAxis;
+    [SerializeField] private string verticalInputAxis;
+    [SerializeField] private KeyCode[] jumpKeys;
+    [SerializeField] private string grabInput;
     [Header("Ground detection")]
-    public LayerMask layerMask;
+    [SerializeField] private LayerMask layerMask;
+    [Header("Animations")]
+    [SerializeField] private Animator animator;
     
     //----- INTERNAL -----//
-    Rigidbody rb;
-    Vector2 inputVector;
-    bool jumpFlag;
-    bool canWalkRight = true;
-    Collider mainCollider;
+    private PlayerShooting playerShooting;
+    private Rigidbody rb;
+    private Vector2 inputVector;
+    private bool jumpFlag;
+    private bool canWalkRight = true;
+    private Collider mainCollider;
     [HideInInspector] public bool blocked;
-    Animator animator;
-    Transform cameraOrientation;
+    private Transform cameraOrientation;
 
     void Start ()
     {
+        playerShooting = GetComponent<PlayerShooting>();
         rb = GetComponent<Rigidbody>();
         mainCollider = GetComponent<Collider>();
         cameraOrientation = CameraBehaviour.instance.orientation;
@@ -68,11 +71,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Animation parameters
-        if (animator != null)
-        {
-            animator.SetBool("Grounded", IsGrounded());
-            animator.SetFloat("Walk", rb.velocity.magnitude);
-        }
+        animator.SetBool("Grounded", IsGrounded());
+        animator.SetFloat("Walk", rb.velocity.magnitude);
+        print (rb.velocity.magnitude);
     }
 
     void FixedUpdate()
@@ -85,14 +86,14 @@ public class PlayerMovement : MonoBehaviour
         // rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(inputVector.x * speed, rb.velocity.y, inputVector.y * speed), acceleration * Time.fixedDeltaTime);
 
         // Rotation
-        // if (inputVector.magnitude > 0.1f)
-        // {
+        if (inputVector.magnitude > 0.1f)
+        {
             transform.forward = Vector3.Lerp(transform.forward, new Vector3(velocity.x, 0, velocity.z).normalized, turnSpeed * Time.deltaTime);
-        // }
-        // else if (CameraBehaviour.instance.inputVector.magnitude > 0)
-        // {
-        //     transform.forward = Vector3.Lerp(transform.forward, new Vector3(-CameraBehaviour.instance.inputVector.x, 0, -CameraBehaviour.instance.inputVector.y).normalized, turnSpeed * Time.deltaTime);
-        // }
+        }
+        else if (Input.GetKey(KeyCode.Mouse0))
+        {
+            transform.forward = Vector3.Lerp(transform.forward, CameraBehaviour.instance.orientation.forward, turnSpeed * Time.deltaTime);
+        }
 
         // Applying jump
         if (jumpFlag)

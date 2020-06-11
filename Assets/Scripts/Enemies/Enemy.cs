@@ -7,25 +7,27 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Movement")]
+    [SerializeField] private float turnSpeed;
     [Header("Life")]
-    public float maxLife;
-    public float currentLife;
-    public Slider lifeBar;
+    [SerializeField] private float maxLife;
+    [SerializeField] private float currentLife;
+    [SerializeField] private Slider lifeBar;
     [Header("Attack")]
-    public float attackRange;
-    public float damage;
-    public LayerMask attackLayerMask;
+    [SerializeField] private float attackRange;
+    [SerializeField] private float damage;
+    [SerializeField] private LayerMask attackLayerMask;
     [Header("Graphics")]
-    public Material defaultMaterial;
-    public Material damageMaterial;
-    public GameObject deathParticles;
+    [SerializeField] private Material defaultMaterial;
+    [SerializeField] private Material damageMaterial;
+    [SerializeField] private GameObject deathParticles;
+    [SerializeField] private MeshRenderer mainRenderer;
     //----- INTERNAL -----//
-    NavMeshAgent navMeshAgent;
-    Transform target;
-    bool attacking = false;
-    Transform pointer;
-    bool stunned = false;
-    MeshRenderer[] renderers;
+    private NavMeshAgent navMeshAgent;
+    private Transform target;
+    private bool attacking = false;
+    private Transform pointer;
+    private bool stunned = false;
 
     void Start ()
     {
@@ -33,7 +35,6 @@ public class Enemy : MonoBehaviour
         pointer = new GameObject("Pointer").transform;
         pointer.SetParent(transform);
         pointer.localPosition = Vector3.zero;
-        renderers = GetComponentsInChildren<MeshRenderer>();
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, UnityEngine.Random.Range(0.0f, 360.0f), transform.localEulerAngles.z);
     }
 
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour
         if (target)
         {
             pointer.LookAt(target);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, pointer.eulerAngles.y, 0)), 3 * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, pointer.eulerAngles.y, 0)), turnSpeed * Time.fixedDeltaTime);
         }
     }
 
@@ -70,8 +71,11 @@ public class Enemy : MonoBehaviour
     {
         try
         {
-            navMeshAgent.SetDestination(player.transform.position);
-            target = player.transform;
+            if (navMeshAgent.isActiveAndEnabled)
+            {
+                navMeshAgent.SetDestination(player.transform.position);
+                target = player.transform;
+            }
         }
         catch (Exception ex) {}
     }
@@ -94,15 +98,9 @@ public class Enemy : MonoBehaviour
 
     IEnumerator BlinkDamage()
     {
-        foreach (MeshRenderer mr in renderers)
-        {
-            mr.material = damageMaterial;
-        }
+        mainRenderer.material = damageMaterial;
         yield return new WaitForSeconds(0.1f);
-        foreach (MeshRenderer mr in renderers)
-        {
-            mr.material = defaultMaterial;
-        }
+        mainRenderer.material = defaultMaterial;
     }
 
     void Die()

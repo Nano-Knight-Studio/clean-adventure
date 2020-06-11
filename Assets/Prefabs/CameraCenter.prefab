@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2437088908018524183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323209327986275950}
+  m_Layer: 0
+  m_Name: CameraContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323209327986275950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437088908018524183}
+  m_LocalRotation: {x: 0.13273787, y: -0, z: -0, w: 0.9911512}
+  m_LocalPosition: {x: 0, y: 0.255, z: -0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7603814202352752501}
+  m_Father: {fileID: 4741338837210207948}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 15.2560005, y: 0, z: 0}
 --- !u!1 &4741338837210207936
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +42,7 @@ GameObject:
   - component: {fileID: 4741338837210207948}
   - component: {fileID: 4741338837210207938}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: CameraCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +59,7 @@ Transform:
   m_LocalPosition: {x: 0.483, y: 0.1938, z: -7.594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7603814202352752501}
+  - {fileID: 323209327986275950}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52,6 +83,7 @@ MonoBehaviour:
   horizontalInput: Right Joystick Horizontal
   verticalInput: Right Joystick Vertical
   sensivity: {x: 0, y: 0}
+  joystickSensivity: {x: 0, y: 0}
   inputVector: {x: 0, y: 0}
   orientation: {fileID: 0}
 --- !u!1 &7603814202352752505
@@ -66,6 +98,7 @@ GameObject:
   - component: {fileID: 7603814202352752500}
   - component: {fileID: 7603814202352752506}
   - component: {fileID: 7603814202352752502}
+  - component: {fileID: 4591844789854270891}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -80,11 +113,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7603814202352752505}
-  m_LocalRotation: {x: 0.13273787, y: -0, z: -0, w: 0.9911512}
-  m_LocalPosition: {x: 0, y: 0.255, z: -0.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4741338837210207948}
+  m_Father: {fileID: 323209327986275950}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 15.2560005, y: 0, z: 0}
 --- !u!20 &7603814202352752500
@@ -198,3 +231,22 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!95 &4591844789854270891
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603814202352752505}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00cc3271264a4b64abe172277065334c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

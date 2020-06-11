@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     {
         currentLife -= damage;
         currentLife = Mathf.Clamp(currentLife, 0, maxLife);
+        CameraBehaviour.instance.CameraShake("CameraShake0");
         if (currentLife <= 0.0f)
         {
             //TODO death effects

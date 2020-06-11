@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
 {
-    public Transform [] targets;
+    public static CameraBehaviour instance;
+    [SerializeField] private Transform [] targets;
     [Header("Position")]
-    public float smoothTime;
-    public Vector3 offset;
+    [SerializeField] private float smoothTime;
+    [SerializeField] private Vector3 offset;
     [Header("Rotation")]
-    public float lookSpeed;
+    [SerializeField] private float lookSpeed;
     [Header("Input")]
-    public string horizontalInput;
-    public string verticalInput;
-    public Vector2 sensivity;
-    public Vector2 joystickSensivity;
+    [SerializeField] private string horizontalInput;
+    [SerializeField] private string verticalInput;
+    [SerializeField] private Vector2 sensivity;
+    [SerializeField] private Vector2 joystickSensivity;
+    [SerializeField] private Animator cameraShakeAnimator;
     // INTERNAL
-    Transform pointer;
+    private Transform pointer;
     [HideInInspector] public Vector2 inputVector;
     [HideInInspector] public Transform orientation;
-    public static CameraBehaviour instance;
-    float cooldown = 0.0f;
-    float desiredXRotation = 0.0f;
-    Vector3 currentVelocity;
+    private float cooldown = 0.0f;
+    private float desiredXRotation = 0.0f;
+    private Vector3 currentVelocity;
 
     void Awake ()
     {
@@ -76,6 +77,11 @@ public class CameraBehaviour : MonoBehaviour
         //Resetting orientation
         orientation.eulerAngles = transform.eulerAngles;
         orientation.eulerAngles = new Vector3(0, orientation.eulerAngles.y, 0);
+    }
+
+    public void CameraShake(string animationName)
+    {
+        cameraShakeAnimator.SetTrigger(animationName);
     }
 
     Vector3 GetAveragePosition ()

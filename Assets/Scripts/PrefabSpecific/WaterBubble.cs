@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WaterBubble : MonoBehaviour
 {
-    public float damage;
-    public GameObject splashPrefab;
-    public float knockbackForce;
-    public float knockbackRadius;
+    [SerializeField] private float damage;
+    [SerializeField] private GameObject splashPrefab;
+    [SerializeField] private float knockbackForce;
+    [SerializeField] private float knockbackRadius;
 
     void OnCollisionEnter (Collision col)
     {

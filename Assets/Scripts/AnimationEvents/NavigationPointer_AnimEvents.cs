@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NavigationPointer : MonoBehaviour
+public class NavigationPointer_AnimEvents : MonoBehaviour
 {
     public void Disable()
     {
