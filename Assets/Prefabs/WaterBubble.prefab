@@ -1040,7 +1040,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 25
+      scalar: 17
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5214,6 +5214,8 @@ MonoBehaviour:
   damage: 15
   splashPrefab: {fileID: 7998951072375877250, guid: 33e31a4c664343a4694a555d51075177,
     type: 3}
+  knockbackForce: 500
+  knockbackRadius: 0
 --- !u!1 &6961246447002999052
 GameObject:
   m_ObjectHideFlags: 0

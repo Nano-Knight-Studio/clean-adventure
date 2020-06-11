@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8029936046379019476}
   - component: {fileID: 5499844867993658265}
   m_Layer: 11
-  m_Name: WaterBubble_Splash
+  m_Name: Enemy_Splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3950,7 +3950,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4775,8 +4775,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 06b1b793b193bff42815e7a7e699a26d, type: 2}
-  - {fileID: 2100000, guid: a6bdf7e5f83085c418287ef233a385ed, type: 2}
+  - {fileID: 2100000, guid: 1a92a02673f88f34a8cd95d25630a523, type: 2}
+  - {fileID: 2100000, guid: 1a92a02673f88f34a8cd95d25630a523, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
