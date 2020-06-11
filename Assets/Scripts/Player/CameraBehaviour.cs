@@ -71,6 +71,7 @@ public class CameraBehaviour : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation,
                                                 targets[0].rotation,
                                                 rotSpeedOverVelocity.Evaluate(GetAverageVelocity())  * Time.fixedDeltaTime);
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0.0f);
             // }
         }
         else
