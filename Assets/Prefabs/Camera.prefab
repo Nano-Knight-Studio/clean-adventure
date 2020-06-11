@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4741338837210207936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.483, y: 0.429, z: -8.802}
+  m_LocalPosition: {x: 0.483, y: 0.1938, z: -7.594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7603814202352752501}
@@ -44,19 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021b2278642dd1c41acce766b7c9db28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
-  cam: {fileID: 7603814202352752501}
   targets:
   - {fileID: 0}
-  movementSpeed: 10
   smoothTime: 0.2
-  lookOffset: {x: 0, y: 0.05, z: 0.12}
-  offset: {x: 0, y: 0.34, z: -0.7}
-  lookSpeed: 3
+  offset: {x: 0, y: 0, z: 0}
+  lookSpeed: 0.8
   horizontalInput: Right Joystick Horizontal
   verticalInput: Right Joystick Vertical
-  inputOffset: 0.05
-  currentOffset: {x: 0, y: 0}
+  sensivity: {x: 0, y: 0}
+  inputVector: {x: 0, y: 0}
   orientation: {fileID: 0}
 --- !u!1 &7603814202352752505
 GameObject:
@@ -84,13 +80,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7603814202352752505}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.13273787, y: -0, z: -0, w: 0.9911512}
+  m_LocalPosition: {x: 0, y: 0.255, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4741338837210207948}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.2560005, y: 0, z: 0}
 --- !u!20 &7603814202352752500
 Camera:
   m_ObjectHideFlags: 0

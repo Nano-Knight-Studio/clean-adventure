@@ -85,14 +85,14 @@ public class PlayerMovement : MonoBehaviour
         // rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(inputVector.x * speed, rb.velocity.y, inputVector.y * speed), acceleration * Time.fixedDeltaTime);
 
         // Rotation
-        if (inputVector.magnitude > 0.1f)
-        {
+        // if (inputVector.magnitude > 0.1f)
+        // {
             transform.forward = Vector3.Lerp(transform.forward, new Vector3(velocity.x, 0, velocity.z).normalized, turnSpeed * Time.deltaTime);
-        }
-        else if (CameraBehaviour.instance.currentOffset.magnitude > 0)
-        {
-            transform.forward = Vector3.Lerp(transform.forward, new Vector3(-CameraBehaviour.instance.currentOffset.x, 0, -CameraBehaviour.instance.currentOffset.y).normalized, turnSpeed * Time.deltaTime);
-        }
+        // }
+        // else if (CameraBehaviour.instance.inputVector.magnitude > 0)
+        // {
+        //     transform.forward = Vector3.Lerp(transform.forward, new Vector3(-CameraBehaviour.instance.inputVector.x, 0, -CameraBehaviour.instance.inputVector.y).normalized, turnSpeed * Time.deltaTime);
+        // }
 
         // Applying jump
         if (jumpFlag)

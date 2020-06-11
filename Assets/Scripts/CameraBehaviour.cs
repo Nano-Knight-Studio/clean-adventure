@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
 {
-    public bool active = true;
-    public Transform cam;
     public Transform [] targets;
     [Header("Position")]
-    public float movementSpeed;
     public float smoothTime;
-    public Vector3 lookOffset;
     public Vector3 offset;
     [Header("Rotation")]
     public float lookSpeed;
     [Header("Input")]
     public string horizontalInput;
     public string verticalInput;
-    public float inputOffset;
-    public float inputSmoothTime;
-    Vector3 currentVelocityInput;
+    public Vector2 sensivity;
+    public Vector2 joystickSensivity;
     // INTERNAL
-    [HideInInspector] public Vector2 currentOffset;
     Transform pointer;
+    [HideInInspector] public Vector2 inputVector;
     [HideInInspector] public Transform orientation;
-    Vector3 currentVelocity;
     public static CameraBehaviour instance;
+    float cooldown = 0.0f;
+    float desiredXRotation = 0.0f;
+    Vector3 currentVelocity;
 
     void Awake ()
     {
@@ -36,16 +33,26 @@ public class CameraBehaviour : MonoBehaviour
         orientation = new GameObject("Orientation").transform;
         orientation.SetParent(transform);
         orientation.localPosition = Vector3.zero;
+
+        Cursor.visible = false;
     }
 
     void Update ()
     {
-        currentOffset = new Vector2(Input.GetAxisRaw(horizontalInput), Input.GetAxisRaw(verticalInput));
+        inputVector = new Vector2(Input.GetAxisRaw(horizontalInput) * -joystickSensivity.x + Input.GetAxisRaw("Mouse X") * sensivity.x,
+                                                    Input.GetAxisRaw(verticalInput) * joystickSensivity.y + Input.GetAxisRaw("Mouse Y") * -sensivity.y);
     }
 
     void LateUpdate ()
     {
-        cam.localPosition = Vector3.SmoothDamp(cam.localPosition, new Vector3(currentOffset.x, 0, currentOffset.y) * -inputOffset, ref currentVelocityInput, inputSmoothTime * Time.deltaTime);
+        if (inputVector.magnitude > 0.05f)
+        {
+            cooldown = 2.0f;
+            transform.Rotate(Vector3.up * inputVector.x  * Time.deltaTime, Space.World);
+            desiredXRotation += inputVector.y  * Time.deltaTime;
+            desiredXRotation = Mathf.Clamp(desiredXRotation, -10, 15);
+            transform.localEulerAngles = new Vector3(desiredXRotation, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        }
     }
 
     void FixedUpdate ()
@@ -54,10 +61,16 @@ public class CameraBehaviour : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, GetAveragePosition() + offset, ref currentVelocity, smoothTime);
 
         //Rotation
-        pointer.LookAt(GetAveragePosition() + lookOffset - new Vector3(currentOffset.x, 0, currentOffset.y) * 0.1f);
-        transform.rotation = Quaternion.Slerp(transform.rotation,
-                                        pointer.rotation,
-                                        lookSpeed * Time.fixedDeltaTime);
+        if (cooldown <= 0)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                                            targets[0].rotation,
+                                            lookSpeed * GetAverageVelocity() * Time.fixedDeltaTime);
+        }
+        else
+        {
+            cooldown -= Time.fixedDeltaTime;
+        }
 
         //Resetting orientation
         orientation.eulerAngles = transform.eulerAngles;
@@ -73,6 +86,23 @@ public class CameraBehaviour : MonoBehaviour
             if (targets[i].gameObject.activeSelf)
             {
                 average += targets[i].position;
+                activeTargets++;
+            }
+        }
+        if (activeTargets > 0) average /= activeTargets;
+        return average;
+    }
+
+    float GetAverageVelocity ()
+    {
+        return 1;
+        float average = 0.0f;
+        int activeTargets = 0;
+        for(int i = 0; i < targets.Length; i++)
+        {
+            if (targets[i].gameObject.activeSelf)
+            {
+                average += targets[i].gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 activeTargets++;
             }
         }
