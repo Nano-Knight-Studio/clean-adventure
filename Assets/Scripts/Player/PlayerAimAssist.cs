@@ -15,12 +15,6 @@ public class PlayerAimAssist : MonoBehaviour
         pointer.localPosition = Vector3.zero;
     }
 
-    void Update ()
-    {
-        //TODO optimization
-        CleanList();
-    }
-
     public Vector3 GetAimAssistDirection()
     {
         try
@@ -37,6 +31,7 @@ public class PlayerAimAssist : MonoBehaviour
 
     public GameObject GetClosestEnemy()
     {
+        CleanList();
         float smallestDistance = Mathf.Infinity;
         GameObject closestEnemy = null;
         foreach (GameObject obj in enemiesOnSight)
