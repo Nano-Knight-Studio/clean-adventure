@@ -103,8 +103,10 @@ public class PlayerMovement : MonoBehaviour
         // Aim assist
         if (playerShooting.keyPressed)
         {
-            transform.forward = Vector3.SmoothDamp(transform.forward, playerAimAssist.GetAimAssistDirection(), ref aimAssistCurrentVelocity, aimAssistSmoothTime * Time.fixedDeltaTime);
-            print (playerAimAssist.GetAimAssistDirection());
+            if (playerAimAssist.GetAimAssistDirection() != Vector3.zero)
+            {
+                transform.forward = Vector3.SmoothDamp(transform.forward, playerAimAssist.GetAimAssistDirection(), ref aimAssistCurrentVelocity, aimAssistSmoothTime * Time.fixedDeltaTime);
+            }
         }
 
         // Applying jump

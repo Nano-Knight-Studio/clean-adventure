@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,9 +23,16 @@ public class PlayerAimAssist : MonoBehaviour
 
     public Vector3 GetAimAssistDirection()
     {
-        pointer.LookAt(GetClosestEnemy().transform);
-        pointer.localEulerAngles = new Vector3(0.0f, pointer.localEulerAngles.y, 0.0f);
-        return pointer.forward;
+        try
+        {
+            pointer.LookAt(GetClosestEnemy().transform);
+            pointer.localEulerAngles = new Vector3(0.0f, pointer.localEulerAngles.y, 0.0f);
+            return pointer.forward;
+        }
+        catch (NullReferenceException ex)
+        {
+            return Vector3.zero;
+        }
     }
 
     public GameObject GetClosestEnemy()
