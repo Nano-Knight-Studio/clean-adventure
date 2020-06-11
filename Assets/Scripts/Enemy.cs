@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     [Header("Graphics")]
     public Material defaultMaterial;
     public Material damageMaterial;
+    public GameObject deathParticles;
     //----- INTERNAL -----//
     NavMeshAgent navMeshAgent;
     Transform target;
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
         pointer.SetParent(transform);
         pointer.localPosition = Vector3.zero;
         renderers = GetComponentsInChildren<MeshRenderer>();
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, UnityEngine.Random.Range(0.0f, 360.0f), transform.localEulerAngles.z);
     }
 
     void FixedUpdate ()
@@ -106,6 +108,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         //TODO death effects
+        if (deathParticles) Instantiate(deathParticles, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

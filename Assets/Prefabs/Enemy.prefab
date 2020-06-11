@@ -1685,7 +1685,7 @@ Rigidbody:
   m_GameObject: {fileID: 6346533089954095151}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
+  m_Drag: 2
   m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1736,6 +1736,8 @@ MonoBehaviour:
     m_Bits: 1024
   defaultMaterial: {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
   damageMaterial: {fileID: 2100000, guid: e68ffbbb3410c2a4ebb930cf641e7baf, type: 2}
+  deathParticles: {fileID: 7998951072375877250, guid: d72f81cebc226ed48badd8962cff4853,
+    type: 3}
 --- !u!135 &949703390633594593
 SphereCollider:
   m_ObjectHideFlags: 0

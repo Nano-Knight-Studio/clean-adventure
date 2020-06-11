@@ -35,6 +35,7 @@ public class CameraBehaviour : MonoBehaviour
         orientation.localPosition = Vector3.zero;
 
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update ()
