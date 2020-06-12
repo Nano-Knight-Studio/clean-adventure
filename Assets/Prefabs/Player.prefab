@@ -529,7 +529,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123926744398909197}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0bbbe45abfbb5d744a634cc8ff1ef982, type: 2}
   m_CullingMode: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
   - Gun_1
   - Gun_2
   shootDelay: 0.07
-  spread: 3.5
+  spread: 2
   keyPressed: 0
 --- !u!114 &2022911629
 MonoBehaviour:
@@ -825,3 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 100
   currentLife: 100
+  damageSounds:
+  - Player_Damage_0
+  - Player_Damage_1
+  - Player_Damage_2

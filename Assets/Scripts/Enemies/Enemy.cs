@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private float damage;
     [SerializeField] private LayerMask attackLayerMask;
+    [SerializeField] private Vector3 selfKnockback;
     [Header("Taking Damage")]
     [SerializeField] private float damageScaleMultiplier;
     [SerializeField] private float damageScaleSpeed;
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
     private bool attacking = false;
     private Transform pointer;
     private bool stunned = false;
+    private Rigidbody rb;
 
     void Start ()
     {
@@ -48,6 +50,7 @@ public class Enemy : MonoBehaviour
         pointer.SetParent(transform);
         pointer.localPosition = Vector3.zero;
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, UnityEngine.Random.Range(0.0f, 360.0f), transform.localEulerAngles.z);
+        rb = GetComponent<Rigidbody>();
         StartCoroutine(PlayIdleSound());
     }
 
@@ -79,6 +82,7 @@ public class Enemy : MonoBehaviour
     void ApplyDamage()
     {
         attacking = false;
+        rb.AddForce(transform.forward * selfKnockback.z + transform.right * selfKnockback.x + transform.up * selfKnockback.y);
         foreach (Collider c in Physics.OverlapSphere(transform.position, attackRange, attackLayerMask))
         {
             if (c.gameObject.tag == "Player")
@@ -155,7 +159,6 @@ public class Enemy : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             ApplyDamage();
-            Die();
         }
     }
 }

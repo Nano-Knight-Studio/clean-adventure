@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float maxLife;
-    public float currentLife;
+    [SerializeField] private float maxLife;
+    [SerializeField] private float currentLife;
+    [SerializeField] private string[] damageSounds;
 
     public void TakeDamage(float damage)
     {
@@ -19,6 +20,9 @@ public class PlayerStats : MonoBehaviour
         else
         {
             //TODO refresh UI
+            string selectedAudio = damageSounds[Random.Range(0, damageSounds.Length)];
+            AudioManager.instance.SetPitch(selectedAudio, Random.Range(0.7f, 1.3f));
+            AudioManager.instance.PlaySound(selectedAudio);
         }
     }
 }
