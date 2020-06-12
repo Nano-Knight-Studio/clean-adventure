@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator PlayIdleSound ()
     {
-        yield return new WaitForSeconds(UnityEngine.Random.Range(2.0f, 20.0f));
+        yield return new WaitForSeconds(UnityEngine.Random.Range(5.0f, 60.0f));
         string selectedSound = idleSounds[UnityEngine.Random.Range(0, idleSounds.Length)];
         AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
         AudioManager.instance.PlaySound(selectedSound, transform.position);
@@ -104,8 +104,8 @@ public class Enemy : MonoBehaviour
                 navMeshAgent.SetDestination(player.transform.position);
                 target = player.transform;
                 string selectedSound = angrySounds[UnityEngine.Random.Range(0, angrySounds.Length)];
-                AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
-                AudioManager.instance.PlaySound(selectedSound, transform.position);
+                // AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
+                // AudioManager.instance.PlaySound(selectedSound, transform.position);
             }
         }
         catch (Exception ex) {}

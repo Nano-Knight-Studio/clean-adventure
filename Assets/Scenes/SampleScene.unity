@@ -11228,7 +11228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  density: 4
+  density: 10
   streets: {fileID: 4422610256594456819}
   height: 0.2
 --- !u!4 &450908670
