@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool blocked;
     private Transform cameraOrientation;
     private Vector3 aimAssistCurrentVelocity;
+    private float timeMoving = 0.0f;
 
     void Start ()
     {
@@ -78,6 +79,15 @@ public class PlayerMovement : MonoBehaviour
 
         // Animation parameters
         animator.SetFloat("Walk", rb.velocity.magnitude);
+
+        if (isStopped)
+        {
+            timeMoving = 0.0f;
+        }
+        else
+        {
+            timeMoving += Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
@@ -105,7 +115,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if (playerAimAssist.GetAimAssistDirection() != Vector3.zero)
             {
-                transform.forward = Vector3.SmoothDamp(transform.forward, playerAimAssist.GetAimAssistDirection(), ref aimAssistCurrentVelocity, aimAssistSmoothTime * Time.fixedDeltaTime);
+                if (isStopped)
+                {
+                    transform.forward = Vector3.SmoothDamp(transform.forward, playerAimAssist.GetAimAssistDirection(), ref aimAssistCurrentVelocity, aimAssistSmoothTime * Time.fixedDeltaTime);
+                }
+                else if (timeMoving <= 1.0f && !Input.GetKey(KeyCode.Mouse0))
+                {
+                    transform.forward = Vector3.Lerp(transform.forward, playerAimAssist.GetAimAssistDirection(), 10 * Time.fixedDeltaTime);
+                }
             }
         }
 
