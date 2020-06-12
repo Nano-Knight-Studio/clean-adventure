@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] prefabs;
-    public Transform streets;
-    public float height;
-    Collider[] streetColliders;
-    public List<GameObject> enemies = new List<GameObject>();
+    [SerializeField] private float height;
+    Collider[] colliders;
+    private List<GameObject> enemies = new List<GameObject>();
 
     void Start ()
     {
-        streetColliders = GetComponentsInChildren<BoxCollider>();
+        colliders = GetComponentsInChildren<BoxCollider>();
         SpawnAll();
         StartCoroutine(Respawn());
     }
@@ -20,20 +18,20 @@ public class EnemySpawner : MonoBehaviour
     public void SpawnAll()
     {
         CleanList();
-        foreach(Collider c in streetColliders)
+        foreach(Collider c in colliders)
         {
-            for (int i=enemies.Count; i < EnemyGlobalSettings.density; i++)
+            for (int i=enemies.Count; i < EnemyGlobalSettings.GetDensity(); i++)
             {
                 Vector3 pos = GenerateRandomPointAtCollider(c);
                 pos = new Vector3(pos.x, height, pos.z);
-                enemies.Add(Instantiate(prefabs[Random.Range(0, prefabs.Length)], pos, Quaternion.identity));
+                enemies.Add(Instantiate(EnemyGlobalSettings.GetEnemy(), pos, Quaternion.identity));
             }
         }
     }
 
     IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(Random.Range(5.0f, 15.0f));
+        yield return new WaitForSeconds(Random.Range(3.0f, 6.0f));
         SpawnAll();
         StartCoroutine(Respawn());
     }

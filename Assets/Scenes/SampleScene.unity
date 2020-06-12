@@ -739,11 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &20760404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,11 +1165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &26912565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,11 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!4 &27769527 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -1871,11 +1859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!4 &77541861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -8191,11 +8175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &289263751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8707,11 +8687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &299108408
 GameObject:
   m_ObjectHideFlags: 0
@@ -11305,54 +11281,6 @@ Transform:
   m_Father: {fileID: 1872595060}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &450908668
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 450908670}
-  - component: {fileID: 450908669}
-  m_Layer: 0
-  m_Name: EnemySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &450908669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450908668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
-  height: 0.2
-  enemies: []
---- !u!4 &450908670
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450908668}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &461541567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11899,11 +11827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &470070693
 GameObject:
   m_ObjectHideFlags: 0
@@ -12150,11 +12074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &475342463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12366,11 +12286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!4 &489013486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -13024,11 +12940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &512367619
 GameObject:
   m_ObjectHideFlags: 0
@@ -13945,7 +13857,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560177953
 GameObject:
@@ -15360,11 +15272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &621155552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19385,11 +19293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &829428475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23006,11 +22910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &954770338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23594,11 +23494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &969717914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24402,11 +24298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &984611878
 GameObject:
   m_ObjectHideFlags: 0
@@ -25790,7 +25682,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 9054a9d0066a89c4292cd0e6b4638289,
         type: 3}
       propertyPath: m_Name
-      value: Log
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
         type: 3}
@@ -25892,7 +25784,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034976801}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.07360621
@@ -28956,11 +28848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &1170429554
 GameObject:
   m_ObjectHideFlags: 0
@@ -32423,11 +32311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1293258638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34443,11 +34327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1354630558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36493,11 +36373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1432265086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37531,11 +37407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!4 &1459059489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -40072,11 +39944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1557482681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41159,6 +41027,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1958353877}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1582179330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582179332}
+  - component: {fileID: 1582179331}
+  m_Layer: 0
+  m_Name: EnemyGlobalSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1582179331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582179330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff8b7ac69c3154418526f2dbb834d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulties:
+  - enemies:
+    - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+    density: 3
+  - enemies:
+    - {fileID: 6346533089954095151, guid: 6875afcab59b22d4b87cd4a8fa8ef42b, type: 3}
+    density: 6
+  currentDifficulty: 0
+--- !u!4 &1582179332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582179330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.355776, y: 9.748972, z: 5.1958413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1585180773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42295,11 +42214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1637663632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42834,11 +42749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &1659216907
 GameObject:
   m_ObjectHideFlags: 0
@@ -43618,11 +43529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1674006268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44707,11 +44614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1709084337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44929,11 +44832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1711685721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45145,11 +45044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &1718040169
 GameObject:
   m_ObjectHideFlags: 0
@@ -45541,11 +45436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1730249340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46431,11 +46322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1779753549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48513,11 +48400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1877480470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51233,11 +51116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &1960470826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52490,11 +52369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &2004115388
 GameObject:
   m_ObjectHideFlags: 0
@@ -52820,11 +52695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &2014392080
 GameObject:
   m_ObjectHideFlags: 0
@@ -53623,11 +53494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1001 &2051473117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55037,11 +54904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &2108422652
 GameObject:
   m_ObjectHideFlags: 0
@@ -55319,11 +55182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!4 &2119479359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 453eeb69ada35cc40b9bbb9cf60b6a99,
@@ -55860,11 +55719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!1 &809272719896552160
 GameObject:
   m_ObjectHideFlags: 0
@@ -55940,11 +55795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!23 &2097290961608086145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56534,11 +56385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  streets: {fileID: 4422610256594456819}
   height: 0.2
-  enemies: []
 --- !u!33 &8934887810940426308
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
     private Transform pointer;
     private bool stunned = false;
     private Rigidbody rb;
+    private float timeOutsideCamera;
 
     void Start ()
     {
@@ -59,6 +60,19 @@ public class Enemy : MonoBehaviour
         // Lerping scale
         // Used on damage effect
         transform.localScale = Vector3.Lerp(transform.localScale, desiredScale, damageScaleSpeed * Time.deltaTime);
+
+        if (mainRenderer.isVisible)
+        {
+            timeOutsideCamera = 0.0f;
+        }
+        else
+        {
+            timeOutsideCamera += Time.deltaTime;
+            if (timeOutsideCamera >= 30.0f)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     void FixedUpdate ()

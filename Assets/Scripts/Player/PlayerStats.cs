@@ -36,6 +36,7 @@ public class PlayerStats : MonoBehaviour
             other.gameObject.transform.SetParent(leftHand);
             other.gameObject.transform.localPosition = Vector3.zero;
             other.gameObject.transform.localEulerAngles = Vector3.zero;
+            EnemyGlobalSettings.NextLevel();
         }
     }
 }
