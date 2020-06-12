@@ -5,26 +5,48 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] prefabs;
-    public int density;
     public Transform streets;
     public float height;
     Collider[] streetColliders;
+    public List<GameObject> enemies = new List<GameObject>();
 
     void Start ()
     {
-        streetColliders = streets.GetComponentsInChildren<BoxCollider>();
+        streetColliders = GetComponentsInChildren<BoxCollider>();
         SpawnAll();
+        StartCoroutine(Respawn());
     }
 
-    void SpawnAll()
+    public void SpawnAll()
     {
+        CleanList();
         foreach(Collider c in streetColliders)
         {
-            for (int i=0; i < density; i++)
+            for (int i=enemies.Count; i < EnemyGlobalSettings.density; i++)
             {
                 Vector3 pos = GenerateRandomPointAtCollider(c);
                 pos = new Vector3(pos.x, height, pos.z);
-                Instantiate(prefabs[Random.Range(0, prefabs.Length)], pos, Quaternion.identity);
+                enemies.Add(Instantiate(prefabs[Random.Range(0, prefabs.Length)], pos, Quaternion.identity));
+            }
+        }
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(Random.Range(5.0f, 15.0f));
+        SpawnAll();
+        StartCoroutine(Respawn());
+    }
+
+    void CleanList()
+    {
+        for (int i=0; i < enemies.Count; i++)
+        {
+            if (enemies[i] == null)
+            {
+                enemies.RemoveAt(i);
+                CleanList();
+                return;
             }
         }
     }

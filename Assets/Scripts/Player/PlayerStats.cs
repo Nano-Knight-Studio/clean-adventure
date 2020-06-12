@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float maxLife;
     [SerializeField] private float currentLife;
     [SerializeField] private string[] damageSounds;
+    [SerializeField] private Transform leftHand;
 
     public void TakeDamage(float damage)
     {
@@ -23,6 +24,18 @@ public class PlayerStats : MonoBehaviour
             string selectedAudio = damageSounds[Random.Range(0, damageSounds.Length)];
             AudioManager.instance.SetPitch(selectedAudio, Random.Range(0.7f, 1.3f));
             AudioManager.instance.PlaySound(selectedAudio);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Goal")
+        {
+            other.gameObject.GetComponent<SimpleRotation>().enabled = false;
+            UserInterface.instance.CollectGoal();
+            other.gameObject.transform.SetParent(leftHand);
+            other.gameObject.transform.localPosition = Vector3.zero;
+            other.gameObject.transform.localEulerAngles = Vector3.zero;
         }
     }
 }

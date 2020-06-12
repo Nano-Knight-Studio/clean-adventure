@@ -144,7 +144,7 @@ public class Enemy : MonoBehaviour
         mainRenderer.material = defaultMaterial;
     }
 
-    void Die()
+    public void Die()
     {
         //TODO death effects
         string selectedSound = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];

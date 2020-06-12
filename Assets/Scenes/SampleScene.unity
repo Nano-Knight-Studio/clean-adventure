@@ -631,6 +631,7 @@ GameObject:
   - component: {fileID: 16862948}
   - component: {fileID: 16862950}
   - component: {fileID: 16862951}
+  - component: {fileID: 16862952}
   m_Layer: 0
   m_Name: Street_Curve (1)
   m_TagString: Untagged
@@ -650,7 +651,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 18
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &16862948
 MeshRenderer:
@@ -726,6 +727,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &16862952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16862946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &20760404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,6 +1061,7 @@ GameObject:
   - component: {fileID: 25153000}
   - component: {fileID: 25153002}
   - component: {fileID: 25153003}
+  - component: {fileID: 25153004}
   m_Layer: 0
   m_Name: Street_Straight (21)
   m_TagString: Untagged
@@ -1062,7 +1081,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -179.99998}
 --- !u!23 &25153000
 MeshRenderer:
@@ -1138,6 +1157,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &25153004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25152998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &26912565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1187,7 @@ GameObject:
   - component: {fileID: 26912567}
   - component: {fileID: 26912569}
   - component: {fileID: 26912570}
+  - component: {fileID: 26912571}
   m_Layer: 0
   m_Name: Street_Curve (6)
   m_TagString: Untagged
@@ -1170,7 +1207,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 24
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!23 &26912567
 MeshRenderer:
@@ -1246,6 +1283,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &26912571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26912565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!4 &27769527 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -1709,6 +1763,7 @@ GameObject:
   - component: {fileID: 77539174}
   - component: {fileID: 77539176}
   - component: {fileID: 77539177}
+  - component: {fileID: 77539178}
   m_Layer: 0
   m_Name: Street_Curve (10)
   m_TagString: Untagged
@@ -1724,11 +1779,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77539172}
   m_LocalRotation: {x: -0.00000013470347, y: 0.70710707, z: 0.7071066, w: 0.00000010430813}
-  m_LocalPosition: {x: 80, y: -0, z: 30}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 80, y: 0, z: 30}
+  m_LocalScale: {x: 100.00021, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 28
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 180.00002}
 --- !u!23 &77539174
 MeshRenderer:
@@ -1804,6 +1859,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &77539178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77539172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!4 &77541861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -8011,6 +8083,7 @@ GameObject:
   - component: {fileID: 287658460}
   - component: {fileID: 287658462}
   - component: {fileID: 287658463}
+  - component: {fileID: 287658464}
   m_Layer: 0
   m_Name: Street_Straight (15)
   m_TagString: Untagged
@@ -8030,7 +8103,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 11
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &287658460
 MeshRenderer:
@@ -8106,6 +8179,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &287658464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287658458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &289263751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8509,6 +8599,7 @@ GameObject:
   - component: {fileID: 298363565}
   - component: {fileID: 298363567}
   - component: {fileID: 298363568}
+  - component: {fileID: 298363569}
   m_Layer: 0
   m_Name: Street_Straight (17)
   m_TagString: Untagged
@@ -8525,10 +8616,10 @@ Transform:
   m_GameObject: {fileID: 298363563}
   m_LocalRotation: {x: -0.7071068, y: -0.000000059604645, z: 0.000000047210005, w: 0.7071067}
   m_LocalPosition: {x: 50, y: 0, z: 30}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 99.999886, z: 99.999886}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!23 &298363565
 MeshRenderer:
@@ -8604,6 +8695,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &298363569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298363563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &299108408
 GameObject:
   m_ObjectHideFlags: 0
@@ -11213,7 +11321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &450908669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11228,9 +11336,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
-  density: 4
   streets: {fileID: 4422610256594456819}
   height: 0.2
+  enemies: []
 --- !u!4 &450908670
 Transform:
   m_ObjectHideFlags: 0
@@ -11243,7 +11351,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &461541567
 PrefabInstance:
@@ -11683,6 +11791,7 @@ GameObject:
   - component: {fileID: 467902849}
   - component: {fileID: 467902851}
   - component: {fileID: 467902852}
+  - component: {fileID: 467902853}
   m_Layer: 0
   m_Name: Street_BorderlessStraight (3)
   m_TagString: Untagged
@@ -11702,7 +11811,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 31
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180.00002}
 --- !u!23 &467902849
 MeshRenderer:
@@ -11778,6 +11887,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &467902853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467902847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &470070693
 GameObject:
   m_ObjectHideFlags: 0
@@ -11916,6 +12042,7 @@ GameObject:
   - component: {fileID: 474282678}
   - component: {fileID: 474282680}
   - component: {fileID: 474282681}
+  - component: {fileID: 474282682}
   m_Layer: 0
   m_Name: Street_BorderlessStraight (4)
   m_TagString: Untagged
@@ -11932,10 +12059,10 @@ Transform:
   m_GameObject: {fileID: 474282676}
   m_LocalRotation: {x: -0.5000005, y: -0.49999973, z: -0.49999967, w: 0.50000024}
   m_LocalPosition: {x: 10, y: 0, z: 40}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 32
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &474282678
 MeshRenderer:
@@ -12011,6 +12138,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &474282682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474282676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &475342463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12114,6 +12258,7 @@ GameObject:
   - component: {fileID: 479048592}
   - component: {fileID: 479048594}
   - component: {fileID: 479048595}
+  - component: {fileID: 479048596}
   m_Layer: 0
   m_Name: Street_Straight (4)
   m_TagString: Untagged
@@ -12129,11 +12274,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479048590}
   m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0, y: -0, z: -10}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!23 &479048592
 MeshRenderer:
@@ -12209,6 +12354,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &479048596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479048590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!4 &489013486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -12754,6 +12916,7 @@ GameObject:
   - component: {fileID: 509720641}
   - component: {fileID: 509720643}
   - component: {fileID: 509720644}
+  - component: {fileID: 509720645}
   m_Layer: 0
   m_Name: Street_Straight (12)
   m_TagString: Untagged
@@ -12773,7 +12936,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 7
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &509720641
 MeshRenderer:
@@ -12849,6 +13012,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &509720645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509720639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &512367619
 GameObject:
   m_ObjectHideFlags: 0
@@ -13765,7 +13945,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560177953
 GameObject:
@@ -15072,6 +15252,7 @@ GameObject:
   - component: {fileID: 618629390}
   - component: {fileID: 618629392}
   - component: {fileID: 618629393}
+  - component: {fileID: 618629394}
   m_Layer: 0
   m_Name: Street_Straight (13)
   m_TagString: Untagged
@@ -15091,7 +15272,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 8
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &618629390
 MeshRenderer:
@@ -15167,6 +15348,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &618629394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618629388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &621155552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19079,6 +19277,7 @@ GameObject:
   - component: {fileID: 825015974}
   - component: {fileID: 825015976}
   - component: {fileID: 825015977}
+  - component: {fileID: 825015978}
   m_Layer: 0
   m_Name: Street_Curve (7)
   m_TagString: Untagged
@@ -19094,11 +19293,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825015972}
   m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 60, y: -0, z: 30}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 60, y: 0, z: 30}
+  m_LocalScale: {x: 100.00015, y: 100.00015, z: 100.00015}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 25
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!23 &825015974
 MeshRenderer:
@@ -19174,6 +19373,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &825015978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825015972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &829428475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22682,6 +22898,7 @@ GameObject:
   - component: {fileID: 954350555}
   - component: {fileID: 954350557}
   - component: {fileID: 954350558}
+  - component: {fileID: 954350559}
   m_Layer: 0
   m_Name: Street_BorderlessStraight (7)
   m_TagString: Untagged
@@ -22697,11 +22914,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954350553}
   m_LocalRotation: {x: -0.7071069, y: 0.0000006556511, z: 0.0000004464707, w: 0.70710665}
-  m_LocalPosition: {x: 30, y: -0, z: 60}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 30, y: 0, z: 60}
+  m_LocalScale: {x: 100, y: 99.999886, z: 99.999886}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 35
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!23 &954350555
 MeshRenderer:
@@ -22777,6 +22994,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &954350559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954350553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &954770338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23252,6 +23486,7 @@ GameObject:
   - component: {fileID: 962942678}
   - component: {fileID: 962942680}
   - component: {fileID: 962942681}
+  - component: {fileID: 962942682}
   m_Layer: 0
   m_Name: Street_Curve (8)
   m_TagString: Untagged
@@ -23271,7 +23506,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 26
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 270}
 --- !u!23 &962942678
 MeshRenderer:
@@ -23347,6 +23582,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &962942682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962942676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &969717914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24042,6 +24294,7 @@ GameObject:
   - component: {fileID: 984342822}
   - component: {fileID: 984342824}
   - component: {fileID: 984342825}
+  - component: {fileID: 984342826}
   m_Layer: 0
   m_Name: Street_BorderlessStraight (6)
   m_TagString: Untagged
@@ -24057,11 +24310,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984342820}
   m_LocalRotation: {x: -0.7071069, y: 0.0000006556511, z: 0.0000004464707, w: 0.70710665}
-  m_LocalPosition: {x: 20, y: -0, z: 60}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 20, y: 0, z: 60}
+  m_LocalScale: {x: 100, y: 99.999886, z: 99.999886}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 34
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!23 &984342822
 MeshRenderer:
@@ -24137,6 +24390,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &984342826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984342820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &984611878
 GameObject:
   m_ObjectHideFlags: 0
@@ -25510,6 +25780,123 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ee346bfafddc66543977d0058652bb4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0527cf68c9e85f439d96036ef9ccf9b, type: 3}
+--- !u!1001 &1034976800
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_Name
+      value: Log
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.552
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1746
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.271
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6647649
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.241014
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.24101403
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.66476476
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -50.143
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8069237
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8069237
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 9054a9d0066a89c4292cd0e6b4638289,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8069237
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9054a9d0066a89c4292cd0e6b4638289, type: 3}
+--- !u!1 &1034976801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9054a9d0066a89c4292cd0e6b4638289,
+    type: 3}
+  m_PrefabInstance: {fileID: 1034976800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1034976802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034976801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1a5a20ad8020b41a6155f417e078ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 50, z: 0}
+  global: 1
+--- !u!135 &1034976803
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034976801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07360621
+  m_Center: {x: -0.00020452775, y: -0.00016689117, z: -0.0007990734}
 --- !u!1 &1043654493
 GameObject:
   m_ObjectHideFlags: 0
@@ -28461,6 +28848,7 @@ GameObject:
   - component: {fileID: 1167870166}
   - component: {fileID: 1167870168}
   - component: {fileID: 1167870169}
+  - component: {fileID: 1167870170}
   m_Layer: 0
   m_Name: Street_BorderlessStraight (2)
   m_TagString: Untagged
@@ -28480,7 +28868,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 30
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180.00002}
 --- !u!23 &1167870166
 MeshRenderer:
@@ -28556,6 +28944,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1167870170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167870164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &1170429554
 GameObject:
   m_ObjectHideFlags: 0
@@ -28959,7 +29364,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -31910,6 +32315,7 @@ GameObject:
   - component: {fileID: 1292559824}
   - component: {fileID: 1292559823}
   - component: {fileID: 1292559826}
+  - component: {fileID: 1292559827}
   m_Layer: 0
   m_Name: Street_T (4)
   m_TagString: Untagged
@@ -31925,11 +32331,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292559821}
   m_LocalRotation: {x: -0.00000027198232, y: -0.70710707, z: -0.7071066, w: 0.00000027567145}
-  m_LocalPosition: {x: 39.999966, y: 0.0000025331974, z: 60.00002}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 39.999966, y: 0, z: 60.00002}
+  m_LocalScale: {x: 100.00032, y: 100.00015, z: 100.00015}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 38
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180.00002}
 --- !u!65 &1292559823
 BoxCollider:
@@ -32005,6 +32411,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1292559827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292559821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1293258638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33912,6 +34335,7 @@ GameObject:
   - component: {fileID: 1349656119}
   - component: {fileID: 1349656121}
   - component: {fileID: 1349656122}
+  - component: {fileID: 1349656123}
   m_Layer: 0
   m_Name: Street_Straight (16)
   m_TagString: Untagged
@@ -33931,7 +34355,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 12
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &1349656119
 MeshRenderer:
@@ -34007,6 +34431,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1349656123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349656117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1354630558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35923,7 +36364,7 @@ Transform:
   - {fileID: 467110921}
   - {fileID: 280054814}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1421469289 stripped
 Transform:
@@ -35944,6 +36385,7 @@ GameObject:
   - component: {fileID: 1422848759}
   - component: {fileID: 1422848761}
   - component: {fileID: 1422848762}
+  - component: {fileID: 1422848763}
   m_Layer: 0
   m_Name: Street_Straight (11)
   m_TagString: Untagged
@@ -35963,7 +36405,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 6
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &1422848759
 MeshRenderer:
@@ -36039,6 +36481,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1422848763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422848757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1432265086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36964,6 +37423,7 @@ GameObject:
   - component: {fileID: 1455619796}
   - component: {fileID: 1455619798}
   - component: {fileID: 1455619799}
+  - component: {fileID: 1455619800}
   m_Layer: 0
   m_Name: Street_Curve (5)
   m_TagString: Untagged
@@ -36983,7 +37443,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 22
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -360}
 --- !u!23 &1455619796
 MeshRenderer:
@@ -37059,6 +37519,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1455619800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455619794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!4 &1459059489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a0527cf68c9e85f439d96036ef9ccf9b,
@@ -38768,6 +39245,117 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1515995186}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1517444911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517444916}
+  - component: {fileID: 1517444915}
+  - component: {fileID: 1517444914}
+  - component: {fileID: 1517444913}
+  - component: {fileID: 1517444912}
+  m_Layer: 5
+  m_Name: UserInterface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1517444912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517444911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d617830e6fc53924885d0dd07de08b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1517444913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517444911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1517444914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517444911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1517444915
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517444911}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1517444916
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517444911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1525851917
 GameObject:
   m_ObjectHideFlags: 0
@@ -39376,6 +39964,7 @@ GameObject:
   - component: {fileID: 1557482226}
   - component: {fileID: 1557482225}
   - component: {fileID: 1557482228}
+  - component: {fileID: 1557482229}
   m_Layer: 0
   m_Name: Street_T (3)
   m_TagString: Untagged
@@ -39391,11 +39980,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557482223}
   m_LocalRotation: {x: -0.7071072, y: 0.00000028312203, z: 0.00000026294063, w: 0.7071065}
-  m_LocalPosition: {x: 39.999996, y: -0.0000025331974, z: 30.000008}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 40, y: 0, z: 30}
+  m_LocalScale: {x: 100, y: 100.00015, z: 100.00015}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 37
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!65 &1557482225
 BoxCollider:
@@ -39471,6 +40060,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1557482229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557482223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1557482681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41581,6 +42187,7 @@ GameObject:
   - component: {fileID: 1636103806}
   - component: {fileID: 1636103808}
   - component: {fileID: 1636103809}
+  - component: {fileID: 1636103810}
   m_Layer: 0
   m_Name: Street_Straight (23)
   m_TagString: Untagged
@@ -41600,7 +42207,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 15
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -179.99998}
 --- !u!23 &1636103806
 MeshRenderer:
@@ -41676,6 +42283,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1636103810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636103804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1637663632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42102,6 +42726,7 @@ GameObject:
   - component: {fileID: 1656685123}
   - component: {fileID: 1656685125}
   - component: {fileID: 1656685126}
+  - component: {fileID: 1656685127}
   m_Layer: 0
   m_Name: Street_Straight (9)
   m_TagString: Untagged
@@ -42118,10 +42743,10 @@ Transform:
   m_GameObject: {fileID: 1656685121}
   m_LocalRotation: {x: -0.7071068, y: -0.000000059604645, z: 0.000000047210005, w: 0.7071067}
   m_LocalPosition: {x: 70, y: 0, z: 40}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 99.99992, z: 99.99992}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 5
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!23 &1656685123
 MeshRenderer:
@@ -42197,6 +42822,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1656685127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656685121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &1659216907
 GameObject:
   m_ObjectHideFlags: 0
@@ -42868,6 +43510,7 @@ GameObject:
   - component: {fileID: 1673632955}
   - component: {fileID: 1673632957}
   - component: {fileID: 1673632958}
+  - component: {fileID: 1673632959}
   m_Layer: 0
   m_Name: Street_Straight (1)
   m_TagString: Untagged
@@ -42884,10 +43527,10 @@ Transform:
   m_GameObject: {fileID: 1673632953}
   m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!23 &1673632955
 MeshRenderer:
@@ -42963,6 +43606,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1673632959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673632953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1674006268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43117,7 +43777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1683600340
 SphereCollider:
@@ -43894,7 +44554,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703142337
 GameObject:
@@ -43939,6 +44599,7 @@ GameObject:
   - component: {fileID: 1703355999}
   - component: {fileID: 1703356001}
   - component: {fileID: 1703356002}
+  - component: {fileID: 1703356003}
   m_Layer: 0
   m_Name: Street_Curve (4)
   m_TagString: Untagged
@@ -43958,7 +44619,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 21
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 180.00002}
 --- !u!23 &1703355999
 MeshRenderer:
@@ -44034,6 +44695,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1703356003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703355997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1709084337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44143,6 +44821,7 @@ GameObject:
   - component: {fileID: 1709792457}
   - component: {fileID: 1709792459}
   - component: {fileID: 1709792460}
+  - component: {fileID: 1709792461}
   m_Layer: 0
   m_Name: Street_BorderlessStraight (5)
   m_TagString: Untagged
@@ -44159,10 +44838,10 @@ Transform:
   m_GameObject: {fileID: 1709792455}
   m_LocalRotation: {x: -0.5000005, y: -0.49999973, z: -0.49999967, w: 0.50000024}
   m_LocalPosition: {x: 10, y: 0, z: 50}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 33
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &1709792457
 MeshRenderer:
@@ -44238,6 +44917,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1709792461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709792455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1711685721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44341,6 +45037,7 @@ GameObject:
   - component: {fileID: 1714974508}
   - component: {fileID: 1714974510}
   - component: {fileID: 1714974511}
+  - component: {fileID: 1714974512}
   m_Layer: 0
   m_Name: Street_Straight (22)
   m_TagString: Untagged
@@ -44360,7 +45057,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 14
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -179.99998}
 --- !u!23 &1714974508
 MeshRenderer:
@@ -44436,6 +45133,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1714974512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714974506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &1718040169
 GameObject:
   m_ObjectHideFlags: 0
@@ -44530,7 +45244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1719766736
 PrefabInstance:
@@ -44719,6 +45433,7 @@ GameObject:
   - component: {fileID: 1724474638}
   - component: {fileID: 1724474640}
   - component: {fileID: 1724474641}
+  - component: {fileID: 1724474642}
   m_Layer: 0
   m_Name: Street_Straight (14)
   m_TagString: Untagged
@@ -44738,7 +45453,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 10
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &1724474638
 MeshRenderer:
@@ -44814,6 +45529,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1724474642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724474636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1730249340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45591,6 +46323,7 @@ GameObject:
   - component: {fileID: 1777971469}
   - component: {fileID: 1777971471}
   - component: {fileID: 1777971472}
+  - component: {fileID: 1777971473}
   m_Layer: 0
   m_Name: Street_BorderlessStraight (1)
   m_TagString: Untagged
@@ -45606,11 +46339,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777971467}
   m_LocalRotation: {x: 0.49999985, y: -0.50000024, z: -0.5000003, w: -0.49999973}
-  m_LocalPosition: {x: 40, y: -0, z: 40}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 40, y: 0, z: 40}
+  m_LocalScale: {x: 100.00015, y: 100, z: 100.00015}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 29
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -270}
 --- !u!23 &1777971469
 MeshRenderer:
@@ -45686,6 +46419,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1777971473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777971467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1779753549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46762,6 +47512,36 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ee346bfafddc66543977d0058652bb4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0527cf68c9e85f439d96036ef9ccf9b, type: 3}
+--- !u!1 &1816818630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1816818631}
+  m_Layer: 10
+  m_Name: Hand (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1816818631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816818630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.862, y: 0, z: 0.438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022911628}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1818064382
 GameObject:
   m_ObjectHideFlags: 0
@@ -47521,7 +48301,7 @@ Transform:
   - {fileID: 408198522}
   - {fileID: 467447343}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1874622339
 PrefabInstance:
@@ -47625,6 +48405,7 @@ GameObject:
   - component: {fileID: 1874720351}
   - component: {fileID: 1874720353}
   - component: {fileID: 1874720354}
+  - component: {fileID: 1874720355}
   m_Layer: 0
   m_Name: Street_Straight (32)
   m_TagString: Untagged
@@ -47644,7 +48425,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 17
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &1874720351
 MeshRenderer:
@@ -47720,6 +48501,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1874720355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874720349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1877480470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50327,6 +51125,7 @@ GameObject:
   - component: {fileID: 1959196151}
   - component: {fileID: 1959196153}
   - component: {fileID: 1959196154}
+  - component: {fileID: 1959196155}
   m_Layer: 0
   m_Name: Street_BorderlessStraight
   m_TagString: Untagged
@@ -50343,10 +51142,10 @@ Transform:
   m_GameObject: {fileID: 1959196149}
   m_LocalRotation: {x: 0.49999985, y: -0.50000024, z: -0.5000003, w: -0.49999973}
   m_LocalPosition: {x: 40, y: 0, z: 50}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.00015, y: 100, z: 100.00015}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 16
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -270}
 --- !u!23 &1959196151
 MeshRenderer:
@@ -50422,6 +51221,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1959196155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959196149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &1960470826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51566,6 +52382,7 @@ GameObject:
   - component: {fileID: 2001161242}
   - component: {fileID: 2001161241}
   - component: {fileID: 2001161244}
+  - component: {fileID: 2001161245}
   m_Layer: 0
   m_Name: Street_T (1)
   m_TagString: Untagged
@@ -51582,10 +52399,10 @@ Transform:
   m_GameObject: {fileID: 2001161239}
   m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 10, y: 0, z: 60}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 36
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!65 &2001161241
 BoxCollider:
@@ -51661,6 +52478,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &2001161245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001161239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &2004115388
 GameObject:
   m_ObjectHideFlags: 0
@@ -51878,6 +52712,7 @@ GameObject:
   - component: {fileID: 2011474379}
   - component: {fileID: 2011474381}
   - component: {fileID: 2011474382}
+  - component: {fileID: 2011474383}
   m_Layer: 0
   m_Name: Street_Curve (9)
   m_TagString: Untagged
@@ -51894,10 +52729,10 @@ Transform:
   m_GameObject: {fileID: 2011474377}
   m_LocalRotation: {x: 0.70710695, y: 0.00000014156103, z: 0.00000009232713, w: -0.7071067}
   m_LocalPosition: {x: 80, y: 0, z: 40}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 27
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 360}
 --- !u!23 &2011474379
 MeshRenderer:
@@ -51973,6 +52808,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &2011474383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011474377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &2014392080
 GameObject:
   m_ObjectHideFlags: 0
@@ -52117,7 +52969,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2018130005
 MonoBehaviour:
@@ -52377,11 +53229,25 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1683600338}
+    - target: {fileID: 2022911629, guid: e73ee765e55d6b648868737d565b1959, type: 3}
+      propertyPath: hand
+      value: 
+      objectReference: {fileID: 1816818631}
+    - target: {fileID: 2022911629, guid: e73ee765e55d6b648868737d565b1959, type: 3}
+      propertyPath: leftHand
+      value: 
+      objectReference: {fileID: 1816818631}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73ee765e55d6b648868737d565b1959, type: 3}
 --- !u!4 &2022911627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5006482648944414839, guid: e73ee765e55d6b648868737d565b1959,
+    type: 3}
+  m_PrefabInstance: {fileID: 2022911626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2022911628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6518803630820835290, guid: e73ee765e55d6b648868737d565b1959,
     type: 3}
   m_PrefabInstance: {fileID: 2022911626}
   m_PrefabAsset: {fileID: 0}
@@ -52649,6 +53515,7 @@ GameObject:
   - component: {fileID: 2047853782}
   - component: {fileID: 2047853784}
   - component: {fileID: 2047853785}
+  - component: {fileID: 2047853786}
   m_Layer: 0
   m_Name: Street_Curve (3)
   m_TagString: Untagged
@@ -52664,11 +53531,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047853780}
   m_LocalRotation: {x: -0.5, y: -0.50000024, z: -0.50000006, w: 0.4999998}
-  m_LocalPosition: {x: -0, y: -0, z: 20}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalScale: {x: 100, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 20
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &2047853782
 MeshRenderer:
@@ -52744,6 +53611,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &2047853786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047853780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1001 &2051473117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54045,6 +54929,7 @@ GameObject:
   - component: {fileID: 2102357862}
   - component: {fileID: 2102357864}
   - component: {fileID: 2102357865}
+  - component: {fileID: 2102357866}
   m_Layer: 0
   m_Name: Street_T (2)
   m_TagString: Untagged
@@ -54061,10 +54946,10 @@ Transform:
   m_GameObject: {fileID: 2102357860}
   m_LocalRotation: {x: -0.49999988, y: -0.50000024, z: -0.5000001, w: 0.49999988}
   m_LocalPosition: {x: 90, y: 0, z: 70}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 9
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!23 &2102357862
 MeshRenderer:
@@ -54140,6 +55025,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &2102357866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102357860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &2108422652
 GameObject:
   m_ObjectHideFlags: 0
@@ -54309,6 +55211,7 @@ GameObject:
   - component: {fileID: 2113042940}
   - component: {fileID: 2113042942}
   - component: {fileID: 2113042943}
+  - component: {fileID: 2113042944}
   m_Layer: 0
   m_Name: Street_Curve (2)
   m_TagString: Untagged
@@ -54324,11 +55227,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113042938}
   m_LocalRotation: {x: -0.5000001, y: 0.49999994, z: 0.5, w: 0.49999994}
-  m_LocalPosition: {x: 10, y: -0, z: 20}
+  m_LocalPosition: {x: 10, y: 0, z: 20}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 19
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!23 &2113042940
 MeshRenderer:
@@ -54404,6 +55307,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &2113042944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113042938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!4 &2119479359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 453eeb69ada35cc40b9bbb9cf60b6a99,
@@ -54709,7 +55629,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 31.615002, y: -203.362, z: 124.77501}
 --- !u!1 &2139900780
 GameObject:
@@ -54894,6 +55814,7 @@ GameObject:
   - component: {fileID: 2097290961608086145}
   - component: {fileID: 479435770226093688}
   - component: {fileID: 479435770226093689}
+  - component: {fileID: 479435770226093690}
   m_Layer: 0
   m_Name: Street_Curve
   m_TagString: Untagged
@@ -54927,6 +55848,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &479435770226093690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479435770226093687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!1 &809272719896552160
 GameObject:
   m_ObjectHideFlags: 0
@@ -54956,6 +55894,7 @@ GameObject:
   - component: {fileID: 3206070495910403528}
   - component: {fileID: 1310367637107134327}
   - component: {fileID: 1310367637107134328}
+  - component: {fileID: 1310367637107134329}
   m_Layer: 0
   m_Name: Street_Straight
   m_TagString: Untagged
@@ -54989,6 +55928,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &1310367637107134329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310367637107134326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!23 &2097290961608086145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55046,10 +56002,10 @@ Transform:
   m_GameObject: {fileID: 1310367637107134326}
   m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!4 &2830621616385712111
 Transform:
@@ -55060,10 +56016,10 @@ Transform:
   m_GameObject: {fileID: 479435770226093687}
   m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 90, y: 0, z: 30}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 0
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!23 &3206070495910403528
 MeshRenderer:
@@ -55156,11 +56112,34 @@ Transform:
   m_LocalPosition: {x: 0.531, y: 0.006000042, z: -5.9218388}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
-  - {fileID: 2830621616385712111}
+  - {fileID: 25152999}
+  - {fileID: 1714974507}
+  - {fileID: 1636103805}
+  - {fileID: 1874720350}
+  - {fileID: 16862947}
+  - {fileID: 1703355998}
+  - {fileID: 1455619795}
+  - {fileID: 26912566}
   - {fileID: 2432227398328308781}
   - {fileID: 5285527725919285896}
   - {fileID: 1673632954}
   - {fileID: 479048591}
+  - {fileID: 2113042939}
+  - {fileID: 2047853781}
+  - {fileID: 474282677}
+  - {fileID: 1709792456}
+  - {fileID: 2001161240}
+  - {fileID: 1167870165}
+  - {fileID: 467902848}
+  - {fileID: 2830621616385712111}
+  - {fileID: 1959196150}
+  - {fileID: 298363564}
+  - {fileID: 825015973}
+  - {fileID: 1777971468}
+  - {fileID: 984342821}
+  - {fileID: 954350554}
+  - {fileID: 1557482224}
+  - {fileID: 1292559822}
   - {fileID: 1656685122}
   - {fileID: 1422848758}
   - {fileID: 509720640}
@@ -55169,34 +56148,11 @@ Transform:
   - {fileID: 1724474637}
   - {fileID: 287658459}
   - {fileID: 1349656118}
-  - {fileID: 25152999}
-  - {fileID: 1714974507}
-  - {fileID: 1636103805}
-  - {fileID: 1959196150}
-  - {fileID: 1874720350}
-  - {fileID: 16862947}
-  - {fileID: 2113042939}
-  - {fileID: 2047853781}
-  - {fileID: 1703355998}
-  - {fileID: 1455619795}
-  - {fileID: 298363564}
-  - {fileID: 26912566}
-  - {fileID: 825015973}
   - {fileID: 962942677}
   - {fileID: 2011474378}
   - {fileID: 77539173}
-  - {fileID: 1777971468}
-  - {fileID: 1167870165}
-  - {fileID: 467902848}
-  - {fileID: 474282677}
-  - {fileID: 1709792456}
-  - {fileID: 984342821}
-  - {fileID: 954350554}
-  - {fileID: 2001161240}
-  - {fileID: 1557482224}
-  - {fileID: 1292559822}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5285527725919285896
 Transform:
@@ -55207,10 +56163,10 @@ Transform:
   m_GameObject: {fileID: 8872808527167124509}
   m_LocalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 10, y: 0, z: 30}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100.0001, y: 100.0001, z: 100.0001}
   m_Children: []
   m_Father: {fileID: 4422610256594456819}
-  m_RootOrder: 2
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
 --- !u!1001 &6448892982592813452
 PrefabInstance:
@@ -55262,7 +56218,7 @@ PrefabInstance:
     - target: {fileID: 4741338837210207948, guid: e3bda4e1e817c29409965c74146b3d19,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4741338837210207948, guid: e3bda4e1e817c29409965c74146b3d19,
         type: 3}
@@ -55532,6 +56488,7 @@ GameObject:
   - component: {fileID: 3684000779484658017}
   - component: {fileID: 8872808527167124510}
   - component: {fileID: 8872808527167124511}
+  - component: {fileID: 8872808527167124512}
   m_Layer: 0
   m_Name: Street_T
   m_TagString: Untagged
@@ -55565,6 +56522,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!114 &8872808527167124512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872808527167124509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+  streets: {fileID: 4422610256594456819}
+  height: 0.2
+  enemies: []
 --- !u!33 &8934887810940426308
 MeshFilter:
   m_ObjectHideFlags: 0
