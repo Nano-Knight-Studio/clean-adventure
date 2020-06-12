@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
 			sound.source.volume = sound.volume;
 			sound.source.pitch = sound.pitch;
 			sound.source.loop = sound.loop;
+			sound.source.playOnAwake = sound.playOnAwake;
 			if (sound.playOnAwake)
 			PlaySound (sound.name);
 		}

@@ -43792,21 +43792,70 @@ MonoBehaviour:
     playOnAwake: 0
     source: {fileID: 0}
   - name: Enemy_Damage_0
-    Clip: {fileID: 8300000, guid: 720575c918c2fda40b7451c79ddd6dec, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 0
-    playOnAwake: 0
-    source: {fileID: 0}
-  - name: Enemy_Damage_1
     Clip: {fileID: 8300000, guid: ec8a4e27744c2a4409fb81f65b2c906e, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
-  - name: Enemy_Damage_3
+  - name: Enemy_Damage_1
     Clip: {fileID: 8300000, guid: 6a24043b6bc4cc6458849c994a1ab27f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Death_0
+    Clip: {fileID: 8300000, guid: 720575c918c2fda40b7451c79ddd6dec, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Death_1
+    Clip: {fileID: 8300000, guid: 720575c918c2fda40b7451c79ddd6dec, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Idle_0
+    Clip: {fileID: 8300000, guid: 8f30327adcb018d4ca96ad17f504d9a2, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Idle_1
+    Clip: {fileID: 8300000, guid: a181d244871b0f24ab4042399e91d8af, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Idle_2
+    Clip: {fileID: 8300000, guid: 83f71618cc644124493d11ab1547d6f1, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Angry_0
+    Clip: {fileID: 8300000, guid: e7835ebee9ecc2f4bbc684302063062a, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Angry_1
+    Clip: {fileID: 8300000, guid: 94d2801f29ab5eb4989226a5d8ee83e2, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Enemy_Angry_2
+    Clip: {fileID: 8300000, guid: e7835ebee9ecc2f4bbc684302063062a, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
@@ -52316,6 +52365,10 @@ PrefabInstance:
         type: 3}
       propertyPath: spread
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022911630, guid: e73ee765e55d6b648868737d565b1959, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73ee765e55d6b648868737d565b1959, type: 3}

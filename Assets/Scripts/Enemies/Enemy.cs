@@ -20,12 +20,16 @@ public class Enemy : MonoBehaviour
     [Header("Taking Damage")]
     [SerializeField] private float damageScaleMultiplier;
     [SerializeField] private float damageScaleSpeed;
-    [SerializeField] private string[] damageSounds;
     [Header("Graphics")]
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material damageMaterial;
     [SerializeField] private GameObject deathParticles;
     [SerializeField] private MeshRenderer mainRenderer;
+    [Header("Audio")]
+    [SerializeField] private string[] damageSounds;
+    [SerializeField] private string[] deathSounds;
+    [SerializeField] private string[] idleSounds;
+    [SerializeField] private string[] angrySounds;
     //----- INTERNAL -----//
     private Vector3 desiredScale;
     private Vector3 defaultScale;
@@ -44,6 +48,7 @@ public class Enemy : MonoBehaviour
         pointer.SetParent(transform);
         pointer.localPosition = Vector3.zero;
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, UnityEngine.Random.Range(0.0f, 360.0f), transform.localEulerAngles.z);
+        StartCoroutine(PlayIdleSound());
     }
 
     void Update ()
@@ -62,9 +67,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    IEnumerator PlayIdleSound ()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(2.0f, 20.0f));
+        string selectedSound = idleSounds[UnityEngine.Random.Range(0, idleSounds.Length)];
+        AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
+        AudioManager.instance.PlaySound(selectedSound, transform.position);
+        StartCoroutine(PlayIdleSound());
+    }
+
     void ApplyDamage()
     {
-        Debug.Log("Enemy: Applying damage");
         attacking = false;
         foreach (Collider c in Physics.OverlapSphere(transform.position, attackRange, attackLayerMask))
         {
@@ -90,6 +103,9 @@ public class Enemy : MonoBehaviour
             {
                 navMeshAgent.SetDestination(player.transform.position);
                 target = player.transform;
+                string selectedSound = angrySounds[UnityEngine.Random.Range(0, angrySounds.Length)];
+                AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
+                AudioManager.instance.PlaySound(selectedSound, transform.position);
             }
         }
         catch (Exception ex) {}
@@ -100,15 +116,15 @@ public class Enemy : MonoBehaviour
         currentLife -= damage;
         currentLife = Mathf.Clamp(currentLife, 0, maxLife);
         StartCoroutine(BlinkDamage());
-        string selectedSound = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
-        AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
-        AudioManager.instance.PlaySound(selectedSound, transform.position);
         if (currentLife <= 0.0f)
         {
             Die();
         }
         else
         {
+            string selectedSound = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
+            AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
+            AudioManager.instance.PlaySound(selectedSound, transform.position);
             StartCoroutine(Stun(1.5f));
             lifeBar.size = new Vector2(currentLife / maxLife, lifeBar.size.y);
             lifeBar.transform.localPosition = new Vector3(Mathf.Lerp(0.5f, 0.0f, lifeBar.size.x), 0, 0);
@@ -127,6 +143,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         //TODO death effects
+        string selectedSound = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
+        AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.8f, 1.2f));
+        AudioManager.instance.PlaySound(selectedSound, transform.position);
         if (deathParticles) Instantiate(deathParticles, transform.position, transform.rotation);
         Destroy(gameObject);
     }

@@ -1656,15 +1656,25 @@ MonoBehaviour:
     m_Bits: 1024
   damageScaleMultiplier: 1.5
   damageScaleSpeed: 20
-  damageSounds:
-  - Enemy_Damage_0
-  - Enemy_Damage_1
-  - Enemy_Damage_2
   defaultMaterial: {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
   damageMaterial: {fileID: 2100000, guid: e68ffbbb3410c2a4ebb930cf641e7baf, type: 2}
   deathParticles: {fileID: 7998951072375877250, guid: d72f81cebc226ed48badd8962cff4853,
     type: 3}
   mainRenderer: {fileID: 2096818454635405691}
+  damageSounds:
+  - Enemy_Damage_0
+  - Enemy_Damage_1
+  deathSounds:
+  - Enemy_Death_0
+  - Enemy_Death_1
+  idleSounds:
+  - Enemy_Idle_0
+  - Enemy_Idle_1
+  - Enemy_Idle_2
+  angrySounds:
+  - Enemy_Angry_0
+  - Enemy_Angry_1
+  - Enemy_Angry_2
 --- !u!135 &949703390633594593
 SphereCollider:
   m_ObjectHideFlags: 0
