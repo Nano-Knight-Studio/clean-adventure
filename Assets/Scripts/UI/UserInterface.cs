@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class UserInterface : MonoBehaviour
 {
-    [SerializeField] Event collectGoalEvent;
     public static UserInterface instance;
     private bool collectedGoal = false;
     private int currentLevel = 0;
+    [SerializeField] private GameObject beforeGoalBarriers;
+    [SerializeField] private GameObject afterGoalBarriers;
 
     void Awake ()
     {
@@ -22,8 +23,16 @@ public class UserInterface : MonoBehaviour
         }
     }
 
+    void Start ()
+    {
+        beforeGoalBarriers.SetActive(true);
+        afterGoalBarriers.SetActive(false);
+    }
+
     public void CollectGoal ()
     {
         collectedGoal = true;
+        beforeGoalBarriers.SetActive(false);
+        afterGoalBarriers.SetActive(true);
     }
 }

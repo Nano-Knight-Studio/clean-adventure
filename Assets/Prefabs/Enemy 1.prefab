@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81884237082508587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.453, z: 0}
+  m_LocalPosition: {x: 0, y: 0.715, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5867880604054618035}
@@ -1168,7 +1168,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 080bfb1b974fbb74c8b7cf5abb4ab028, type: 3}
-  m_Color: {r: 0.14117648, g: 0.7686275, b: 0.454902, a: 1}
+  m_Color: {r: 0.19215688, g: 0.19607845, b: 0.21960786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -1362,8 +1362,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5788643288744043414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.57456905, y: 0.57456905, z: 0.57456905}
+  m_LocalPosition: {x: -0.00020117, y: 0.077, z: -0.073824}
+  m_LocalScale: {x: 0.9768248, y: 0.9768248, z: 0.9768248}
   m_Children:
   - {fileID: 552215441079844860}
   - {fileID: 3459262352114695356}
@@ -1411,7 +1411,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
+  - {fileID: 2100000, guid: 6f15bd01e5d74ab47a80666beffcb40b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1622,7 +1622,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.25
-  m_Speed: 0.4
+  m_Speed: 0.3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 5000
@@ -1647,18 +1647,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 1.5
-  maxLife: 100
-  currentLife: 100
+  maxLife: 200
+  currentLife: 200
   lifeBar: {fileID: 466158287239835405}
   attackRange: 0.05
-  damage: 10
+  damage: 20
   attackLayerMask:
     serializedVersion: 2
     m_Bits: 1024
   selfKnockback: {x: 0, y: 0, z: -50}
   damageScaleMultiplier: 1.5
   damageScaleSpeed: 20
-  defaultMaterial: {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 6f15bd01e5d74ab47a80666beffcb40b, type: 2}
   damageMaterial: {fileID: 2100000, guid: e68ffbbb3410c2a4ebb930cf641e7baf, type: 2}
   deathParticles: {fileID: 7998951072375877250, guid: d72f81cebc226ed48badd8962cff4853,
     type: 3}
