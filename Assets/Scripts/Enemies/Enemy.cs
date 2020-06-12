@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     [Header("Life")]
     [SerializeField] private float maxLife;
     [SerializeField] private float currentLife;
-    [SerializeField] private Slider lifeBar;
+    [SerializeField] private SpriteRenderer lifeBar;
     [Header("Attack")]
     [SerializeField] private float attackRange;
     [SerializeField] private float damage;
@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     [Header("Taking Damage")]
     [SerializeField] private float damageScaleMultiplier;
     [SerializeField] private float damageScaleSpeed;
+    [SerializeField] private string[] damageSounds;
     [Header("Graphics")]
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material damageMaterial;
@@ -99,6 +100,9 @@ public class Enemy : MonoBehaviour
         currentLife -= damage;
         currentLife = Mathf.Clamp(currentLife, 0, maxLife);
         StartCoroutine(BlinkDamage());
+        string selectedSound = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
+        AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(0.7f, 1.3f));
+        AudioManager.instance.PlaySound(selectedSound, transform.position);
         if (currentLife <= 0.0f)
         {
             Die();
@@ -106,7 +110,8 @@ public class Enemy : MonoBehaviour
         else
         {
             StartCoroutine(Stun(1.5f));
-            lifeBar.value = currentLife / maxLife;
+            lifeBar.size = new Vector2(currentLife / maxLife, lifeBar.size.y);
+            lifeBar.transform.localPosition = new Vector3(Mathf.Lerp(0.5f, 0.0f, lifeBar.size.x), 0, 0);
         }
     }
 

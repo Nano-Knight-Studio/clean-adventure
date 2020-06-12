@@ -34,12 +34,14 @@ public class AudioManager : MonoBehaviour
 	public void SetPitch (string name, float pitch)
 	{
 		Sound soundToUse = Array.Find (sounds, sound => sound.name == name);
+		soundToUse.pitch = pitch;
 		soundToUse.source.pitch = pitch;
 	}
 
 	public void SetVolume (string name, float volume)
 	{
 		Sound soundToUse = Array.Find (sounds, sound => sound.name == name);
+		soundToUse.volume = volume;
 		soundToUse.source.volume = volume;
 	}
 
@@ -58,12 +60,13 @@ public class AudioManager : MonoBehaviour
 		AudioSource src = obj.GetComponent<AudioSource>();
 		src.volume = soundToUse.volume;
 		src.spatialBlend = 1.0f;
-		src.minDistance = 2.0f;
-		src.maxDistance = 15.0f * soundToUse.volume;
+		src.minDistance = 0.5f;
+		src.maxDistance = 2.0f * soundToUse.volume;
 		src.clip = soundToUse.Clip;
 		src.playOnAwake = false;
 		src.loop = false;
 		src.spread = 0;
+		src.pitch = soundToUse.pitch;
 		src.Play();
 		Destroy(obj, soundToUse.Clip.length + 1.0f);
 	}
