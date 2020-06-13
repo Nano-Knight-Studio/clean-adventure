@@ -1664,7 +1664,7 @@ MonoBehaviour:
     type: 3}
   mainRenderer: {fileID: 2096818454635405691}
   soundPitchMin: 0.85
-  soundPitchMax: 1.35
+  soundPitchMax: 1.3
   damageSounds:
   - Enemy_Damage_0
   - Enemy_Damage_1

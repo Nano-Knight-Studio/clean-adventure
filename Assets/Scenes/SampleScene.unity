@@ -17228,6 +17228,8 @@ MonoBehaviour:
     - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
     density: 3
   - enemies:
+    - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+    - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
     - {fileID: 6346533089954095151, guid: 6875afcab59b22d4b87cd4a8fa8ef42b, type: 3}
     density: 6
   currentDifficulty: 0
