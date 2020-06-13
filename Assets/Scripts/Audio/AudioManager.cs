@@ -61,8 +61,8 @@ public class AudioManager : MonoBehaviour
 		AudioSource src = obj.GetComponent<AudioSource>();
 		src.volume = soundToUse.volume;
 		src.spatialBlend = 1.0f;
-		src.minDistance = 2f;
-		src.maxDistance = 50.0f * soundToUse.volume;
+		src.minDistance = 1f;
+		src.maxDistance = 10.0f * soundToUse.volume;
 		src.clip = soundToUse.Clip;
 		src.playOnAwake = false;
 		src.loop = false;

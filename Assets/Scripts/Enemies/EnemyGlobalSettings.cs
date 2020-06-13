@@ -38,6 +38,11 @@ public class EnemyGlobalSettings : MonoBehaviour
         return instance.difficulties[instance.currentDifficulty].enemies[Random.Range(0, instance.difficulties[instance.currentDifficulty].enemies.Length)];
     }
 
+    public static int GetDifficulty()
+    {
+        return instance.currentDifficulty;
+    }
+
     public static void NextLevel()
     {
         instance.currentDifficulty++;

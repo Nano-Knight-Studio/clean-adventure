@@ -7,10 +7,12 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float height;
     Collider[] colliders;
     private List<GameObject> enemies = new List<GameObject>();
+    int currentDifficulty;
 
     void Start ()
     {
         colliders = GetComponentsInChildren<BoxCollider>();
+        currentDifficulty = EnemyGlobalSettings.GetDifficulty();
         SpawnAll();
         StartCoroutine(Respawn());
     }
@@ -29,10 +31,26 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    public void RemoveAll()
+    {
+        CleanList();
+        foreach (GameObject obj in enemies)
+        {
+            obj.GetComponent<Enemy>().Die(false);
+        }
+        CleanList();
+    }
+
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(Random.Range(3.0f, 6.0f));
-        if (Vector3.Distance(transform.position, PlayerMovement.instance.transform.position) > 5)
+        if (EnemyGlobalSettings.GetDifficulty() != currentDifficulty)
+        {
+            currentDifficulty = EnemyGlobalSettings.GetDifficulty();
+            RemoveAll();
+            SpawnAll();
+        }
+        else if (Vector3.Distance(transform.position, PlayerMovement.instance.transform.position) > 3.0f)
         {
             SpawnAll();
         }

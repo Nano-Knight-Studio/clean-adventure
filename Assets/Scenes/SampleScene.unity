@@ -702,6 +702,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0.2
+--- !u!1 &54785426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54785428}
+  - component: {fileID: 54785427}
+  m_Layer: 0
+  m_Name: DifficultyTrigger (5)
+  m_TagString: DifficultyTrigger
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &54785427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54785426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.601553, y: 0.68200386, z: 0.6481205}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &54785428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54785426}
+  m_LocalRotation: {x: -0, y: -0.7071065, z: -0, w: 0.7071071}
+  m_LocalPosition: {x: 6.945, y: 0.227, z: 6.073}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1001 &59247358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -797,6 +841,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 59247358}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &64251041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4741338837210207936, guid: e3bda4e1e817c29409965c74146b3d19,
+    type: 3}
+  m_PrefabInstance: {fileID: 4412170433586408336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &64251042
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64251041}
+  m_Enabled: 1
 --- !u!1 &68480809
 GameObject:
   m_ObjectHideFlags: 0
@@ -5482,7 +5540,6 @@ GameObject:
   - component: {fileID: 479048592}
   - component: {fileID: 479048594}
   - component: {fileID: 479048595}
-  - component: {fileID: 479048596}
   m_Layer: 0
   m_Name: Street_Straight (4)
   m_TagString: Untagged
@@ -5578,19 +5635,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
---- !u!114 &479048596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479048590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a9cef373ce1734a8e7fa033376beff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  height: 0.2
 --- !u!1001 &490787190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16284,6 +16328,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundType: 1
+--- !u!1 &1512548239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512548241}
+  - component: {fileID: 1512548240}
+  m_Layer: 0
+  m_Name: DifficultyTrigger (3)
+  m_TagString: DifficultyTrigger
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1512548240
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512548239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.601553, y: 0.68200386, z: 0.6481205}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1512548241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512548239}
+  m_LocalRotation: {x: -0, y: 0.0000004768371, z: -0, w: 1}
+  m_LocalPosition: {x: 18.523, y: 0.227, z: 6.924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1515800740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17231,10 +17319,26 @@ MonoBehaviour:
   difficulties:
   - enemies:
     - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+    density: 2
+  - enemies:
+    - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
     density: 3
   - enemies:
     - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
     - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+    - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+    - {fileID: 6346533089954095151, guid: 6875afcab59b22d4b87cd4a8fa8ef42b, type: 3}
+    density: 5
+  - enemies:
+    - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+    - {fileID: 6346533089954095151, guid: 6875afcab59b22d4b87cd4a8fa8ef42b, type: 3}
+    density: 5
+  - enemies:
+    - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
+    - {fileID: 6346533089954095151, guid: 6875afcab59b22d4b87cd4a8fa8ef42b, type: 3}
+    - {fileID: 6346533089954095151, guid: 6875afcab59b22d4b87cd4a8fa8ef42b, type: 3}
+    density: 4
+  - enemies:
     - {fileID: 6346533089954095151, guid: 6875afcab59b22d4b87cd4a8fa8ef42b, type: 3}
     density: 6
   currentDifficulty: 0
@@ -23123,6 +23227,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0.2
+--- !u!1 &2079304048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079304050}
+  - component: {fileID: 2079304049}
+  m_Layer: 0
+  m_Name: DifficultyTrigger (1)
+  m_TagString: DifficultyTrigger
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2079304049
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079304048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.601553, y: 0.68200386, z: 0.6481205}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2079304050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079304048}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.306, y: 0.227, z: 0.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!1001 &2081851720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23686,6 +23834,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0.2
+--- !u!1 &2102791297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102791299}
+  - component: {fileID: 2102791298}
+  m_Layer: 0
+  m_Name: DifficultyTrigger (2)
+  m_TagString: DifficultyTrigger
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2102791298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102791297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.601553, y: 0.68200386, z: 0.6481205}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2102791299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102791297}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 14.524, y: 0.227, z: 8.086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!1 &2113042938
 GameObject:
   m_ObjectHideFlags: 0
@@ -23808,6 +24000,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0.2
+--- !u!1 &2129352360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129352362}
+  - component: {fileID: 2129352361}
+  m_Layer: 0
+  m_Name: DifficultyTrigger (4)
+  m_TagString: DifficultyTrigger
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2129352361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129352360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.601553, y: 0.68200386, z: 0.6481205}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2129352362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129352360}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: 11.571, y: 0.227, z: 0.088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &2138677391
 GameObject:
   m_ObjectHideFlags: 0
@@ -24401,7 +24637,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.86
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7603814202352752506, guid: e3bda4e1e817c29409965c74146b3d19, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e3bda4e1e817c29409965c74146b3d19, type: 3}
 --- !u!4 &4422610256594456819
 Transform:

@@ -63,18 +63,18 @@ public class Enemy : MonoBehaviour
         // Used on damage effect
         transform.localScale = Vector3.Lerp(transform.localScale, desiredScale, damageScaleSpeed * Time.deltaTime);
 
-        if (mainRenderer.isVisible)
-        {
-            timeOutsideCamera = 0.0f;
-        }
-        else
-        {
-            timeOutsideCamera += Time.deltaTime;
-            if (timeOutsideCamera >= 30.0f)
-            {
-                Destroy(gameObject);
-            }
-        }
+        // if (mainRenderer.isVisible)
+        // {
+        //     timeOutsideCamera = 0.0f;
+        // }
+        // else
+        // {
+        //     timeOutsideCamera += Time.deltaTime;
+        //     if (timeOutsideCamera >= 30.0f)
+        //     {
+        //         Destroy(gameObject);
+        //     }
+        // }
     }
 
     void FixedUpdate ()
@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(BlinkDamage());
         if (currentLife <= 0.0f)
         {
-            Die();
+            Die(true);
         }
         else
         {
@@ -158,12 +158,15 @@ public class Enemy : MonoBehaviour
         mainRenderer.material = defaultMaterial;
     }
 
-    public void Die()
+    public void Die(bool makeSound)
     {
         //TODO death effects
-        string selectedSound = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
-        AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(soundPitchMin, soundPitchMax));
-        AudioManager.instance.PlaySound(selectedSound, transform.position);
+        if (makeSound)
+        {
+            string selectedSound = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
+            AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(soundPitchMin, soundPitchMax));
+            AudioManager.instance.PlaySound(selectedSound, transform.position);
+        }
         if (deathParticles) Instantiate(deathParticles, transform.position, transform.rotation);
         Destroy(gameObject);
     }
