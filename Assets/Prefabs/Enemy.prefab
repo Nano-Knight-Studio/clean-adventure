@@ -1658,6 +1658,7 @@ MonoBehaviour:
   selfKnockback: {x: 0, y: 0, z: -50}
   damageScaleMultiplier: 1.5
   damageScaleSpeed: 20
+  stunTime: 1.5
   defaultMaterial: {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
   damageMaterial: {fileID: 2100000, guid: e68ffbbb3410c2a4ebb930cf641e7baf, type: 2}
   deathParticles: {fileID: 7998951072375877250, guid: d72f81cebc226ed48badd8962cff4853,

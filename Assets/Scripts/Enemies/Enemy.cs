@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     [Header("Taking Damage")]
     [SerializeField] private float damageScaleMultiplier;
     [SerializeField] private float damageScaleSpeed;
+    [SerializeField] private float stunTime;
     [Header("Graphics")]
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material damageMaterial;
@@ -143,7 +144,7 @@ public class Enemy : MonoBehaviour
             string selectedSound = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
             AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(soundPitchMin, soundPitchMax));
             AudioManager.instance.PlaySound(selectedSound, transform.position);
-            StartCoroutine(Stun(1.5f));
+            StartCoroutine(Stun(stunTime));
             lifeBar.size = new Vector2(currentLife / maxLife, lifeBar.size.y);
             lifeBar.transform.localPosition = new Vector3(Mathf.Lerp(0.5f, 0.0f, lifeBar.size.x), 0, 0);
         }
