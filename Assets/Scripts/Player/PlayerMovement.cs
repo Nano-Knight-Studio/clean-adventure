@@ -137,19 +137,7 @@ public class PlayerMovement : MonoBehaviour
         }
         //----- APPLYING ROTATIONS -----//
 
-        // First, torso rotation
-        // There's somewhere to aim, so turn
-        if (desiredTorsoRotation != Quaternion.identity)
-        {
-            torso.rotation = Quaternion.Slerp(torso.rotation, desiredTorsoRotation, turnSpeed * Time.fixedDeltaTime);
-        }
-        // There's nowhere to aim, so reset torso
-        else
-        {
-            torso.localRotation = Quaternion.Slerp(torso.localRotation, Quaternion.identity, turnSpeed * Time.fixedDeltaTime);
-        }
-
-        // And then, the player object
+        // First, player object
         if (isStopped)
         {
             if (desiredTorsoRotation != Quaternion.identity)
@@ -160,6 +148,19 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             transform.forward = Vector3.Lerp(transform.forward, new Vector3(velocity.x, 0, velocity.z).normalized, turnSpeed * Time.fixedDeltaTime);
+        }
+
+        // And then, torso rotation
+        // There's somewhere to aim, so turn
+        if (desiredTorsoRotation != Quaternion.identity)
+        {
+            // torso.rotation = Quaternion.Slerp(torso.rotation, desiredTorsoRotation, turnSpeed * Time.fixedDeltaTime);
+            torso.rotation = desiredTorsoRotation;
+        }
+        // There's nowhere to aim, so reset torso
+        else
+        {
+            torso.localRotation = Quaternion.Slerp(torso.localRotation, Quaternion.identity, turnSpeed * Time.fixedDeltaTime);
         }
 
         // Flip legs when angle > 180
