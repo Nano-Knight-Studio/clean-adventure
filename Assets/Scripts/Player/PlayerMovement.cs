@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     
     //----- INTERNAL -----//
+    public static PlayerMovement instance;
     private PlayerShooting playerShooting;
     private PlayerAimAssist playerAimAssist;
     private Rigidbody rb;
@@ -36,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
     private Transform cameraOrientation;
     private Vector3 aimAssistCurrentVelocity;
     private float timeMoving = 0.0f;
+
+    void Awake ()
+    {
+        instance = this;
+    }
 
     void Start ()
     {

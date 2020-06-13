@@ -77,13 +77,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 0}
-  smoothTime: 0.2
+  smoothTime: 0.1
   offset: {x: 0, y: 0, z: 0}
-  lookSpeed: 0.8
+  rotSpeedOverVelocity:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.3
+      inSlope: 1.0999999
+      outSlope: 1.0999999
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1.4
+      inSlope: 1.0999999
+      outSlope: 1.0999999
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   horizontalInput: Right Joystick Horizontal
   verticalInput: Right Joystick Vertical
-  sensivity: {x: 0, y: 0}
-  joystickSensivity: {x: 0, y: 0}
+  sensivity: {x: 60, y: 60}
+  joystickSensivity: {x: 130, y: 130}
+  cameraShakeAnimator: {fileID: 4591844789854270891}
   inputVector: {x: 0, y: 0}
   orientation: {fileID: 0}
 --- !u!1 &7603814202352752505
@@ -130,7 +154,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -199,7 +223,7 @@ MonoBehaviour:
     quality: 2
   fastApproximateAntialiasing:
     fastMode: 1
-    keepAlpha: 0
+    keepAlpha: 1
   fog:
     enabled: 1
     excludeSkybox: 1

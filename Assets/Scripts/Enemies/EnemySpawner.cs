@@ -32,7 +32,10 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(Random.Range(3.0f, 6.0f));
-        SpawnAll();
+        if (Vector3.Distance(transform.position, PlayerMovement.instance.transform.position) > 5)
+        {
+            SpawnAll();
+        }
         StartCoroutine(Respawn());
     }
 
