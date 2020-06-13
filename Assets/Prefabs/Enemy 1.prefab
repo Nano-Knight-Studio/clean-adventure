@@ -1663,6 +1663,8 @@ MonoBehaviour:
   deathParticles: {fileID: 7998951072375877250, guid: d72f81cebc226ed48badd8962cff4853,
     type: 3}
   mainRenderer: {fileID: 2096818454635405691}
+  soundPitchMin: 0.6
+  soundPitchMax: 1.15
   damageSounds:
   - Enemy_Damage_0
   - Enemy_Damage_1
