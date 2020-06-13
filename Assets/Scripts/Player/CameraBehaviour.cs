@@ -21,6 +21,7 @@ public class CameraBehaviour : MonoBehaviour
     // INTERNAL
     private Transform pointer;
     [HideInInspector] public Vector2 inputVector;
+    [HideInInspector] public Vector2 mouseInputVector;
     [HideInInspector] public Transform orientation;
     private float cooldown = 0.0f;
     private float desiredXRotation = 0.0f;
@@ -42,13 +43,29 @@ public class CameraBehaviour : MonoBehaviour
 
     void Update ()
     {
-        inputVector = new Vector2(Input.GetAxisRaw(horizontalInput) * distance.x,
-                                                    Input.GetAxisRaw(verticalInput) * -distance.y);
+        //----- INPUT -----//
+        inputVector = new Vector2(Input.GetAxisRaw(horizontalInput),
+                                    Input.GetAxisRaw(verticalInput) * -1);
+        mouseInputVector = new Vector2(Mathf.Lerp(-1.0f, 1.0f, Input.mousePosition.x / Screen.width),
+                                    Mathf.Lerp(-1.0f, 1.0f, Input.mousePosition.y / Screen.height)) * 3;
+        if (inputVector.magnitude > 0)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        inputVector += mouseInputVector;
+        if (inputVector.magnitude > 1) inputVector.Normalize();
+        //-----------------//
     }
 
     void LateUpdate ()
     {
-        camera.transform.localPosition = Vector3.SmoothDamp(camera.transform.localPosition, new Vector3(inputVector.x, inputVector.y, 0.0f), ref inputSpeedCurrentVelocity, inputSmoothTime * Time.deltaTime);
+        camera.transform.localPosition = Vector3.SmoothDamp(camera.transform.localPosition, new Vector3(inputVector.x * distance.x, inputVector.y * distance.y, 0.0f), ref inputSpeedCurrentVelocity, inputSmoothTime * Time.deltaTime);
     }
 
     void FixedUpdate ()
