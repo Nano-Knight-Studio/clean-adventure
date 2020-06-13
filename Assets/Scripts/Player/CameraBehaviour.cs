@@ -25,6 +25,7 @@ public class CameraBehaviour : MonoBehaviour
     private float cooldown = 0.0f;
     private float desiredXRotation = 0.0f;
     private Vector3 currentVelocity;
+    [HideInInspector] public Camera camera;
 
     void Awake ()
     {
@@ -35,9 +36,7 @@ public class CameraBehaviour : MonoBehaviour
         orientation = new GameObject("Orientation").transform;
         orientation.SetParent(transform);
         orientation.localPosition = Vector3.zero;
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        camera = GetComponentInChildren<Camera>();
     }
 
     void Update ()

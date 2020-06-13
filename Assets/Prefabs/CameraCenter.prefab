@@ -23,14 +23,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2437088908018524183}
-  m_LocalRotation: {x: 0.13273787, y: -0, z: -0, w: 0.9911512}
-  m_LocalPosition: {x: 0, y: 0.255, z: -0.6}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -0, y: 6.12, z: -6.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7603814202352752501}
   m_Father: {fileID: 4741338837210207948}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15.2560005, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!1 &4412170431785305137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4412170431785305138}
+  m_Layer: 0
+  m_Name: Orientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4412170431785305138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412170431785305137}
+  m_LocalRotation: {x: -0.08715612, y: -0, z: -0.0000000018626451, w: -0.9961947}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4741338837210207948}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4412170433743508236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4412170433743508237}
+  m_Layer: 0
+  m_Name: Pointer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4412170433743508237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412170433743508236}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4741338837210207948}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4741338837210207936
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,14 +115,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4741338837210207936}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.08052176, y: -0.381227, z: -0.03335318, w: -0.920364}
   m_LocalPosition: {x: 0.483, y: 0.1938, z: -7.594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 323209327986275950}
+  - {fileID: 4412170433743508237}
+  - {fileID: 4412170431785305138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10, y: 45, z: 0}
 --- !u!114 &4741338837210207938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,25 +139,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 0}
-  smoothTime: 0.1
+  smoothTime: 0.2
   offset: {x: 0, y: 0, z: 0}
   rotSpeedOverVelocity:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.3
-      inSlope: 1.0999999
-      outSlope: 1.0999999
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 1.4
-      inSlope: 1.0999999
-      outSlope: 1.0999999
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -105,11 +167,12 @@ MonoBehaviour:
     m_RotationOrder: 4
   horizontalInput: Right Joystick Horizontal
   verticalInput: Right Joystick Vertical
-  sensivity: {x: 60, y: 60}
-  joystickSensivity: {x: 130, y: 130}
+  sensivity: {x: 0, y: 0}
+  joystickSensivity: {x: 0, y: 0}
   cameraShakeAnimator: {fileID: 4591844789854270891}
   inputVector: {x: 0, y: 0}
-  orientation: {fileID: 0}
+  orientation: {fileID: 4412170431785305138}
+  camera: {fileID: 0}
 --- !u!1 &7603814202352752505
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,9 +232,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 40
+  field of view: 6
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 0.87
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

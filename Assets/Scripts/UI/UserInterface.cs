@@ -9,7 +9,6 @@ public class UserInterface : MonoBehaviour
     private int currentLevel = 0;
     [SerializeField] private GameObject beforeGoalBarriers;
     [SerializeField] private GameObject afterGoalBarriers;
-    [SerializeField] private RenderTexture damageIndicatorsRenderTexture;
 
     void Awake ()
     {
@@ -28,8 +27,6 @@ public class UserInterface : MonoBehaviour
     {
         beforeGoalBarriers.SetActive(true);
         afterGoalBarriers.SetActive(false);
-
-        RefreshRenderTextures();
     }
 
     public void CollectGoal ()
@@ -37,11 +34,5 @@ public class UserInterface : MonoBehaviour
         collectedGoal = true;
         beforeGoalBarriers.SetActive(false);
         afterGoalBarriers.SetActive(true);
-    }
-
-    void RefreshRenderTextures()
-    {
-        damageIndicatorsRenderTexture.width = Screen.width;
-        damageIndicatorsRenderTexture.height = Screen.height;
     }
 }
