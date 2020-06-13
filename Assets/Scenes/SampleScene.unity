@@ -24371,6 +24371,21 @@ PrefabInstance:
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 2022911627}
+    - target: {fileID: 4741338837210207938, guid: e3bda4e1e817c29409965c74146b3d19,
+        type: 3}
+      propertyPath: inputSmoothTime
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741338837210207938, guid: e3bda4e1e817c29409965c74146b3d19,
+        type: 3}
+      propertyPath: distance.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741338837210207938, guid: e3bda4e1e817c29409965c74146b3d19,
+        type: 3}
+      propertyPath: distance.y
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 323209327986275950, guid: e3bda4e1e817c29409965c74146b3d19,
         type: 3}
       propertyPath: m_LocalPosition.x

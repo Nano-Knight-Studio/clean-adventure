@@ -15,9 +15,9 @@ public class CameraBehaviour : MonoBehaviour
     [Header("Input")]
     [SerializeField] private string horizontalInput;
     [SerializeField] private string verticalInput;
-    [SerializeField] private Vector2 sensivity;
-    [SerializeField] private Vector2 joystickSensivity;
+    [SerializeField] private Vector2 distance;
     [SerializeField] private Animator cameraShakeAnimator;
+    [SerializeField] private float inputSmoothTime;
     // INTERNAL
     private Transform pointer;
     [HideInInspector] public Vector2 inputVector;
@@ -25,6 +25,7 @@ public class CameraBehaviour : MonoBehaviour
     private float cooldown = 0.0f;
     private float desiredXRotation = 0.0f;
     private Vector3 currentVelocity;
+    private Vector3 inputSpeedCurrentVelocity;
     [HideInInspector] public Camera camera;
 
     void Awake ()
@@ -41,42 +42,19 @@ public class CameraBehaviour : MonoBehaviour
 
     void Update ()
     {
-        inputVector = new Vector2(Input.GetAxisRaw(horizontalInput) * -joystickSensivity.x + Input.GetAxisRaw("Mouse X") * sensivity.x,
-                                                    Input.GetAxisRaw(verticalInput) * joystickSensivity.y + Input.GetAxisRaw("Mouse Y") * -sensivity.y);
+        inputVector = new Vector2(Input.GetAxisRaw(horizontalInput) * distance.x,
+                                                    Input.GetAxisRaw(verticalInput) * -distance.y);
     }
 
     void LateUpdate ()
     {
-        if (inputVector.magnitude > 0.05f)
-        {
-            cooldown = 2.0f;
-            transform.Rotate(Vector3.up * inputVector.x  * Time.deltaTime, Space.World);
-            desiredXRotation += inputVector.y  * Time.deltaTime;
-            desiredXRotation = Mathf.Clamp(desiredXRotation, -10, 15);
-            transform.localEulerAngles = new Vector3(desiredXRotation, transform.localEulerAngles.y, transform.localEulerAngles.z);
-        }
+        camera.transform.localPosition = Vector3.SmoothDamp(camera.transform.localPosition, new Vector3(inputVector.x, inputVector.y, 0.0f), ref inputSpeedCurrentVelocity, inputSmoothTime * Time.deltaTime);
     }
 
     void FixedUpdate ()
     {
         //Position
         transform.position = Vector3.SmoothDamp(transform.position, GetAveragePosition() + offset, ref currentVelocity, smoothTime);
-
-        //Rotation
-        if (cooldown <= 0)
-        {
-            // if (Quaternion.Angle(transform.rotation, targets[0].rotation) > 47.0f || targets[0].gameObject.GetComponent<PlayerMovement>().isStopped)
-            // {
-                transform.rotation = Quaternion.Slerp(transform.rotation,
-                                                targets[0].rotation,
-                                                rotSpeedOverVelocity.Evaluate(GetAverageVelocity())  * Time.fixedDeltaTime);
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0.0f);
-            // }
-        }
-        else
-        {
-            cooldown -= Time.fixedDeltaTime;
-        }
 
         //Resetting orientation
         orientation.eulerAngles = transform.eulerAngles;

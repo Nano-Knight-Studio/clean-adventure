@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         inputVector = new Vector2(Input.GetAxis(horizontalInputAxis), Input.GetAxis(verticalInputAxis)).normalized;
-        aimInputVector = new Vector2(Input.GetAxis(aimHorizontalInputAxis), Input.GetAxis(aimVerticalInputAxis)).normalized;
+        aimInputVector = new Vector2(-Input.GetAxis(aimHorizontalInputAxis), Input.GetAxis(aimVerticalInputAxis)).normalized;
 
         // Blocked
         if (blocked)
