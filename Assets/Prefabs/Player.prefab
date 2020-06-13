@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 361602547}
   - component: {fileID: 361602548}
   - component: {fileID: 361602549}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: AimAssist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1152,6 +1152,8 @@ MonoBehaviour:
   turnSpeed: 20
   horizontalInputAxis: Horizontal
   verticalInputAxis: Vertical
+  aimHorizontalInputAxis: Right Joystick Horizontal
+  aimVerticalInputAxis: Right Joystick Vertical
   jumpKeys: 200000004a010000
   grabInput: Grab
   aimAssistSmoothTime: 20
@@ -1162,9 +1164,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   animator: {fileID: 2022911630}
+  torso: {fileID: 8263013560100037735}
+  legs: {fileID: 8876026397015358549}
   isStopped: 0
   blocked: 0
-  dale: {fileID: 0}
 --- !u!114 &1977877653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,7 +1182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   pointer: {fileID: 588732464}
-  minDistance: 1
+  minDistance: 0.3
 --- !u!114 &1977877654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,7 +1344,7 @@ Transform:
   m_GameObject: {fileID: 5885882034780264688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.9777, z: 0}
-  m_LocalScale: {x: 0.3794379, y: 0.3794379, z: 0.3794379}
+  m_LocalScale: {x: 0.5814127, y: 0.5814127, z: 0.5814127}
   m_Children:
   - {fileID: 8263013560100037735}
   - {fileID: 8876026397015358549}
@@ -1373,13 +1376,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6003410419565484749}
-  m_LocalRotation: {x: -0.23036094, y: 0, z: -0, w: 0.97310525}
+  m_LocalRotation: {x: -0.0033325853, y: -0, z: -0, w: 0.99999446}
   m_LocalPosition: {x: 0.00007253127, y: 0.001037346, z: 0.0043265675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7199442267049521037}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.38200003, y: 0, z: 0}
 --- !u!33 &5230665215384878052
 MeshFilter:
   m_ObjectHideFlags: 0

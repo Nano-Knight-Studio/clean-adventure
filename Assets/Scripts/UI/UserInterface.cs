@@ -7,6 +7,8 @@ public class UserInterface : MonoBehaviour
     public static UserInterface instance;
     private bool collectedGoal = false;
     private int currentLevel = 0;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform housePosition;
     [SerializeField] private GameObject beforeGoalBarriers;
     [SerializeField] private GameObject afterGoalBarriers;
 
@@ -34,5 +36,6 @@ public class UserInterface : MonoBehaviour
         collectedGoal = true;
         beforeGoalBarriers.SetActive(false);
         afterGoalBarriers.SetActive(true);
+        player.GetComponent<PlayerNavigation>().target = housePosition;
     }
 }
