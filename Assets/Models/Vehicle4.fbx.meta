@@ -3,7 +3,62 @@ guid: 486f17bf7401e1343aa83d52f32bf437
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_BrakeLights
+    second: {fileID: 2100000, guid: 8843a1db372612f4897d809931808650, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Chassis
+    second: {fileID: 2100000, guid: 83f7e3fbb342d4144abb85229c064373, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Interior
+    second: {fileID: 2100000, guid: 34b3a77f62b92cb4296167559674ad10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_LightBorders
+    second: {fileID: 2100000, guid: 33444194e6a55084abf31e1e08e829e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Lights
+    second: {fileID: 2100000, guid: bb5f2fdbc7d83824481432df38aa4273, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Seats
+    second: {fileID: 2100000, guid: 2b51d739053fc434e929115fd71788d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_SteeringWheel
+    second: {fileID: 2100000, guid: 24c0acc4eb1cfbf48a4385e924a5978a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Strips
+    second: {fileID: 2100000, guid: 8204528006761634ead6035db05b23ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Tires
+    second: {fileID: 2100000, guid: 563e68dda8bb5df40a619b1f180e4596, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Wheels
+    second: {fileID: 2100000, guid: 73ac06fceac2bf94aab78acfb7431b94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle8_Windows
+    second: {fileID: 2100000, guid: a3d952d951ec84146a6fdd1f8f982a40, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

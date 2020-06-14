@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 1329593491674453287}
   - component: {fileID: 6092124006573448861}
   - component: {fileID: 2620500721657044548}
+  - component: {fileID: 8441031720000651133}
   m_Layer: 0
   m_Name: arvore_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!4 &2719446898460362690
 Transform:
@@ -111,6 +112,20 @@ MonoBehaviour:
   X: 0
   Y: 1
   Z: 0
+--- !u!136 &8441031720000651133
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523269587762803896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.002
+  m_Height: 0.004
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.0015}
 --- !u!1 &1851995630382431023
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,12 +139,13 @@ GameObject:
   - component: {fileID: 3395156125180881235}
   - component: {fileID: 1264499526198401731}
   - component: {fileID: 5355271406626007440}
+  - component: {fileID: 1944020523908095292}
   m_Layer: 0
   m_Name: arvore_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!4 &3567550063476034147
 Transform:
@@ -222,6 +238,20 @@ MonoBehaviour:
   X: 0
   Y: 1
   Z: 0
+--- !u!136 &1944020523908095292
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851995630382431023}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.002
+  m_Height: 0.004
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.0015}
 --- !u!1 &2200868388234922333
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,12 +315,13 @@ GameObject:
   - component: {fileID: 8072103729993098070}
   - component: {fileID: 2892283587492510497}
   - component: {fileID: 3119261656571386632}
+  - component: {fileID: 8582508139769405521}
   m_Layer: 0
   m_Name: arvore_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5053838975699453782
 Transform:
@@ -383,3 +414,17 @@ MonoBehaviour:
   X: 0
   Y: 1
   Z: 0
+--- !u!136 &8582508139769405521
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488152677385312353}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.002
+  m_Height: 0.004
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.0015}

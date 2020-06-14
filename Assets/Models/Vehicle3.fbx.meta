@@ -3,7 +3,42 @@ guid: ec6efbe05a3e57242b0c2eae2c61c988
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle7_BreakLights
+    second: {fileID: 2100000, guid: e137d800e052db247be91761c263658b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle7_Bumper
+    second: {fileID: 2100000, guid: 0e0e7a809241c7f43a1b6d4c085a8989, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle7_Chassis
+    second: {fileID: 2100000, guid: a72873f79496afa4193d77479a72b963, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle7_Lights
+    second: {fileID: 2100000, guid: ad8db377b8e84c64f8b44466346d5103, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle7_Tires
+    second: {fileID: 2100000, guid: 2a26dfb8b40e5294bbd31047383eabdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle7_Wheels
+    second: {fileID: 2100000, guid: 1246d2193504e1d40bbcea365a6b5556, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vehicle7_Windows
+    second: {fileID: 2100000, guid: 6194bc2b562c19e4ebb0fa8d9a4ecce0, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
