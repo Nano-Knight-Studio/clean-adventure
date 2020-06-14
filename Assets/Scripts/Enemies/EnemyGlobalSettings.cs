@@ -13,6 +13,7 @@ public class EnemyGlobalSettings : MonoBehaviour
 {
     public Difficulty[] difficulties;
     public int currentDifficulty = 0;
+    public bool isGameplayActive = false;
     public static EnemyGlobalSettings instance;
 
     void Awake ()
@@ -26,6 +27,11 @@ public class EnemyGlobalSettings : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public static void SetGameplayActive (bool active)
+    {
+        instance.isGameplayActive = active;
     }
 
     public static int GetDensity()
