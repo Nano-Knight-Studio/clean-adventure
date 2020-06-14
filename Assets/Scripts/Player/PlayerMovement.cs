@@ -237,6 +237,11 @@ public class PlayerMovement : MonoBehaviour
         {
             canWalkRight = false;
         }
+    }
+
+    void OnTriggerStay (Collider other)
+    {
+
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<Enemy>().DetectPlayer(this.gameObject);

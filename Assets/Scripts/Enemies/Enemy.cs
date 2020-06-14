@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
     private Vector3 desiredScale;
     private Vector3 defaultScale;
     private NavMeshAgent navMeshAgent;
-    private Transform target;
+    public Transform target;
     private bool attacking = false;
     private Transform pointer;
     private bool stunned = false;
@@ -118,13 +118,17 @@ public class Enemy : MonoBehaviour
 
     public void DetectPlayer (GameObject player)
     {
+        if (target != null)
+        return; 
         try
         {
             if (navMeshAgent.isActiveAndEnabled)
             {
-                navMeshAgent.SetDestination(player.transform.position);
-                target = player.transform;
-                string selectedSound = angrySounds[UnityEngine.Random.Range(0, angrySounds.Length)];
+                if (EnemyGlobalSettings.instance.isGameplayActive)
+                {
+                    target = player.transform;
+                    navMeshAgent.SetDestination(player.transform.position);
+                }
             }
         }
         catch (Exception ex) {}

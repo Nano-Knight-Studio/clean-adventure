@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de632f4c31f04e4498f382b0f4e99627
+guid: 76fa4319a8d895742b568af978dee4f5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -12,23 +12,13 @@ TrueTypeFontImporter:
   fontNames:
   - Poppins
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 5954e8e0b6c421148b131c2984b3adcf, type: 3}
-  - {fileID: 12800000, guid: d738e4a2f41350f47910c9650ca14303, type: 3}
-  - {fileID: 12800000, guid: 3792f61433997384d849feba009535f4, type: 3}
-  - {fileID: 12800000, guid: 5e3fd9d4db5e6ec468ee350712847511, type: 3}
-  - {fileID: 12800000, guid: 5956ed95923c1334f86b414546574941, type: 3}
-  - {fileID: 12800000, guid: 0718b69664371d44287a4a9e049ba915, type: 3}
-  - {fileID: 12800000, guid: b0682be6ea517d349ab3b8220b67fdb1, type: 3}
-  - {fileID: 12800000, guid: 932b5d8779c4cd04e9c2ed05f644f9c1, type: 3}
-  - {fileID: 12800000, guid: 2cd3d089eb37e8846b9b67f6df845ca8, type: 3}
-  - {fileID: 12800000, guid: 40c116c968f09ea4bafe8bef6da642f6, type: 3}
-  - {fileID: 12800000, guid: 5b362b2aaa37ded4dbd3fc2d23a1db04, type: 3}
-  - {fileID: 12800000, guid: 1ccf7cea61bf3d74d946ec1506724aea, type: 3}
-  - {fileID: 12800000, guid: 18979f1c8abb2c045a82f275a51d7d65, type: 3}
-  - {fileID: 12800000, guid: 8734f8ac510d1af43a5b3cdc71b3ec8b, type: 3}
-  - {fileID: 12800000, guid: caf302bc951d0c647a63d50501fe5732, type: 3}
-  - {fileID: 12800000, guid: b618d33e7a0dc5a40a229aec061692f2, type: 3}
-  - {fileID: 12800000, guid: 7d01e06ff17e00a4b80d0ab5defee7a5, type: 3}
+  - {fileID: 12800000, guid: 30e6f613b47d70646a47e45c18cd6cdd, type: 3}
+  - {fileID: 12800000, guid: 25ece255582b99947b532cf646553ef1, type: 3}
+  - {fileID: 12800000, guid: 26952d28891ae904e89f0c2ccb34a7ce, type: 3}
+  - {fileID: 12800000, guid: 5b4ba838a31bd2242b6a919bf9374379, type: 3}
+  - {fileID: 12800000, guid: 31de8fcb7b1ceb540b405468e3813839, type: 3}
+  - {fileID: 12800000, guid: 28b509ac23230584d8bcb1cd9830790f, type: 3}
+  - {fileID: 12800000, guid: 2241092f8f634f2498dfbc397d00b701, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

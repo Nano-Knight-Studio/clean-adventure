@@ -8,6 +8,7 @@ public class UserInterface : MonoBehaviour
     private bool collectedGoal = false;
     private int currentLevel = 0;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject cameraCenter;
     [SerializeField] private Transform housePosition;
     [SerializeField] private GameObject beforeGoalBarriers;
     [SerializeField] private GameObject afterGoalBarriers;
@@ -29,6 +30,15 @@ public class UserInterface : MonoBehaviour
     {
         beforeGoalBarriers.SetActive(true);
         afterGoalBarriers.SetActive(false);
+    }
+
+    public void StartGame ()
+    {
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerShooting>().enabled = true;
+        player.GetComponent<PlayerNavigation>().enabled = true;
+        cameraCenter.GetComponent<CameraBehaviour>().enabled = true;
+        EnemyGlobalSettings.SetGameplayActive(true);
     }
 
     public void CollectGoal ()
