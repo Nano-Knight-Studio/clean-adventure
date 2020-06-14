@@ -14,11 +14,10 @@ public class WaterBubble : MonoBehaviour
     [SerializeField] private float criticalDamage;
     [Range(0, 100)]
     [SerializeField] private float criticalDamagePercentageVariation;
-    [SerializeField] private Color defaultColor;
-    [SerializeField] private Color criticalColor;
     [Header("Prefabs")]
     [SerializeField] private GameObject splashPrefab;
     [SerializeField] private GameObject damageIndicator;
+    [SerializeField] private GameObject damageIndicatorCritical;
     [Header("Knockback")]
     [SerializeField] private float knockbackForce;
     [SerializeField] private float knockbackRadius;
@@ -41,9 +40,12 @@ public class WaterBubble : MonoBehaviour
             dmg = (int)dmg;
 
             //Damage indicador
-            GameObject obj = Instantiate(damageIndicator, transform.position, transform.rotation);
+            GameObject obj;
+            if (critical)
+                obj = Instantiate(damageIndicatorCritical, transform.position, transform.rotation);
+            else
+                obj = Instantiate(damageIndicator, transform.position, transform.rotation);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = dmg.ToString("F0");
-            obj.GetComponentInChildren<TextMeshProUGUI>().color = critical ? criticalColor : defaultColor;
 
             //Applying damage
             col.gameObject.GetComponent<Enemy>().TakeDamage(dmg);

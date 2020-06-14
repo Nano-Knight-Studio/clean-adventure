@@ -3,7 +3,12 @@ guid: df96bfc16f3486c4e9af2755f87b27e4
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SHAGGY
+    second: {fileID: 2100000, guid: 6f9dbd5b42d995349b110f68a7921eb5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

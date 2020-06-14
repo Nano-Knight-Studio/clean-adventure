@@ -5180,11 +5180,11 @@ MonoBehaviour:
   criticalChance: 7.5
   criticalDamage: 35
   criticalDamagePercentageVariation: 25
-  defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  criticalColor: {r: 1, g: 0.2688679, b: 0.2688679, a: 1}
   splashPrefab: {fileID: 7998951072375877250, guid: 33e31a4c664343a4694a555d51075177,
     type: 3}
   damageIndicator: {fileID: 1357460859184751788, guid: 741a41463577adf469612d1fc27e46f3,
+    type: 3}
+  damageIndicatorCritical: {fileID: 1357460859184751788, guid: 7e81376d377274e47b91527288fca6e5,
     type: 3}
   knockbackForce: 500
   knockbackRadius: 0

@@ -134,6 +134,7 @@ public class Enemy : MonoBehaviour
     {
         currentLife -= damage;
         currentLife = Mathf.Clamp(currentLife, 0, maxLife);
+        StopAllCoroutines();
         StartCoroutine(BlinkDamage());
         if (currentLife <= 0.0f)
         {
