@@ -5188,6 +5188,9 @@ MonoBehaviour:
     type: 3}
   knockbackForce: 500
   knockbackRadius: 0
+  collisionSound: Gun_Collision
+  collisionSoundMinPitch: 0.45
+  collisionSoundMaxPitch: 0.65
 --- !u!1 &6961246447002999052
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,10 @@ public class WaterBubble : MonoBehaviour
     [Header("Knockback")]
     [SerializeField] private float knockbackForce;
     [SerializeField] private float knockbackRadius;
+    [Header("Audio")]
+    [SerializeField] private string collisionSound;
+    [SerializeField] private float collisionSoundMinPitch;
+    [SerializeField] private float collisionSoundMaxPitch;
 
     void OnCollisionEnter (Collision col)
     {
@@ -55,6 +59,8 @@ public class WaterBubble : MonoBehaviour
             col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(knockbackForce, transform.position, knockbackRadius);
         }
         if (splashPrefab) Instantiate(splashPrefab, transform.position, transform.rotation);
+        AudioManager.instance.SetPitch(collisionSound, Random.Range(collisionSoundMinPitch, collisionSoundMaxPitch));
+        AudioManager.instance.PlaySound(collisionSound, transform.position);
         Destroy(gameObject);
     }
 }
