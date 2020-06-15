@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
     private bool stunned = false;
     private Rigidbody rb;
     private float timeOutsideCamera;
+    public float defaultLifeBarSize;
 
     void Start ()
     {
@@ -56,6 +57,7 @@ public class Enemy : MonoBehaviour
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, UnityEngine.Random.Range(0.0f, 360.0f), transform.localEulerAngles.z);
         rb = GetComponent<Rigidbody>();
         StartCoroutine(PlayIdleSound());
+        defaultLifeBarSize = lifeBar.size.x;
     }
 
     void Update ()
@@ -63,19 +65,6 @@ public class Enemy : MonoBehaviour
         // Lerping scale
         // Used on damage effect
         transform.localScale = Vector3.Lerp(transform.localScale, desiredScale, damageScaleSpeed * Time.deltaTime);
-
-        // if (mainRenderer.isVisible)
-        // {
-        //     timeOutsideCamera = 0.0f;
-        // }
-        // else
-        // {
-        //     timeOutsideCamera += Time.deltaTime;
-        //     if (timeOutsideCamera >= 30.0f)
-        //     {
-        //         Destroy(gameObject);
-        //     }
-        // }
     }
 
     void FixedUpdate ()
@@ -118,8 +107,6 @@ public class Enemy : MonoBehaviour
 
     public void DetectPlayer (GameObject player)
     {
-        if (target != null)
-        return; 
         try
         {
             if (navMeshAgent.isActiveAndEnabled)
@@ -150,8 +137,8 @@ public class Enemy : MonoBehaviour
             AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(soundPitchMin, soundPitchMax));
             AudioManager.instance.PlaySound(selectedSound, transform.position);
             StartCoroutine(Stun(stunTime));
-            lifeBar.size = new Vector2(currentLife / maxLife, lifeBar.size.y);
-            lifeBar.transform.localPosition = new Vector3(Mathf.Lerp(0.5f, 0.0f, lifeBar.size.x), 0, 0);
+            lifeBar.size = new Vector2((currentLife / maxLife) * defaultLifeBarSize, lifeBar.size.y);
+            lifeBar.transform.localPosition = new Vector3(Mathf.Lerp(defaultLifeBarSize / 2.0f, 0.0f, lifeBar.size.x), 0, 0);
         }
     }
 

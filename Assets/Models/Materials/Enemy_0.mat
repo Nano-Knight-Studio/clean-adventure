@@ -81,8 +81,8 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimAmount: 0.677
-    - _RimThreshold: 0.1
+    - _RimAmount: 0.423
+    - _RimThreshold: 0
     - _Smoothness: 0.87
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
