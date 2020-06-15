@@ -18,15 +18,7 @@ public class EnemyGlobalSettings : MonoBehaviour
 
     void Awake ()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     public static void SetGameplayActive (bool active)

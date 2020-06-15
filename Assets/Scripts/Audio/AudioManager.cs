@@ -9,15 +9,7 @@ public class AudioManager : MonoBehaviour
 
 	void Awake ()
 	{
-		if (instance == null)
-		{
-			instance = this;
-		}
-		else
-		{
-			Destroy(gameObject);
-			return;
-		}
+		instance = this;
 		foreach (Sound sound in sounds)
 		{
 			sound.source = gameObject.AddComponent<AudioSource>();
@@ -29,7 +21,6 @@ public class AudioManager : MonoBehaviour
 			if (sound.playOnAwake)
 			PlaySound (sound.name);
 		}
-		DontDestroyOnLoad(gameObject);
 	}
 
 	public void SetPitch (string name, float pitch)
