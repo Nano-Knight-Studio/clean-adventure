@@ -33813,6 +33813,7 @@ MonoBehaviour:
   afterGoalBarriers: {fileID: 1872541002}
   postProcessingLayer: {fileID: 23993280}
   mobileControls: {fileID: 2055252919}
+  terrain: {fileID: 2018130003}
   audioToggle: {fileID: 1075496119}
   effectsToggle: {fileID: 1569267888}
   controlsToggle: {fileID: 1196937641}

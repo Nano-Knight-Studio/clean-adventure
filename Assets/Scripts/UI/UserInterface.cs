@@ -17,6 +17,7 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private GameObject afterGoalBarriers;
     [SerializeField] private PostProcessLayer postProcessingLayer;
     [SerializeField] private GameObject mobileControls;
+    [SerializeField] private Terrain terrain;
     [Header("Settings Menu")]
     [SerializeField] private Toggle audioToggle;
     [SerializeField] private Toggle effectsToggle;
@@ -57,12 +58,15 @@ public class UserInterface : MonoBehaviour
         // Auto deactivate stuff depending on platform
         #if UNITY_ANDROID
             SwitchEffects(false);
+            SetGrassDensity(0.3f);
         #endif
         #if UNITY_IOS
             SwitchEffects(false);
+            SetGrassDensity(0.3f);
         #endif
         #if UNITY_STANDALONE
             SwitchControls(false);
+            SetGrassDensity(1.0f);
         #endif
     }
 
@@ -123,6 +127,11 @@ public class UserInterface : MonoBehaviour
     {
         PlayerPrefs.SetInt("ControlsOff", activate ? 0 : 1);
         mobileControls.SetActive(activate);
+    }
+
+    public void SetGrassDensity(float density)
+    {
+        terrain.detailObjectDensity = density;
     }
 
     #endregion
