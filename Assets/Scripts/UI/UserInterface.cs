@@ -18,17 +18,22 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private PostProcessLayer postProcessingLayer;
     [SerializeField] private GameObject mobileControls;
     [SerializeField] private Terrain terrain;
+    [SerializeField] public RenderTexture fakeRender;
+    [SerializeField] private GameObject fakeRenderImage;
     [Header("Settings Menu")]
     [SerializeField] private Toggle audioToggle;
     [SerializeField] private Toggle effectsToggle;
     [SerializeField] private Toggle controlsToggle;
+    [SerializeField] private Toggle pixelEffectToggle;
     [Header("Songs")]
     [SerializeField] private GameObject mainMenuSong;
     [SerializeField] private GameObject inGameSong;
+    [HideInInspector] public float customRenderScale = 1.0f;
 
     void Awake ()
     {
         instance = this;
+        customRenderScale = 1.0f;
     }
 
     void Start ()
@@ -38,6 +43,15 @@ public class UserInterface : MonoBehaviour
 
         // Getting settings from playerprefs
         RecoverSettings();
+    }
+
+    IEnumerator RefreshRenderTexture ()
+    {
+        fakeRender.width = (int) ((float)fakeRender.height/(float)Screen.height * (float)Screen.width);
+		cameraCenter.GetComponentInChildren<Camera>().aspect = (float)fakeRender.width/(float)fakeRender.height;
+        customRenderScale = (float)fakeRender.width / (float)Screen.width;
+        yield return new WaitForSeconds(10.0f);
+        StartCoroutine(RefreshRenderTexture());
     }
 
     void RecoverSettings ()
@@ -53,6 +67,10 @@ public class UserInterface : MonoBehaviour
         if (PlayerPrefs.GetInt("ControlsOff") == 1)
         {
             controlsToggle.isOn = false;
+        }
+        if (PlayerPrefs.GetInt("PixelEffect") == 1)
+        {
+            pixelEffectToggle.isOn = true;
         }
 
         // Auto deactivate stuff depending on platform
@@ -121,12 +139,46 @@ public class UserInterface : MonoBehaviour
     {
         PlayerPrefs.SetInt("EffectsOff", activate ? 0 : 1);
         postProcessingLayer.enabled = activate;
+        if (pixelEffectToggle.isOn && activate)
+        {
+            pixelEffectToggle.isOn = false;
+        }
     }
 
     public void SwitchControls(bool activate)
     {
         PlayerPrefs.SetInt("ControlsOff", activate ? 0 : 1);
         mobileControls.SetActive(activate);
+    }
+
+    public void SwitchPixelEffect(bool activate)
+    {
+        PlayerPrefs.SetInt("PixelEffect", activate ? 1 : 0);
+        if (activate)
+        {
+            bool wasOn = PlayerPrefs.GetInt("EffectsOff") == 1 ? false : true;
+            effectsToggle.isOn = false;
+            if (wasOn)
+            {
+                PlayerPrefs.SetInt("EffectsOff", 0);
+            }
+        }
+        else
+        {
+            effectsToggle.isOn = PlayerPrefs.GetInt("EffectsOff") == 1 ? false : true;
+        }
+        if (activate)
+        {
+            StartCoroutine(RefreshRenderTexture());
+            fakeRenderImage.SetActive(true);
+            cameraCenter.GetComponentInChildren<Camera>().targetTexture = fakeRender;
+        }
+        else
+        {
+            StopCoroutine(RefreshRenderTexture());
+            fakeRenderImage.SetActive(false);
+            cameraCenter.GetComponentInChildren<Camera>().targetTexture = null;
+        }
     }
 
     public void SetGrassDensity(float density)

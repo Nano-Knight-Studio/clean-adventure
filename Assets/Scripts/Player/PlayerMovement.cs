@@ -128,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         // Aiming with mouse
         if (Input.GetKey(KeyCode.Mouse0) && !mobile)
         {
-            if (Physics.Raycast(CameraBehaviour.instance.camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 200, mouseAimLayerMask, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(CameraBehaviour.instance.camera.ScreenPointToRay(Input.mousePosition * UserInterface.instance.customRenderScale), out RaycastHit hit, 200, mouseAimLayerMask, QueryTriggerInteraction.Ignore))
             {
                 Vector3 point = hit.point;
                 point = new Vector3(point.x, transform.position.y, point.z);
