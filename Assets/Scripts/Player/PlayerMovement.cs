@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
@@ -44,10 +45,17 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 aimAssistCurrentVelocity;
     private float timeMoving = 0.0f;
     private Transform pointer;
+    private bool mobile = false;
 
     void Awake ()
     {
         instance = this;
+        #if UNITY_ANDROID
+        mobile = true;
+        #endif
+        #if UNITY_IOS
+        mobile = true;
+        #endif
     }
 
     void Start ()
@@ -77,8 +85,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        inputVector = new Vector2(Input.GetAxisRaw(horizontalInputAxis), Input.GetAxisRaw(verticalInputAxis)).normalized;
-        aimInputVector = new Vector2(-Input.GetAxisRaw(aimHorizontalInputAxis), Input.GetAxisRaw(aimVerticalInputAxis)).normalized;
+        inputVector = new Vector2(Input.GetAxisRaw(horizontalInputAxis), Input.GetAxisRaw(verticalInputAxis));
+        inputVector += new Vector2(CrossPlatformInputManager.GetAxisRaw(horizontalInputAxis), CrossPlatformInputManager.GetAxisRaw(verticalInputAxis));
+        if (inputVector.magnitude > 1) inputVector.Normalize();
+        aimInputVector = new Vector2(-Input.GetAxisRaw(aimHorizontalInputAxis), Input.GetAxisRaw(aimVerticalInputAxis));
+        if (mobile)
+        {
+            aimInputVector += new Vector2(-CrossPlatformInputManager.GetAxisRaw(aimHorizontalInputAxis), -CrossPlatformInputManager.GetAxisRaw(aimVerticalInputAxis));
+        }
+        print (aimInputVector);
+        if (aimInputVector.magnitude > 1) aimInputVector.Normalize();
 
         // Blocked
         if (blocked)
@@ -110,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         //----- DEFINING DESIRED ROTATION -----//
         Quaternion desiredTorsoRotation = Quaternion.identity;
         // Aiming with mouse
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && !mobile)
         {
             if (Physics.Raycast(CameraBehaviour.instance.camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 200, mouseAimLayerMask, QueryTriggerInteraction.Ignore))
             {

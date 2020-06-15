@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -15,16 +16,49 @@ public class PlayerShooting : MonoBehaviour
     //----- INTERNAL -----//
     [HideInInspector] public bool keyPressed = false;
     private bool canShoot = true;
+    private bool mobile = false;
+
+    void Awake ()
+    {
+        #if UNITY_ANDROID
+        mobile = true;
+        #endif
+        #if UNITY_IOS
+        mobile = true;
+        #endif
+    }
 
     void Update ()
     {
         // Detecting key press
-        keyPressed = false;
-        foreach (KeyCode k in keys)
+        if (mobile)
         {
-            if (Input.GetKey(k))
+            if (Input.GetKeyDown(KeyCode.JoystickButton2))
             {
                 keyPressed = true;
+            }
+            if (Input.GetKeyUp(KeyCode.JoystickButton2))
+            {
+                keyPressed = false;
+            }
+            if (CrossPlatformInputManager.GetButtonDown("Fire"))
+            {
+                keyPressed = true;
+            }
+            if (CrossPlatformInputManager.GetButtonUp("Fire"))
+            {
+                keyPressed = false;
+            }
+        }
+        else
+        {
+            keyPressed = false;
+            foreach (KeyCode k in keys)
+            {
+                if (Input.GetKey(k))
+                {
+                    keyPressed = true;
+                }
             }
         }
 

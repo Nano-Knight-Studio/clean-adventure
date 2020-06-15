@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class CameraBehaviour : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class CameraBehaviour : MonoBehaviour
     private Vector3 currentVelocity;
     private Vector3 inputSpeedCurrentVelocity;
     [HideInInspector] public Camera camera;
+    private bool mobile = false;
 
     void Awake ()
     {
@@ -39,6 +41,12 @@ public class CameraBehaviour : MonoBehaviour
         orientation.SetParent(transform);
         orientation.localPosition = Vector3.zero;
         camera = GetComponentInChildren<Camera>();
+        #if UNITY_ANDROID
+        mobile = true;
+        #endif
+        #if UNITY_IOS
+        mobile = true;
+        #endif
     }
 
     void Update ()
@@ -46,17 +54,28 @@ public class CameraBehaviour : MonoBehaviour
         //----- INPUT -----//
         inputVector = new Vector2(Input.GetAxisRaw(horizontalInput),
                                     Input.GetAxisRaw(verticalInput) * -1);
-        mouseInputVector = new Vector2(Mathf.Lerp(-1.0f, 1.0f, Input.mousePosition.x / Screen.width),
-                                    Mathf.Lerp(-1.0f, 1.0f, Input.mousePosition.y / Screen.height)) * 3;
-        if (inputVector.magnitude > 0)
+        if (mobile)
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+        inputVector += new Vector2(CrossPlatformInputManager.GetAxisRaw(horizontalInput),
+                                    -CrossPlatformInputManager.GetAxisRaw(verticalInput) * -1);
         }
-        else if (Input.GetMouseButton(0))
+        else
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            mouseInputVector = new Vector2(Mathf.Lerp(-1.0f, 1.0f, Input.mousePosition.x / Screen.width),
+                                        Mathf.Lerp(-1.0f, 1.0f, Input.mousePosition.y / Screen.height)) * 3;
+        }
+        if (!mobile)
+        {
+            if (inputVector.magnitude > 0)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else if (Input.GetMouseButton(0))
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
         }
         inputVector += mouseInputVector;
         if (inputVector.magnitude > 1) inputVector.Normalize();
