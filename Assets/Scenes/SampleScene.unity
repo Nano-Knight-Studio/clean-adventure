@@ -3698,7 +3698,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ae68a8b54f9496c498f83fe3350a6db2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -29078,8 +29078,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.238972, y: 1, z: 7.039629}
-  m_Center: {x: 9.468609e-15, y: 0, z: 0.2356619}
+  m_Size: {x: 1.4278026, y: 1, z: 7.039629}
+  m_Center: {x: -0.09441531, y: 0, z: 0.2356617}
 --- !u!4 &988622881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4052016118345205103, guid: eb48b352207dea846a1fb8cdfe873004,
@@ -30161,7 +30161,7 @@ PrefabInstance:
     - target: {fileID: 4052016118345205103, guid: eb48b352207dea846a1fb8cdfe873004,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22558999
+      value: 0.477
       objectReference: {fileID: 0}
     - target: {fileID: 4052016118345205103, guid: eb48b352207dea846a1fb8cdfe873004,
         type: 3}
@@ -36012,8 +36012,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.238972, y: 1, z: 7.039629}
-  m_Center: {x: 9.468609e-15, y: 0, z: 0.2356619}
+  m_Size: {x: 1.3756374, y: 1, z: 7.039629}
+  m_Center: {x: 0.06833273, y: 0, z: 0.23566197}
 --- !u!1001 &1217901696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51332,84 +51332,84 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Step_Grass_0
     Clip: {fileID: 8300000, guid: 3ba3efa794240c249ae5bfe7d0745c03, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_1
     Clip: {fileID: 8300000, guid: 348fdb7315a66bb4ca79b3ef5789e2c6, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_2
     Clip: {fileID: 8300000, guid: 9eea79310072af740bccb920283ecc8a, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_3
     Clip: {fileID: 8300000, guid: 8a9a49df561a89042946ec99feca9ee4, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_4
     Clip: {fileID: 8300000, guid: 0f24b4226db9f24419c20f65a712047e, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_5
     Clip: {fileID: 8300000, guid: 0d50ee877e75aa548a89572b0b170ffe, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_0
     Clip: {fileID: 8300000, guid: 2792dc4f5a048a448857acc08bfdfe49, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_1
     Clip: {fileID: 8300000, guid: e3fe9db5c8d7304498bd21ffadaa15ab, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_2
     Clip: {fileID: 8300000, guid: 38cdeca6712b24d45b391424c7ff7511, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_3
     Clip: {fileID: 8300000, guid: 97e0762a9f60bee4aaf3f3f28e8d3aec, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_4
     Clip: {fileID: 8300000, guid: 308954c131a78574aa8e3c11996e96d2, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_5
     Clip: {fileID: 8300000, guid: f6a857c0a867cb5409747d79ff4c8187, type: 3}
-    volume: 0.1
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -55438,8 +55438,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.100254305, y: 0.24254024, z: 2}
-  m_Center: {x: 0, y: 0.05455196, z: 0}
+  m_Size: {x: 0.100254305, y: 0.24254024, z: 4.4130573}
+  m_Center: {x: 0, y: 0.05455196, z: 1.2065287}
 --- !u!1001 &1845471924
 PrefabInstance:
   m_ObjectHideFlags: 0

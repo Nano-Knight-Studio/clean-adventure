@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask mouseAimLayerMask;
     [Header("Animations")]
     [SerializeField] private Animator animator;
+    [SerializeField] private Transform torsoPosition;
     [SerializeField] private Transform torso;
     [SerializeField] private Transform legs;
     
@@ -46,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
     private float timeMoving = 0.0f;
     private Transform pointer;
     private bool mobile = false;
+    private Quaternion defaultTorsoRotation;
+    private bool walkingBackwards = false;
 
     void Awake ()
     {
@@ -68,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         pointer = new GameObject("Pointer").transform;
         pointer.SetParent(transform);
         pointer.localPosition = Vector3.zero;
+        defaultTorsoRotation = torso.localRotation;
     }
 
     void Update ()
@@ -102,7 +106,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Animation parameters
-        animator.SetFloat("Walk", rb.velocity.magnitude);
+        animator.SetBool("Walking", rb.velocity.magnitude > 0.1f);
+        if (walkingBackwards) animator.SetFloat("Walk", rb.velocity.magnitude);
+        else animator.SetFloat("Walk", -rb.velocity.magnitude);
 
         if (isStopped)
         {
@@ -175,8 +181,11 @@ public class PlayerMovement : MonoBehaviour
         // There's nowhere to aim, so reset torso
         else
         {
-            torso.localRotation = Quaternion.Slerp(torso.localRotation, Quaternion.identity, turnSpeed * Time.fixedDeltaTime);
+            torso.localRotation = Quaternion.Slerp(torso.localRotation, defaultTorsoRotation, turnSpeed * Time.fixedDeltaTime);
         }
+
+        // Adjusting torso height
+        torso.position = torsoPosition.position;
 
         // Flip legs when angle > 180
         if (desiredTorsoRotation != Quaternion.identity)
@@ -185,11 +194,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 // TODO leg animation
                 legs.localRotation = Quaternion.Slerp(legs.localRotation, Quaternion.Euler(new Vector3(0, 180, 0)), turnSpeed * Time.fixedDeltaTime);
+                walkingBackwards = false;
             }
             else
             {
                 // TODO leg animation
                 legs.localRotation = Quaternion.Slerp(legs.localRotation, Quaternion.Euler(new Vector3(0, 0, 0)), turnSpeed * Time.fixedDeltaTime);
+                walkingBackwards = true;
             }
         }
         else
