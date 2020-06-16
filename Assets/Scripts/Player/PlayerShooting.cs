@@ -17,6 +17,7 @@ public class PlayerShooting : MonoBehaviour
     [HideInInspector] public bool keyPressed = false;
     private bool canShoot = true;
     private bool mobile = false;
+    private Vector3 shootPointDefaultRotation;
 
     void Awake ()
     {
@@ -26,6 +27,11 @@ public class PlayerShooting : MonoBehaviour
         #if UNITY_IOS
         mobile = true;
         #endif
+    }
+
+    void Start ()
+    {
+        shootPointDefaultRotation = shootPoint.localEulerAngles;
     }
 
     void Update ()
@@ -78,7 +84,7 @@ public class PlayerShooting : MonoBehaviour
         canShoot = false;
 
         // Spread
-        shootPoint.localEulerAngles = new Vector3(Random.Range(-spread, spread), Random.Range(-spread, spread), 0);
+        shootPoint.localEulerAngles = shootPointDefaultRotation + new Vector3(Random.Range(-spread, spread), Random.Range(-spread, spread), 0);
 
         //TODO Object Pooling
         // Instantiate bullet

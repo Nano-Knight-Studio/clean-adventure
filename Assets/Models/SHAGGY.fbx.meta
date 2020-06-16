@@ -7,8 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Cabelo
+    second: {fileID: 2100000, guid: 94fb2cfea65cc5842b9e8b6827150d2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camiseta
+    second: {fileID: 2100000, guid: d5271a6e2c58a4f40ae594e8b9afb18d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OLHO
+    second: {fileID: 2100000, guid: 1d917757a6a12df44a33a8a6742e1ea1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pele
+    second: {fileID: 2100000, guid: 5250f4e5f21827f49a552bc25a477ba4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Perna
+    second: {fileID: 2100000, guid: 28c05a97f98967c4fa0a401896338f5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: SHAGGY
     second: {fileID: 2100000, guid: 6f9dbd5b42d995349b110f68a7921eb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Touca
+    second: {fileID: 2100000, guid: 9135a036e2710984c83578b10bfb211c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
