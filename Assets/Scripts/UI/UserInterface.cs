@@ -139,6 +139,10 @@ public class UserInterface : MonoBehaviour
     {
         PlayerPrefs.SetInt("EffectsOff", activate ? 0 : 1);
         postProcessingLayer.enabled = activate;
+        if (activate)
+        {
+            customRenderScale = 1.0f;
+        }
         if (pixelEffectToggle.isOn && activate)
         {
             pixelEffectToggle.isOn = false;

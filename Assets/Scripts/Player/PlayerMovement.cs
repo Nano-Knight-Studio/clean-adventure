@@ -93,7 +93,6 @@ public class PlayerMovement : MonoBehaviour
         {
             aimInputVector += new Vector2(-CrossPlatformInputManager.GetAxisRaw(aimHorizontalInputAxis), -CrossPlatformInputManager.GetAxisRaw(aimVerticalInputAxis));
         }
-        print (aimInputVector);
         if (aimInputVector.magnitude > 1) aimInputVector.Normalize();
 
         // Blocked
