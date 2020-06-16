@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] private LayerMask mouseAimLayerMask;
     [Header("Animations")]
-    [SerializeField] private Animator animator;
+    [SerializeField] public Animator animator;
     [SerializeField] private Transform torsoPosition;
     [SerializeField] private Transform torso;
     [SerializeField] private Transform legs;

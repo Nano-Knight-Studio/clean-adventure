@@ -13,14 +13,19 @@ public class PlayerStats : MonoBehaviour
     {
         currentLife -= damage;
         currentLife = Mathf.Clamp(currentLife, 0, maxLife);
+        UserInterface.instance.RefreshPlayerStats();
         CameraBehaviour.instance.CameraShake("CameraShake0");
         if (currentLife <= 0.0f)
         {
-            //TODO death effects
+            GetComponentInParent<PlayerMovement>().enabled = false;
+            GetComponentInParent<PlayerShooting>().enabled = false;
+            GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GetComponentInParent<Rigidbody>().AddTorque(new Vector3(Random.Range(-30, 30), Random.Range(-30, 30), Random.Range(-30, 30)));
+            GetComponentInParent<PlayerMovement>().animator.SetFloat("Walk", 0.0f);
+            GetComponentInParent<PlayerMovement>().animator.SetBool("Walking", false);
         }
         else
         {
-            UserInterface.instance.RefreshPlayerStats();
             string selectedAudio = damageSounds[Random.Range(0, damageSounds.Length)];
             AudioManager.instance.SetPitch(selectedAudio, Random.Range(0.7f, 1.3f));
             AudioManager.instance.PlaySound(selectedAudio);

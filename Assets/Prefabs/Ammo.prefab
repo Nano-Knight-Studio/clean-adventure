@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665310096932608760}
   - component: {fileID: 2823723351144461880}
+  - component: {fileID: 1388701869442269815}
   m_Layer: 14
   m_Name: Ammo
   m_TagString: Ammo
@@ -138,3 +139,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.06
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1388701869442269815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043581844901415763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce7b0e5448671a4a8ad16b6723baaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 30

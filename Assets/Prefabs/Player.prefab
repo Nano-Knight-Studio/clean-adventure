@@ -2874,8 +2874,8 @@ MonoBehaviour:
   - Gun_2
   outOfAmmoSound: Gun_OutOfAmmo
   reloadSound: Gun_Reload
-  ammo: 0
-  maxAmmo: 0
+  ammo: 100
+  maxAmmo: 100
   keys: 430100004c010000
   prefab: {fileID: 6383101612006521208, guid: b891011236c5a6d4384aee2c1aaaaea0, type: 3}
   shootPoint: {fileID: 5052526018694626538}

@@ -140,7 +140,7 @@ public class PlayerShooting : MonoBehaviour
         if (other.gameObject.tag == "Ammo")
         {
             Reload();
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Ammo>().Respawn();
         }
     }    
 }
