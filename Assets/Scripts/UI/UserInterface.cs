@@ -49,7 +49,8 @@ public class UserInterface : MonoBehaviour
     {
         fakeRender.width = (int) ((float)fakeRender.height/(float)Screen.height * (float)Screen.width);
 		cameraCenter.GetComponentInChildren<Camera>().aspect = (float)fakeRender.width/(float)fakeRender.height;
-        customRenderScale = (float)fakeRender.width / (float)Screen.width;
+        if (fakeRenderImage.activeSelf) customRenderScale = (float)fakeRender.width / (float)Screen.width;
+        else customRenderScale = 1.0f;
         yield return new WaitForSeconds(10.0f);
         StartCoroutine(RefreshRenderTexture());
     }

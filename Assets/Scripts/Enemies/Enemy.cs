@@ -23,8 +23,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damageScaleSpeed;
     [SerializeField] private float stunTime;
     [Header("Graphics")]
-    [SerializeField] private Material defaultMaterial;
-    [SerializeField] private Material damageMaterial;
+    [SerializeField] private Material[] defaultMaterials;
+    [SerializeField] private Material[] damageMaterials;
     [SerializeField] private GameObject deathParticles;
     [SerializeField] private MeshRenderer mainRenderer;
     [Header("Audio")]
@@ -144,11 +144,11 @@ public class Enemy : MonoBehaviour
 
     IEnumerator BlinkDamage()
     {
-        mainRenderer.material = damageMaterial;
+        mainRenderer.materials = damageMaterials;
         desiredScale = defaultScale * damageScaleMultiplier;
         yield return new WaitForSeconds(0.15f);
         desiredScale = defaultScale;
-        mainRenderer.material = defaultMaterial;
+        mainRenderer.materials = defaultMaterials;
     }
 
     public void Die(bool makeSound)
