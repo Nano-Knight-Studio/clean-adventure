@@ -500,7 +500,7 @@ MonoBehaviour:
   selfKnockback: {x: 0, y: 0, z: -50}
   damageScaleMultiplier: 1.5
   damageScaleSpeed: 20
-  stunTime: 1.5
+  stunTime: 0.5
   defaultMaterials:
   - {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
   - {fileID: 2100000, guid: 99c975e5d2df1be49a079f01d5c05e33, type: 2}

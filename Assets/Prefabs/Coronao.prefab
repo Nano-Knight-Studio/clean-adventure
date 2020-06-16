@@ -446,7 +446,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6346533089954095151}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 3
   m_AngularDrag: 1
   m_UseGravity: 1
@@ -500,7 +500,7 @@ MonoBehaviour:
   selfKnockback: {x: 0, y: 0, z: -50}
   damageScaleMultiplier: 1.5
   damageScaleSpeed: 20
-  stunTime: 1.5
+  stunTime: 0
   defaultMaterials:
   - {fileID: 2100000, guid: 04e439a4e87ed8b4c81d3c7798f8ff3f, type: 2}
   - {fileID: 2100000, guid: 05b428e736b421741aeff6b1c7190ad7, type: 2}

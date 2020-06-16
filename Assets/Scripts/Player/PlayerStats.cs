@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
         }
         else
         {
-            //TODO refresh UI
+            UserInterface.instance.RefreshPlayerStats();
             string selectedAudio = damageSounds[Random.Range(0, damageSounds.Length)];
             AudioManager.instance.SetPitch(selectedAudio, Random.Range(0.7f, 1.3f));
             AudioManager.instance.PlaySound(selectedAudio);
@@ -43,5 +43,10 @@ public class PlayerStats : MonoBehaviour
             EnemyGlobalSettings.NextLevel();
             Destroy(other.gameObject);
         }
+    }
+
+    public float GetHealthPercentage()
+    {
+        return currentLife / maxLife;
     }
 }

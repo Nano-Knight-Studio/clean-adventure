@@ -20,6 +20,9 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private Terrain terrain;
     [SerializeField] public RenderTexture fakeRender;
     [SerializeField] private GameObject fakeRenderImage;
+    [Header("Player Stats")]
+    [SerializeField] private StatIndicator healthStat;
+    [SerializeField] private StatIndicator ammoStat;
     [Header("Settings Menu")]
     [SerializeField] private Toggle audioToggle;
     [SerializeField] private Toggle effectsToggle;
@@ -106,6 +109,12 @@ public class UserInterface : MonoBehaviour
         beforeGoalBarriers.SetActive(false);
         afterGoalBarriers.SetActive(true);
         player.GetComponent<PlayerNavigation>().target = housePosition;
+    }
+
+    public void RefreshPlayerStats()
+    {
+        healthStat.SetPercentage(player.GetComponent<PlayerStats>().GetHealthPercentage());
+        ammoStat.SetPercentage(player.GetComponent<PlayerShooting>().GetAmmoPercentage());
     }
 
     #region PAUSE
