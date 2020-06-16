@@ -3698,7 +3698,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ae68a8b54f9496c498f83fe3350a6db2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -40775,8 +40775,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358396011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.17, z: 0}
+  m_LocalScale: {x: 1, y: 3.2018, z: 1}
   m_Children:
   - {fileID: 1898075091}
   - {fileID: 109168002}
@@ -51332,84 +51332,84 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Step_Grass_0
     Clip: {fileID: 8300000, guid: 3ba3efa794240c249ae5bfe7d0745c03, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_1
     Clip: {fileID: 8300000, guid: 348fdb7315a66bb4ca79b3ef5789e2c6, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_2
     Clip: {fileID: 8300000, guid: 9eea79310072af740bccb920283ecc8a, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_3
     Clip: {fileID: 8300000, guid: 8a9a49df561a89042946ec99feca9ee4, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_4
     Clip: {fileID: 8300000, guid: 0f24b4226db9f24419c20f65a712047e, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Grass_5
     Clip: {fileID: 8300000, guid: 0d50ee877e75aa548a89572b0b170ffe, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_0
     Clip: {fileID: 8300000, guid: 2792dc4f5a048a448857acc08bfdfe49, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_1
     Clip: {fileID: 8300000, guid: e3fe9db5c8d7304498bd21ffadaa15ab, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_2
     Clip: {fileID: 8300000, guid: 38cdeca6712b24d45b391424c7ff7511, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_3
     Clip: {fileID: 8300000, guid: 97e0762a9f60bee4aaf3f3f28e8d3aec, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_4
     Clip: {fileID: 8300000, guid: 308954c131a78574aa8e3c11996e96d2, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: Step_Stone_5
     Clip: {fileID: 8300000, guid: f6a857c0a867cb5409747d79ff4c8187, type: 3}
-    volume: 0.4
+    volume: 0.25
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -65364,11 +65364,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraCenter
       objectReference: {fileID: 0}
-    - target: {fileID: 7603814202352752502, guid: e3bda4e1e817c29409965c74146b3d19,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4741338837210207948, guid: e3bda4e1e817c29409965c74146b3d19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -65429,16 +65424,6 @@ PrefabInstance:
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 2022911627}
-    - target: {fileID: 4741338837210207938, guid: e3bda4e1e817c29409965c74146b3d19,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7603814202352752500, guid: e3bda4e1e817c29409965c74146b3d19,
-        type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3bda4e1e817c29409965c74146b3d19, type: 3}
 --- !u!1 &4412170433586408337 stripped
