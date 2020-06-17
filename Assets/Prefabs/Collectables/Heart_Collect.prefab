@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8029936046379019476}
   - component: {fileID: 5499844867993658265}
   m_Layer: 11
-  m_Name: Enemy_Splash
+  m_Name: Heart_Collect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4775,7 +4775,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14f2fb6d5cdf92d4497eaf18521fdddf, type: 2}
+  - {fileID: 2100000, guid: 76e984afad6d2b845910b00fe11ee226, type: 2}
   - {fileID: 2100000, guid: 1a92a02673f88f34a8cd95d25630a523, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

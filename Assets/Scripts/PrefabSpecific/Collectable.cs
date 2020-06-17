@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     [SerializeField] private float respawnTime = 30.0f;
+    [SerializeField] private GameObject collectParticles;
     private MeshRenderer[] meshRenderers;
     private Collider[] colliders;
     public bool spawnedOnMap = true;
@@ -17,6 +18,8 @@ public class Collectable : MonoBehaviour
 
     public void Collect ()
     {
+        if (collectParticles) Instantiate(collectParticles, transform.position, transform.rotation);
+
         // Respawn / Destroy
         if (spawnedOnMap)
         {
