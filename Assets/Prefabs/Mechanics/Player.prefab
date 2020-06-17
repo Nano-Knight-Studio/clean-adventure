@@ -1088,6 +1088,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &1994128439139450160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5223400022885991561}
+  m_Layer: 0
+  m_Name: Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5223400022885991561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994128439139450160}
+  m_LocalRotation: {x: 0.20200762, y: -0.08325265, z: -0.34020177, w: 0.9146173}
+  m_LocalPosition: {x: -0.00434, y: 0.00207, z: -0.00537}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7703326883778877440}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 18.233002, y: -17.761002, z: -43.679}
 --- !u!1 &2019816537880841666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,7 +2930,7 @@ MonoBehaviour:
   - Player_Damage_0
   - Player_Damage_1
   - Player_Damage_2
-  leftHand: {fileID: 1816818631}
+  leftHand: {fileID: 5223400022885991561}
 --- !u!1 &5035659981922726454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,6 +4406,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7921672676870443248}
+  - {fileID: 5223400022885991561}
   m_Father: {fileID: 5369143160729569180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -156.079, y: 134.969, z: -0.102996826}

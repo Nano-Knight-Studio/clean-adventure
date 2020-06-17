@@ -37,11 +37,18 @@ public class PlayerStats : MonoBehaviour
     {
         if (other.gameObject.name == "Goal")
         {
-            other.gameObject.GetComponent<SimpleRotation>().enabled = false;
+            foreach (SimpleRotation s in other.gameObject.GetComponentsInChildren<SimpleRotation>())
+            {
+                s.enabled = false;
+                // TODO fix
+                s.gameObject.transform.localEulerAngles = new Vector3(12.439f, -28.887f, 58.768f);
+                s.gameObject.transform.localPosition = new Vector3(-0.0101f, 0.0243f, 0.0017f);
+            }
             UserInterface.instance.CollectGoal();
             other.gameObject.transform.SetParent(leftHand);
             other.gameObject.transform.localPosition = Vector3.zero;
             other.gameObject.transform.localEulerAngles = Vector3.zero;
+            other.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
         }
 
         if (other.gameObject.tag == "DifficultyTrigger")
