@@ -7,6 +7,7 @@ public class Collectable : MonoBehaviour
     [SerializeField] private float respawnTime = 30.0f;
     [SerializeField] private GameObject collectParticles;
     private MeshRenderer[] meshRenderers;
+    private SpriteRenderer spriteRenderer;
     private Collider[] colliders;
     public bool spawnedOnMap = true;
 
@@ -14,6 +15,7 @@ public class Collectable : MonoBehaviour
     {
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
         colliders = GetComponentsInChildren<Collider>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void Collect ()
@@ -41,6 +43,7 @@ public class Collectable : MonoBehaviour
         {
             c.enabled = false;
         }
+        spriteRenderer.enabled = false;
         yield return new WaitForSeconds(respawnTime);
         foreach (MeshRenderer mr in meshRenderers)
         {
@@ -50,5 +53,6 @@ public class Collectable : MonoBehaviour
         {
             c.enabled = true;
         }
+        spriteRenderer.enabled = true;
     }
 }

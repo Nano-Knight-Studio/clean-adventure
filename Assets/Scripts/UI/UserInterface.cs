@@ -23,6 +23,7 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private GameObject loseScreen;
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject outOfAmmoText;
+    [SerializeField] private GameObject[] goalTexts;
     [Header("Player Stats")]
     [SerializeField] private StatIndicator healthStat;
     [SerializeField] private StatIndicator ammoStat;
@@ -112,6 +113,8 @@ public class UserInterface : MonoBehaviour
         beforeGoalBarriers.SetActive(false);
         afterGoalBarriers.SetActive(true);
         player.GetComponent<PlayerNavigation>().target = housePosition;
+        goalTexts[0].SetActive(false);
+        goalTexts[1].SetActive(true);
     }
 
     #region STATS
@@ -132,6 +135,7 @@ public class UserInterface : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         winScreen.SetActive(true);
+        goalTexts[1].SetActive(false);
     }
 
     #endregion
