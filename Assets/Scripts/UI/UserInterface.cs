@@ -22,6 +22,7 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private GameObject fakeRenderImage;
     [SerializeField] private GameObject loseScreen;
     [SerializeField] private GameObject winScreen;
+    [SerializeField] private GameObject outOfAmmoText;
     [Header("Player Stats")]
     [SerializeField] private StatIndicator healthStat;
     [SerializeField] private StatIndicator ammoStat;
@@ -119,6 +120,7 @@ public class UserInterface : MonoBehaviour
     {
         healthStat.SetPercentage(player.GetComponent<PlayerStats>().GetHealthPercentage());
         ammoStat.SetPercentage(player.GetComponent<PlayerShooting>().GetAmmoPercentage());
+        if (outOfAmmoText) outOfAmmoText.SetActive(player.GetComponent<PlayerShooting>().GetAmmoPercentage() * 100.0f < 1);
     }
 
     public void Lose()
