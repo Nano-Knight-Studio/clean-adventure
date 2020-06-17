@@ -62,6 +62,7 @@ public class PlayerStats : MonoBehaviour
             currentLife = maxLife;
             UserInterface.instance.RefreshPlayerStats();
             other.gameObject.GetComponent<Collectable>().Collect();
+            AudioManager.instance.PlaySound("Heart_Collect");
         }
     }
 
