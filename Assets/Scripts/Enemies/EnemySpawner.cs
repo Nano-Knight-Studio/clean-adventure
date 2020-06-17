@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
         CleanList();
         foreach (GameObject obj in enemies)
         {
-            obj.GetComponent<Enemy>().Die(false);
+            obj.GetComponent<Enemy>().Die(false, false);
         }
         CleanList();
     }

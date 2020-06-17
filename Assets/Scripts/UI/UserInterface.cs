@@ -20,6 +20,8 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private Terrain terrain;
     [SerializeField] public RenderTexture fakeRender;
     [SerializeField] private GameObject fakeRenderImage;
+    [SerializeField] private GameObject loseScreen;
+    [SerializeField] private GameObject winScreen;
     [Header("Player Stats")]
     [SerializeField] private StatIndicator healthStat;
     [SerializeField] private StatIndicator ammoStat;
@@ -111,12 +113,26 @@ public class UserInterface : MonoBehaviour
         player.GetComponent<PlayerNavigation>().target = housePosition;
     }
 
+    #region STATS
+
     public void RefreshPlayerStats()
     {
         healthStat.SetPercentage(player.GetComponent<PlayerStats>().GetHealthPercentage());
         ammoStat.SetPercentage(player.GetComponent<PlayerShooting>().GetAmmoPercentage());
     }
 
+    public void Lose()
+    {
+        loseScreen.SetActive(true);
+    }
+
+    public void Win()
+    {
+        Time.timeScale = 0.0f;
+        winScreen.SetActive(true);
+    }
+
+    #endregion
     #region PAUSE
 
     public void Pause ()

@@ -8,6 +8,7 @@ TagManager:
   - DamageEnemy
   - DifficultyTrigger
   - Ammo
+  - Health
   layers:
   - Default
   - TransparentFX

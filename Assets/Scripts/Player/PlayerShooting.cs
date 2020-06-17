@@ -26,6 +26,7 @@ public class PlayerShooting : MonoBehaviour
     private bool canShoot = true;
     private bool mobile = false;
     private Vector3 shootPointDefaultRotation;
+    PlayerMovement playerMovement;
 
     void Awake ()
     {
@@ -40,6 +41,8 @@ public class PlayerShooting : MonoBehaviour
     void Start ()
     {
         shootPointDefaultRotation = shootPoint.localEulerAngles;
+
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     void Update ()
@@ -66,7 +69,7 @@ public class PlayerShooting : MonoBehaviour
         }
         else
         {
-            keyPressed = false;
+            keyPressed = (playerMovement.aimInputVector.magnitude > 0);
             foreach (KeyCode k in keys)
             {
                 if (Input.GetKey(k))
@@ -75,9 +78,6 @@ public class PlayerShooting : MonoBehaviour
                 }
             }
         }
-
-        // Animation(s)
-        animator.SetBool("Shooting", keyPressed);
 
         // Shoot
         if (canShoot && keyPressed)
@@ -140,7 +140,7 @@ public class PlayerShooting : MonoBehaviour
         if (other.gameObject.tag == "Ammo")
         {
             Reload();
-            other.gameObject.GetComponent<Ammo>().Respawn();
+            other.gameObject.GetComponent<Collectable>().Collect();
         }
     }    
 }

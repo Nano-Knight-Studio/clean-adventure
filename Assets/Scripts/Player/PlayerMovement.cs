@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAimAssist playerAimAssist;
     private Rigidbody rb;
     private Vector2 inputVector;
-    private Vector2 aimInputVector;
+    [HideInInspector] public Vector2 aimInputVector;
     private bool jumpFlag;
     [HideInInspector] public bool isStopped;
     private bool canWalkRight = true;

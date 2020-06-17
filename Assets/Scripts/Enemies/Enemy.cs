@@ -34,6 +34,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private string[] deathSounds;
     [SerializeField] private string[] idleSounds;
     [SerializeField] private string[] angrySounds;
+    [Header("Drops")]
+    [SerializeField] private GameObject[] drops;
+    [SerializeField] private float[] probabilities;
     //----- INTERNAL -----//
     private Vector3 desiredScale;
     private Vector3 defaultScale;
@@ -129,7 +132,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(BlinkDamage());
         if (currentLife <= 0.0f)
         {
-            Die(true);
+            Die(true, true);
         }
         else
         {
@@ -151,16 +154,60 @@ public class Enemy : MonoBehaviour
         mainRenderer.materials = defaultMaterials;
     }
 
-    public void Die(bool makeSound)
+    public void Die(bool makeSound, bool drop)
     {
-        //TODO death effects
         if (makeSound)
         {
             string selectedSound = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
             AudioManager.instance.SetPitch(selectedSound, UnityEngine.Random.Range(soundPitchMin, soundPitchMax));
             AudioManager.instance.PlaySound(selectedSound, transform.position);
         }
-        if (deathParticles) Instantiate(deathParticles, transform.position, transform.rotation);
+        if (deathParticles) 
+        {
+            Instantiate(deathParticles, transform.position, transform.rotation);
+        }
+
+        // Drops
+        if (drop)
+        {
+            float rnd = UnityEngine.Random.Range(0.0f, 100.0f);
+            print("drop: " + rnd);
+            int selectedIndex = 0;
+            for (int i=0; i < probabilities.Length; i++)
+            {
+                if (i < probabilities.Length -1)
+                {
+                    if (i == 0)
+                    {
+                        if (rnd <= probabilities[i])
+                        {
+                            selectedIndex = i;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (rnd > probabilities[i -1] &&
+                            rnd < probabilities[i])
+                        {
+                            selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    selectedIndex = i;
+                    break;
+                }
+            }
+            if (drops[selectedIndex] != null)
+            {
+                GameObject obj = Instantiate(drops[selectedIndex], transform.position, transform.rotation);
+                obj.GetComponent<Collectable>().spawnedOnMap = false;
+            }
+        }
+
         Destroy(gameObject);
     }
 

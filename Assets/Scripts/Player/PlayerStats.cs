@@ -23,11 +23,12 @@ public class PlayerStats : MonoBehaviour
             GetComponentInParent<Rigidbody>().AddTorque(new Vector3(Random.Range(-30, 30), Random.Range(-30, 30), Random.Range(-30, 30)));
             GetComponentInParent<PlayerMovement>().animator.SetFloat("Walk", 0.0f);
             GetComponentInParent<PlayerMovement>().animator.SetBool("Walking", false);
+            UserInterface.instance.Lose();
         }
         else
         {
             string selectedAudio = damageSounds[Random.Range(0, damageSounds.Length)];
-            AudioManager.instance.SetPitch(selectedAudio, Random.Range(0.7f, 1.3f));
+            AudioManager.instance.SetPitch(selectedAudio, Random.Range(0.95f, 1.05f));
             AudioManager.instance.PlaySound(selectedAudio);
         }
     }
@@ -47,6 +48,13 @@ public class PlayerStats : MonoBehaviour
         {
             EnemyGlobalSettings.NextLevel();
             Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "Health")
+        {
+            currentLife = maxLife;
+            UserInterface.instance.RefreshPlayerStats();
+            other.gameObject.GetComponent<Collectable>().Collect();
         }
     }
 

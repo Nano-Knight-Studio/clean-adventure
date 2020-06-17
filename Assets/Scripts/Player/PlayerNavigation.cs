@@ -11,6 +11,7 @@ public class PlayerNavigation : MonoBehaviour
 
     void Update ()
     {
+        if (target == null) return;
         if (Vector3.Distance(transform.position, target.position) >= minDistance)
         {
             pointer.gameObject.SetActive(true);
@@ -19,6 +20,11 @@ public class PlayerNavigation : MonoBehaviour
         else
         {
             pointer.gameObject.GetComponent<Animator>().SetTrigger("Disable");
+            if (target.gameObject.name == "HousePosition")
+            {
+                UserInterface.instance.Win();
+            }
+            target = null;
         }
     }
 }
