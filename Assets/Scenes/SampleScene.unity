@@ -64471,7 +64471,7 @@ MonoBehaviour:
   difficulties:
   - enemies:
     - {fileID: 6346533089954095151, guid: 6131ca235a53c5c40814168ba0b0b2da, type: 3}
-    density: 0
+    density: 2
   - enemies:
     - {fileID: 6346533089954095151, guid: 6131ca235a53c5c40814168ba0b0b2da, type: 3}
     - {fileID: 6346533089954095151, guid: 1ebd67b432f00264689977705a4444c3, type: 3}
@@ -82065,6 +82065,16 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 5006512735788848442}
+    - target: {fileID: 7703326883778877440, guid: e73ee765e55d6b648868737d565b1959,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0005900018
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703326883778877440, guid: e73ee765e55d6b648868737d565b1959,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.002039999
+      objectReference: {fileID: 0}
     - target: {fileID: 3301420841681979261, guid: e73ee765e55d6b648868737d565b1959,
         type: 3}
       propertyPath: m_LocalRotation.x
