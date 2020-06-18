@@ -154,6 +154,8 @@ public class UserInterface : MonoBehaviour
     public void Home ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Resume();
     }
 
