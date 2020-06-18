@@ -21,8 +21,11 @@ public class PlayerStats : MonoBehaviour
             GetComponentInParent<PlayerShooting>().enabled = false;
             GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.None;
             GetComponentInParent<Rigidbody>().AddTorque(new Vector3(Random.Range(-30, 30), Random.Range(-30, 30), Random.Range(-30, 30)));
-            GetComponentInParent<PlayerMovement>().animator.SetFloat("Walk", 0.0f);
-            GetComponentInParent<PlayerMovement>().animator.SetBool("Walking", false);
+            foreach(Animator a in GetComponentInParent<PlayerMovement>().animators)
+            {
+                a.SetFloat("Walk", 0.0f);
+                a.SetBool("Walking", false);
+            }
             UserInterface.instance.Lose();
         }
         else

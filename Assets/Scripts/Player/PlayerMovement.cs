@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] private LayerMask mouseAimLayerMask;
     [Header("Animations")]
-    [SerializeField] public Animator animator;
+    [SerializeField] public Animator[] animators;
     [SerializeField] private Transform torsoPosition;
     [SerializeField] private Transform torso;
     [SerializeField] private Transform legs;
@@ -106,9 +106,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Animation parameters
-        animator.SetBool("Walking", rb.velocity.magnitude > 0.1f);
-        if (walkingBackwards) animator.SetFloat("Walk", rb.velocity.magnitude);
-        else animator.SetFloat("Walk", -rb.velocity.magnitude);
+        foreach (Animator a in animators)
+        {
+            a.SetBool("Walking", rb.velocity.magnitude > 0.1f);
+            if (walkingBackwards) a.SetFloat("Walk", rb.velocity.magnitude);
+            else a.SetFloat("Walk", -rb.velocity.magnitude);
+        }
 
         if (isStopped)
         {
