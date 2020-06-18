@@ -92,13 +92,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+    - _AmbientColor: {r: 0.4811321, g: 0.2705428, b: 0.18836774, a: 1}
     - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _SpecularColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+    - _SpecularColor: {r: 0.4811321, g: 0.2705428, b: 0.18836774, a: 1}
 --- !u!114 &3771585187601066666
 MonoBehaviour:
   m_ObjectHideFlags: 11
