@@ -107,9 +107,15 @@ public class UserInterface : MonoBehaviour
         inGameSong.SetActive(true);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void CollectGoal ()
     {
         collectedGoal = true;
+        AudioManager.instance.PlaySound("Sacoleta");
         beforeGoalBarriers.SetActive(false);
         afterGoalBarriers.SetActive(true);
         player.GetComponent<PlayerNavigation>().target = housePosition;
