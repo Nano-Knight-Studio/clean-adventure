@@ -223,6 +223,12 @@ public class UserInterface : MonoBehaviour
             fakeRenderImage.SetActive(false);
             cameraCenter.GetComponentInChildren<Camera>().targetTexture = null;
         }
+
+        // FORCING RENDER SCALE UPDATE
+        fakeRender.width = (int) ((float)fakeRender.height/(float)Screen.height * (float)Screen.width);
+		cameraCenter.GetComponentInChildren<Camera>().aspect = (float)fakeRender.width/(float)fakeRender.height;
+        if (fakeRenderImage.activeSelf) customRenderScale = (float)fakeRender.width / (float)Screen.width;
+        else customRenderScale = 1.0f;
     }
 
     public void SetGrassDensity(float density)
