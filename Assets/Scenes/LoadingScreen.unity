@@ -503,6 +503,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 650539746}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &650539749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4745462766277166643, guid: 20fcabcce0e79a54894b9b41b4a195ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 650539746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &650539750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650539749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: Avoid hugs, kisses and handshakes.
+  portugueseText: "Evite abra\xE7os, beijos e apertos de m\xE3os."
 --- !u!1 &800982564
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +855,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1027911408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1027911411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4745462766277166643, guid: 20fcabcce0e79a54894b9b41b4a195ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027911408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027911412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027911411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: Always wash your hands.
+  portugueseText: "Lave sempre as m\xE3os."
 --- !u!1 &1071594739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1153,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1175506555}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1175506558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4745462766277166643, guid: 20fcabcce0e79a54894b9b41b4a195ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1175506555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1175506559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175506558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: Keep environments clean and well ventilated.
+  portugueseText: Mantenha os ambientes limpos e bem ventilados.
 --- !u!1001 &1260112536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,6 +1400,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1260112536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1260112539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4745462766277166643, guid: 20fcabcce0e79a54894b9b41b4a195ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260112536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1260112540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260112539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: Wear masks when you go out.
+  portugueseText: "Utilize m\xE1scaras quando sair."
 --- !u!1 &1610299080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1713,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1633681229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1633681232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4745462766277166643, guid: 20fcabcce0e79a54894b9b41b4a195ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1633681229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1633681233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633681232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: If you can, stay home.
+  portugueseText: Se puder, fique em casa.
 --- !u!1001 &4745462766173658704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1819,3 +1919,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4745462766173658704}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4745462766173658707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4745462766277166643, guid: 20fcabcce0e79a54894b9b41b4a195ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 4745462766173658704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4745462766173658708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745462766173658707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: Sleep well and eat healthy.
+  portugueseText: "Durma bem e tenha uma alimenta\xE7\xE3o saud\xE1vel."
