@@ -171,7 +171,6 @@ public class Enemy : MonoBehaviour
         if (drop)
         {
             float rnd = UnityEngine.Random.Range(0.0f, 100.0f);
-            print("drop: " + rnd);
             int selectedIndex = 0;
             for (int i=0; i < probabilities.Length; i++)
             {
