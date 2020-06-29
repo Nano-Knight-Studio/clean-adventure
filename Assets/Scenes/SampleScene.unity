@@ -6985,6 +6985,7 @@ GameObject:
   - component: {fileID: 177999119}
   - component: {fileID: 177999121}
   - component: {fileID: 177999120}
+  - component: {fileID: 177999122}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -7130,6 +7131,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177999118}
   m_CullTransparentMesh: 0
+--- !u!114 &177999122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177999118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: EXIT GAME?
+  portugueseText: SAIR DO JOGO?
 --- !u!1001 &179147393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9310,6 +9325,7 @@ GameObject:
   - component: {fileID: 238702518}
   - component: {fileID: 238702517}
   - component: {fileID: 238702516}
+  - component: {fileID: 238702519}
   m_Layer: 5
   m_Name: GoalText0
   m_TagString: Untagged
@@ -9474,6 +9490,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238702514}
   m_CullTransparentMesh: 0
+--- !u!114 &238702519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238702514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: GO TO THE SUPERMARKET
+  portugueseText: "V\xC1 AT\xC9 O MERCADO"
 --- !u!1001 &238823949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14514,6 +14544,7 @@ GameObject:
   - component: {fileID: 377214068}
   - component: {fileID: 377214070}
   - component: {fileID: 377214069}
+  - component: {fileID: 377214071}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -14659,6 +14690,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377214067}
   m_CullTransparentMesh: 0
+--- !u!114 &377214071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377214067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: YES
+  portugueseText: SIM
 --- !u!1001 &379680030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16587,6 +16632,7 @@ GameObject:
   - component: {fileID: 425268044}
   - component: {fileID: 425268046}
   - component: {fileID: 425268045}
+  - component: {fileID: 425268047}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -16732,6 +16778,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425268043}
   m_CullTransparentMesh: 0
+--- !u!114 &425268047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425268043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: PLAY
+  portugueseText: JOGAR
 --- !u!1 &427463320 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9d2698bc104144741b3516bd1ce64928,
@@ -17038,6 +17098,7 @@ GameObject:
   - component: {fileID: 451101079}
   - component: {fileID: 451101081}
   - component: {fileID: 451101080}
+  - component: {fileID: 451101082}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -17183,6 +17244,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451101078}
   m_CullTransparentMesh: 0
+--- !u!114 &451101082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451101078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: EFFECTS
+  portugueseText: EFEITOS
 --- !u!1 &453229582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5006482648944414829, guid: e73ee765e55d6b648868737d565b1959,
@@ -29110,6 +29185,7 @@ GameObject:
   - component: {fileID: 747858032}
   - component: {fileID: 747858034}
   - component: {fileID: 747858033}
+  - component: {fileID: 747858035}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -29255,6 +29331,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747858031}
   m_CullTransparentMesh: 0
+--- !u!114 &747858035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747858031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: PLAY AGAIN
+  portugueseText: JOGAR DE NOVO
 --- !u!1001 &748651858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33849,6 +33939,7 @@ GameObject:
   - component: {fileID: 863610852}
   - component: {fileID: 863610851}
   - component: {fileID: 863610850}
+  - component: {fileID: 863610853}
   m_Layer: 5
   m_Name: GoalText1
   m_TagString: Untagged
@@ -34013,6 +34104,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863610848}
   m_CullTransparentMesh: 0
+--- !u!114 &863610853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863610848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: GO BACK HOME SAFELY
+  portugueseText: "VOLTE PARA CASA EM SEGURAN\xC7A"
 --- !u!1 &865135097
 GameObject:
   m_ObjectHideFlags: 0
@@ -34482,6 +34587,7 @@ GameObject:
   - component: {fileID: 871728723}
   - component: {fileID: 871728722}
   - component: {fileID: 871728724}
+  - component: {fileID: 871728725}
   m_Layer: 5
   m_Name: OutOfAmmoText
   m_TagString: Untagged
@@ -34646,6 +34752,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &871728725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871728720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: NO SOAP!
+  portugueseText: "SEM SAB\xC3O!"
 --- !u!1 &872341097
 GameObject:
   m_ObjectHideFlags: 0
@@ -62055,6 +62175,7 @@ GameObject:
   - component: {fileID: 1515407173}
   - component: {fileID: 1515407175}
   - component: {fileID: 1515407174}
+  - component: {fileID: 1515407176}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -62200,6 +62321,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515407172}
   m_CullTransparentMesh: 0
+--- !u!114 &1515407176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515407172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: OPS! BE CAREFUL!
+  portugueseText: OPS! TOME CUIDADO!
 --- !u!1001 &1515800740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73947,6 +74082,7 @@ GameObject:
   - component: {fileID: 1779949142}
   - component: {fileID: 1779949144}
   - component: {fileID: 1779949143}
+  - component: {fileID: 1779949145}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -74092,6 +74228,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779949141}
   m_CullTransparentMesh: 0
+--- !u!114 &1779949145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779949141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: NO
+  portugueseText: "N\xC3O"
 --- !u!1 &1780230601
 GameObject:
   m_ObjectHideFlags: 0
@@ -75722,6 +75872,7 @@ GameObject:
   - component: {fileID: 1829841050}
   - component: {fileID: 1829841052}
   - component: {fileID: 1829841051}
+  - component: {fileID: 1829841053}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -75867,6 +76018,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829841049}
   m_CullTransparentMesh: 0
+--- !u!114 &1829841053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829841049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: PAUSED
+  portugueseText: PAUSADO
 --- !u!1 &1831757483
 GameObject:
   m_ObjectHideFlags: 0
@@ -81729,6 +81894,7 @@ GameObject:
   - component: {fileID: 1979376938}
   - component: {fileID: 1979376940}
   - component: {fileID: 1979376939}
+  - component: {fileID: 1979376941}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -81874,6 +82040,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979376937}
   m_CullTransparentMesh: 0
+--- !u!114 &1979376941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979376937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: PLAY AGAIN
+  portugueseText: JOGAR DE NOVO
 --- !u!4 &1980654330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4052016118345205103, guid: eb48b352207dea846a1fb8cdfe873004,
@@ -83680,6 +83860,7 @@ GameObject:
   - component: {fileID: 2033046117}
   - component: {fileID: 2033046119}
   - component: {fileID: 2033046118}
+  - component: {fileID: 2033046120}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -83825,6 +84006,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033046116}
   m_CullTransparentMesh: 0
+--- !u!114 &2033046120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033046116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: CONTROLS
+  portugueseText: CONTROLES
 --- !u!4 &2036287441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4052016118345205103, guid: eb48b352207dea846a1fb8cdfe873004,
@@ -84927,6 +85122,7 @@ GameObject:
   - component: {fileID: 2055275982}
   - component: {fileID: 2055275984}
   - component: {fileID: 2055275983}
+  - component: {fileID: 2055275985}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -85072,6 +85268,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055275981}
   m_CullTransparentMesh: 0
+--- !u!114 &2055275985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055275981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: NICE! YOU GOT IT!
+  portugueseText: "BOA! VOC\xCA CONSEGUIU!"
 --- !u!1001 &2056626166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88068,6 +88278,7 @@ GameObject:
   - component: {fileID: 2138264036}
   - component: {fileID: 2138264038}
   - component: {fileID: 2138264037}
+  - component: {fileID: 2138264039}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -88213,6 +88424,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138264035}
   m_CullTransparentMesh: 0
+--- !u!114 &2138264039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138264035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fca34611a4dc49a9a1994f729f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  englishText: RETRO EFFECT
+  portugueseText: EFEITO RETRO
 --- !u!1 &2138271758 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9d2698bc104144741b3516bd1ce64928,
