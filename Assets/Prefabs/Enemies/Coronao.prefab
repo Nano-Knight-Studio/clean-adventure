@@ -492,7 +492,7 @@ MonoBehaviour:
   maxLife: 300
   currentLife: 300
   lifeBar: {fileID: 466158287239835405}
-  attackRange: 0.05
+  attackRange: 0.1
   damage: 20
   attackLayerMask:
     serializedVersion: 2
