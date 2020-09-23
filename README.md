@@ -39,10 +39,10 @@ Softwares/Languages used in the development process:
 # :man: Developers
 <img src="https://github.com/felipegodoyf/game-jam-ps/blob/master/Assets/Sprites/itchio/heart.gif?raw=true" width="120">
 
-<a src="https://www.linkedin.com/in/davi-baptista/" target="_blank">Davi Arcos Baptista</a> - Game | Sound Designer
-<a src="https://www.linkedin.com/in/felipegodoyfidelis/" target="_blank">Felipe Godoy</a> - Programmer
-<a src="https://www.linkedin.com/in/igor-nascimento10/" target="_blank">Igor Nascimento</a> - 3D Modeler
-<a src="https://www.linkedin.com/in/rafael-natali-6b3480bb/" target="_blank">Rafael Natali</a> - Artist
+<a href="https://www.linkedin.com/in/davi-baptista/" target="_blank">Davi Arcos Baptista</a> - Game | Sound Designer<br>
+<a href="https://www.linkedin.com/in/felipegodoyfidelis/" target="_blank">Felipe Godoy</a> - Programmer<br>
+<a href="https://www.linkedin.com/in/igor-nascimento10/" target="_blank">Igor Nascimento</a> - 3D Modeler<br>
+<a href="https://www.linkedin.com/in/rafael-natali-6b3480bb/" target="_blank">Rafael Natali</a> - Artist
 
 
 
